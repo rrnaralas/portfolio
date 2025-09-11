@@ -44,7 +44,15 @@ A modern, responsive portfolio website showcasing Rohith Reddy Narala's professi
 
 3. Open `index.html` in your browser to view the website locally.
 
-4. To deploy, simply upload the files to your web hosting service.
+4. To deploy using GitHub Pages:
+   - The repository is already set up with a GitHub Actions workflow for automatic deployment
+   - Go to your repository settings on GitHub
+   - Navigate to "Pages" in the left sidebar
+   - Under "Build and deployment" > "Source", select "GitHub Actions"
+   - Your site will be deployed to https://rrnaralas.github.io/portfolio/
+   - Any changes pushed to the main branch will trigger automatic deployment
+
+5. Alternatively, you can deploy by uploading the files to any web hosting service.
 
 ## Customization
 
