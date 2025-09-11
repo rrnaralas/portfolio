@@ -1,6 +1,6 @@
 # Rohith Reddy Narala - Portfolio Website
 
-A modern, responsive portfolio website showcasing Rohith Reddy Narala's professional experience, projects, and skills as a Hardware Development Engineer.
+A modern, responsive portfolio website showcasing Rohith Reddy Narala's professional experience, projects, and skills as a Hardware Development Engineer. Deployed using GitHub Pages.
 
 ## Features
 
