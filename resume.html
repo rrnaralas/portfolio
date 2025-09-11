@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohith Reddy Narala - Resume</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Exo+2:wght@700;900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-black">
+
+    <div id="particles-js"></div>
+
+    <!-- Header & Navigation -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="font-display text-3xl font-bold tracking-wider">RN<span style="color: #00BFFF;">.</span></a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html#about" class="nav-link">01.About</a>
+                <a href="index.html#experience" class="nav-link">02.Experience</a>
+                <a href="index.html#projects" class="nav-link">03.Projects</a>
+                <a href="index.html#contact" class="nav-link">04.Contact</a>
+            </div>
+            <a href="resume.html" target="_blank" class="hidden md:block border border-primary-color text-primary-color px-4 py-2 rounded-md hover:bg-primary-color hover:text-black transition-all duration-300" style="border-color: #00BFFF; color: #00BFFF;">Resume</a>
+            <button id="mobile-menu-button" class="md:hidden text-2xl z-50">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-black/95 z-40 flex flex-col items-center justify-center space-y-8 text-xl">
+        <a href="index.html#about" class="nav-link">01.About</a>
+        <a href="index.html#experience" class="nav-link">02.Experience</a>
+        <a href="index.html#projects" class="nav-link">03.Projects</a>
+        <a href="index.html#contact" class="nav-link">04.Contact</a>
+        <a href="resume.html" class="border border-primary-color text-primary-color px-6 py-3 rounded-md mt-4" style="border-color: #00BFFF; color: #00BFFF;">Resume</a>
+    </div>
+
+    <main class="container mx-auto px-6 pt-24 pb-16">
+        <div class="flex justify-between items-center mb-8">
+            <h1 class="text-4xl font-bold" style="color: #00BFFF;">Rohith Reddy Narala</h1>
+            <div>
+                <a href="mailto:rohithreddy.narala@gmail.com" class="text-gray-400 hover:text-primary-color transition block mb-1" style="color: #E0E0E0;"><i class="fas fa-envelope mr-2"></i> rohithreddy.narala@gmail.com</a>
+                <a href="https://www.linkedin.com/in/rohithreddynarala" target="_blank" class="text-gray-400 hover:text-primary-color transition block mb-1" style="color: #E0E0E0;"><i class="fab fa-linkedin mr-2"></i> linkedin.com/in/rohithreddynarala</a>
+                <a href="https://github.com/rohithnarala" target="_blank" class="text-gray-400 hover:text-primary-color transition block" style="color: #E0E0E0;"><i class="fab fa-github mr-2"></i> github.com/rohithnarala</a>
+            </div>
+        </div>
+
+        <div class="glass-card mb-8">
+            <h2 class="text-2xl font-bold mb-4" style="color: #00BFFF;">Summary</h2>
+            <p>Hardware Engineering professional with an M.S. in Electrical Engineering and 9+ years of progressive experience in delivering innovative electronic solutions. Expertise spans the full hardware development lifecycle, from initial concept to mass production. Skilled in analog/digital circuit design, power electronics, and embedded systems. Passionate about leading cross-functional teams through New Product Introduction (NPI) processes, implementing advanced sensing technologies, and optimizing prototypes for manufacturability (DFM).</p>
+        </div>
+
+        <div class="glass-card mb-8">
+            <h2 class="text-2xl font-bold mb-4" style="color: #00BFFF;">Skills</h2>
+            <div class="mb-4">
+                <h3 class="text-xl mb-2">Hardware Design</h3>
+                <div>
+                    <span class="skill-tag">Analog Circuit Design</span>
+                    <span class="skill-tag">Digital Circuit Design</span>
+                    <span class="skill-tag">Power Electronics</span>
+                    <span class="skill-tag">PCB Layout</span>
+                    <span class="skill-tag">Schematic Capture</span>
+                    <span class="skill-tag">Signal Integrity</span>
+                    <span class="skill-tag">High-Density PCBs</span>
+                    <span class="skill-tag">Flex/Rigid PCBs</span>
+                </div>
+            </div>
+            <div class="mb-4">
+                <h3 class="text-xl mb-2">Tools & Software</h3>
+                <div>
+                    <span class="skill-tag">Altium Designer</span>
+                    <span class="skill-tag">Cadence Suite</span>
+                    <span class="skill-tag">OrCAD</span>
+                    <span class="skill-tag">LTspice</span>
+                    <span class="skill-tag">MATLAB</span>
+                    <span class="skill-tag">Oscilloscopes</span>
+                    <span class="skill-tag">Logic Analyzers</span>
+                    <span class="skill-tag">Spectrum Analyzers</span>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-xl mb-2">Programming & Embedded</h3>
+                <div>
+                    <span class="skill-tag">Embedded C/C++</span>
+                    <span class="skill-tag">Microcontrollers</span>
+                    <span class="skill-tag">Sensor Integration</span>
+                    <span class="skill-tag">Sensor Fusion</span>
+                    <span class="skill-tag">Bluetooth/BLE</span>
+                    <span class="skill-tag">I2C/SPI/UART</span>
+                    <span class="skill-tag">RTOS</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="glass-card mb-8">
+            <h2 class="text-2xl font-bold mb-4" style="color: #00BFFF;">Experience</h2>
+            
+            <!-- Experience Item 1 -->
+            <div class="mb-6">
+                <div class="flex justify-between items-start mb-1">
+                    <h3 class="text-xl font-bold">Hardware Development Engineer</h3>
+                    <span class="text-sm">May 2025 - Present</span>
+                </div>
+                <div class="flex justify-between items-start mb-2">
+                    <p class="text-primary-color" style="color: #00BFFF;">Amazon Lab126</p>
+                    <p class="text-sm">San Jose, CA</p>
+                </div>
+                <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm">
+                    <li>Developing next-generation Fire TV hardware platforms.</li>
+                    <li>Involved in New Product Development (NPD), R&D, and Proof of Concept creation.</li>
+                </ul>
+            </div>
+            
+            <!-- Experience Item 2 -->
+            <div class="mb-6">
+                <div class="flex justify-between items-start mb-1">
+                    <h3 class="text-xl font-bold">Sr Electrical Engineer</h3>
+                    <span class="text-sm">July 2022 - February 2025</span>
+                </div>
+                <div class="flex justify-between items-start mb-2">
+                    <p class="text-primary-color" style="color: #00BFFF;">Meta Reality Labs</p>
+                    <p class="text-sm">Redmond, WA</p>
+                </div>
+                <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm">
+                    <li>Led end-to-end development of 5+ PoC hardware platforms for AR/VR.</li>
+                    <li>Designed high-density rigid/flex PCBs, reducing board spins by 30%.</li>
+                    <li>Improved sensor performance by 20% through iterative testing and system-level integration.</li>
+                    <li>Engineered precision analog front-end circuits for EMG, optical, and capacitive touch sensors.</li>
+                    <li>Owned validation and test planning, achieving over 95% first-pass yield.</li>
+                    <li>Collaborated with cross-functional teams to optimize designs for manufacturability (DFM).</li>
+                </ul>
+            </div>
+            
+            <!-- Experience Item 3 -->
+            <div class="mb-6">
+                <div class="flex justify-between items-start mb-1">
+                    <h3 class="text-xl font-bold">Electrical Engineer II</h3>
+                    <span class="text-sm">March 2021 - June 2022</span>
+                </div>
+                <div class="flex justify-between items-start mb-2">
+                    <p class="text-primary-color" style="color: #00BFFF;">Milwaukee Tool</p>
+                    <p class="text-sm">Brookfield, WI</p>
+                </div>
+                <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm">
+                    <li>Drove early-stage hardware innovation for next-gen power tools.</li>
+                    <li>Created technology roadmaps by validating sensors and wireless modules.</li>
+                    <li>Reduced New Product Development (NPD) risk by 40% through rigorous testing and analysis.</li>
+                    <li>Designed and prototyped an innovative Electrofusion device for joining MDPE and HDPE plastic pipes.</li>
+                    <li>Created a digital vacuum gauge with high precision measurement capabilities.</li>
+                </ul>
+            </div>
+            
+            <!-- Experience Item 4 -->
+            <div>
+                <div class="flex justify-between items-start mb-1">
+                    <h3 class="text-xl font-bold">Hardware Design Engineer</h3>
+                    <span class="text-sm">October 2018 - February 2021</span>
+                </div>
+                <div class="flex justify-between items-start mb-2">
+                    <p class="text-primary-color" style="color: #00BFFF;">T-L Irrigation Co.</p>
+                    <p class="text-sm">Hastings, NE</p>
+                </div>
+                <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm">
+                    <li>Led hardware development for industrial control systems for autonomous agricultural equipment.</li>
+                    <li>Integrated GPS RTK modules to achieve sub-inch navigation accuracy.</li>
+                    <li>Developed embedded firmware (C), reducing field failures by 25%.</li>
+                    <li>Designed a hand-held GPS Smart Tester for field waypoint recording.</li>
+                    <li>Features developed increased company sales by over $2M annually.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="glass-card mb-8">
+            <h2 class="text-2xl font-bold mb-4" style="color: #00BFFF;">Education</h2>
+            <div class="mb-4">
+                <div class="flex justify-between items-start">
+                    <h3 class="text-xl font-bold">Master of Science in Electrical Engineering</h3>
+                    <span class="text-sm">2016 - 2018</span>
+                </div>
+                <p class="text-primary-color" style="color: #00BFFF;">University of Nebraska-Lincoln</p>
+                <p class="text-sm text-gray-400">Focus: Embedded Systems, Power Electronics, Signal Processing</p>
+            </div>
+            <div>
+                <div class="flex justify-between items-start">
+                    <h3 class="text-xl font-bold">Bachelor of Technology in Electronics & Communication Engineering</h3>
+                    <span class="text-sm">2012 - 2016</span>
+                </div>
+                <p class="text-primary-color" style="color: #00BFFF;">Jawaharlal Nehru Technological University</p>
+            </div>
+        </div>
+
+        <div class="glass-card">
+            <h2 class="text-2xl font-bold mb-4" style="color: #00BFFF;">Projects</h2>
+            
+            <!-- Project 1 -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold">AR/VR Hardware Platforms</h3>
+                <p class="text-primary-color mb-2" style="color: #00BFFF;">Meta Reality Labs</p>
+                <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm">
+                    <li>Led end-to-end development of multiple proof-of-concept hardware platforms for next-generation AR/VR and wearable technologies.</li>
+                    <li>Designed high-density rigid/flex PCBs using Altium and Cadence, reducing board spins by 30%.</li>
+                    <li>Engineered precision analog front-end circuits for EMG, optical, and capacitive touch sensors.</li>
+                </ul>
+            </div>
+            
+            <!-- Project 2 -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold">DC-DC Converter for Thermoelectric Cooler</h3>
+                <p class="text-primary-color mb-2" style="color: #00BFFF;">Meta Reality Labs</p>
+                <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm">
+                    <li>Designed a bespoke DC-DC converter with a temperature-based control loop.</li>
+                    <li>Combined Boost and Flyback topologies to achieve a high voltage output from a low voltage input.</li>
+                    <li>Specifications: Input Voltage: 3.1V - 5V, Output Voltage: 60V, Switching Frequency: 520KHz.</li>
+                </ul>
+            </div>
+            
+            <!-- Project 3 -->
+            <div>
+                <h3 class="text-xl font-bold">GPS & Telemetry Systems</h3>
+                <p class="text-primary-color mb-2" style="color: #00BFFF;">T-L Irrigation Co.</p>
+                <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm">
+                    <li>Led hardware development for industrial control systems focused on GPS RTK-based navigation.</li>
+                    <li>Integrated GPS RTK modules to achieve sub-inch navigation accuracy.</li>
+                    <li>Developed embedded firmware (C) reducing field failures by 25%.</li>
+                    <li>Designed a hand-held GPS Smart Tester for field waypoint recording.</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="py-6 text-center">
+        <div class="flex justify-center space-x-6 text-2xl mb-4">
+             <a href="https://www.linkedin.com/in/rohithreddynarala" target="_blank" class="text-gray-400 hover:text-primary-color transition" style="color: #808080;"><i class="fab fa-linkedin"></i></a>
+             <a href="https://github.com/rohithnarala" target="_blank" class="text-gray-400 hover:text-primary-color transition" style="color: #808080;"><i class="fab fa-github"></i></a>
+        </div>
+        <p class="text-gray-600 text-sm">Designed & Built by Rohith Reddy Narala</p>
+    </footer>
+
+    <!-- Print Button -->
+    <button class="print-button" onclick="window.print()">
+        <i class="fas fa-print"></i>
+    </button>
+    
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
