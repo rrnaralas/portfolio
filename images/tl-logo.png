@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Developed by Provident Promotions | www.providentpro.com -->
+		<meta name='robots' content='noindex, follow' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" data-pagespeed-no-defer>
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+	<!-- This site is optimized with the Yoast SEO plugin v25.0 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Page not found - T-L Irrigation</title>
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:title" content="Page not found - T-L Irrigation" />
+	<meta property="og:site_name" content="T-L Irrigation" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.tlirr.com/#website","url":"https://www.tlirr.com/","name":"T-L Irrigation","description":"","publisher":{"@id":"https://www.tlirr.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.tlirr.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://www.tlirr.com/#organization","name":"T-L Irrigation","url":"https://www.tlirr.com/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.tlirr.com/#/schema/logo/image/","url":"https://www.tlirr.com/wp-content/uploads/t-l-irrigation-logo.jpg","contentUrl":"https://www.tlirr.com/wp-content/uploads/t-l-irrigation-logo.jpg","width":300,"height":300,"caption":"T-L Irrigation"},"image":{"@id":"https://www.tlirr.com/#/schema/logo/image/"}}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='stylesheet' id='formidable-css' href='https://www.tlirr.com/wp-content/plugins/formidable/css/formidableforms.css?ver=4281555' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css' href='https://www.tlirr.com/wp-content/plugins/pro-framework/css/font-awesome/5/css/all.min.css?ver=5.15.4' type='text/css' media='all' />
+<link rel='stylesheet' id='video-embeds-css' href='https://www.tlirr.com/wp-content/plugins/pro-framework/css/video-embeds.css?ver=1.3.8' type='text/css' media='all' />
+<link rel='stylesheet' id='normalize-css' href='https://www.tlirr.com/wp-content/themes/tlirr/css/normalize/normalize.min.css?ver=8.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='google-fonts-css' href='https://fonts.googleapis.com/css?family=Montserrat%3A300%2C300i%2C400%2C400i%2C500%2C500i%2C700%2C700i%7CRoboto+Condensed%3A300%2C300i%2C400%2C400i%2C700%2C700i&#038;display=swap&#038;subset=cyrillic&#038;ver=6.7.3' type='text/css' media='all' />
+<link rel='stylesheet' id='fancybox-css' href='https://www.tlirr.com/wp-content/themes/tlirr/js/fancybox/jquery.fancybox.min.css?ver=3.5.7' type='text/css' media='all' />
+<link rel='stylesheet' id='slick-css' href='https://www.tlirr.com/wp-content/themes/tlirr/js/slick/slick.min.css?ver=1.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='aos-css' href='https://www.tlirr.com/wp-content/themes/tlirr/js/aos/aos.css?ver=2.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='theme-css' href='https://www.tlirr.com/wp-content/themes/tlirr/style.css?ver=1.0.7' type='text/css' media='all' />
+<link rel='stylesheet' id='page-builder-overlay-css' href='https://www.tlirr.com/wp-content/plugins/pro-framework/css/page-builder-overlay.css?ver=1.3.8' type='text/css' media='all' />
+<style id='akismet-widget-style-inline-css' type='text/css'>
+
+			.a-stats {
+				--akismet-color-mid-green: #357b49;
+				--akismet-color-white: #fff;
+				--akismet-color-light-grey: #f6f7f7;
+
+				max-width: 350px;
+				width: auto;
+			}
+
+			.a-stats * {
+				all: unset;
+				box-sizing: border-box;
+			}
+
+			.a-stats strong {
+				font-weight: 600;
+			}
+
+			.a-stats a.a-stats__link,
+			.a-stats a.a-stats__link:visited,
+			.a-stats a.a-stats__link:active {
+				background: var(--akismet-color-mid-green);
+				border: none;
+				box-shadow: none;
+				border-radius: 8px;
+				color: var(--akismet-color-white);
+				cursor: pointer;
+				display: block;
+				font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen-Sans', 'Ubuntu', 'Cantarell', 'Helvetica Neue', sans-serif;
+				font-weight: 500;
+				padding: 12px;
+				text-align: center;
+				text-decoration: none;
+				transition: all 0.2s ease;
+			}
+
+			/* Extra specificity to deal with TwentyTwentyOne focus style */
+			.widget .a-stats a.a-stats__link:focus {
+				background: var(--akismet-color-mid-green);
+				color: var(--akismet-color-white);
+				text-decoration: none;
+			}
+
+			.a-stats a.a-stats__link:hover {
+				filter: brightness(110%);
+				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06), 0 0 2px rgba(0, 0, 0, 0.16);
+			}
+
+			.a-stats .count {
+				color: var(--akismet-color-white);
+				display: block;
+				font-size: 1.5em;
+				line-height: 1.4;
+				padding: 0 13px;
+				white-space: nowrap;
+			}
+		
+</style>
+<script type="text/javascript" src="https://www.tlirr.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://www.tlirr.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<link rel="https://api.w.org/" href="https://www.tlirr.com/wp-json/" /><meta name="generator" content="WPML ver:4.7.1 stt:1,45,2;" />
+<script>document.documentElement.className += " js";</script>
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<!-- GTM Container placement set to automatic -->
+<script data-cfasync="false" data-pagespeed-no-defer>
+	var dataLayer_content = {"pagePostType":"404-error"};
+	dataLayer.push( dataLayer_content );
+</script>
+<script data-cfasync="false" data-pagespeed-no-defer>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KHS989F');
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->			<script async src="https://www.googletagmanager.com/gtag/js?id=G-7KDBQLTGZS"></script>
+			<script>
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments);}
+				gtag('js', new Date());
+
+				gtag('config', 'G-7KDBQLTGZS');
+			</script>
+			<link rel="icon" href="https://www.tlirr.com/wp-content/uploads/cropped-site-icon-150x150.png" sizes="32x32" />
+<link rel="icon" href="https://www.tlirr.com/wp-content/uploads/cropped-site-icon-300x300.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.tlirr.com/wp-content/uploads/cropped-site-icon-300x300.png" />
+<meta name="msapplication-TileImage" content="https://www.tlirr.com/wp-content/uploads/cropped-site-icon-300x300.png" />
+	</head>
+	<body class="error404">
+		<div id="page">
+			<div id="mobile-menu">
+				<a href="#" class="close"></a>
+									<div class="primary-menu">
+						<ul>
+							<li id="menu-item-1079" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-1079"><a href="https://www.tlirr.com/">Home</a></li>
+<li id="menu-item-145" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-145"><a href="https://www.tlirr.com/the-t-l-difference/">The T-L Difference</a>
+<ul class="sub-menu">
+	<li id="menu-item-150" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150"><a href="https://www.tlirr.com/the-t-l-difference/continuous-movement/">Continuous Movement</a></li>
+	<li id="menu-item-152" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-152"><a href="https://www.tlirr.com/the-t-l-difference/no-spoking/">No Spoking</a></li>
+	<li id="menu-item-151" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-151"><a href="https://www.tlirr.com/the-t-l-difference/no-copper-theft/">No Copper Theft</a></li>
+	<li id="menu-item-147" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-147"><a href="https://www.tlirr.com/the-t-l-difference/high-reliability/">High Reliability</a></li>
+	<li id="menu-item-146" class="break menu-item menu-item-type-post_type menu-item-object-page menu-item-146"><a href="https://www.tlirr.com/the-t-l-difference/low-maintenance/">Low Maintenance</a></li>
+	<li id="menu-item-148" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-148"><a href="https://www.tlirr.com/the-t-l-difference/safety/">Safety</a></li>
+	<li id="menu-item-149" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-149"><a href="https://www.tlirr.com/the-t-l-difference/unmatched-warranty/">Unmatched Warranty</a></li>
+</ul>
+</li>
+<li id="menu-item-493" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-493"><a href="https://www.tlirr.com/products/">Products</a>
+<ul class="sub-menu">
+	<li id="menu-item-484" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-484"><a href="https://www.tlirr.com/products/center-pivots/">Center Pivots</a></li>
+	<li id="menu-item-483" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-483"><a href="https://www.tlirr.com/products/corner-pivots/">Corner Pivots</a></li>
+	<li id="menu-item-482" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-482"><a href="https://www.tlirr.com/products/linears/">Linear Irrigation Systems</a></li>
+	<li id="menu-item-480" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-480"><a href="https://www.tlirr.com/products/quick-tows/">Quick Tows</a></li>
+	<li id="menu-item-479" class="break menu-item menu-item-type-post_type menu-item-object-page menu-item-479"><a href="https://www.tlirr.com/products/pmdi/">PMDI™</a></li>
+	<li id="menu-item-478" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-478"><a href="https://www.tlirr.com/products/pivot-control-options/">Pivot Control Options</a></li>
+	<li id="menu-item-10875" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10875"><a href="https://www.tlirr.com/products/titan-hi-dration-lug/">Titan Hi-Dration Lug</a></li>
+</ul>
+</li>
+<li id="menu-item-511" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-511"><a href="https://www.tlirr.com/company/">Company</a>
+<ul class="sub-menu">
+	<li id="menu-item-249" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-249"><a href="https://www.tlirr.com/company/history/">History</a></li>
+	<li id="menu-item-12298" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12298"><a target="_blank" href="https://www.tlirr.com/flipbook/12296">T-L Through the Years</a></li>
+	<li id="menu-item-250" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-250"><a href="https://www.tlirr.com/company/careers/">Careers</a></li>
+	<li id="menu-item-251" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-251"><a href="https://www.tlirr.com/company/power-pump-division/">Power &#038; Pump Division</a></li>
+	<li id="menu-item-252" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-252"><a href="https://www.tlirr.com/company/galvanizing/">Galvanizing</a></li>
+</ul>
+</li>
+<li id="menu-item-510" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-510"><a href="https://www.tlirr.com/resources/">Resources</a>
+<ul class="sub-menu">
+	<li id="menu-item-246" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-246"><a href="https://www.tlirr.com/resources/testimonials/">Testimonials</a></li>
+	<li id="menu-item-244" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-244"><a href="https://www.tlirr.com/resources/literature/">Literature</a></li>
+	<li id="menu-item-243" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-243"><a href="https://www.tlirr.com/resources/news/">News</a></li>
+	<li id="menu-item-245" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-245"><a href="https://www.tlirr.com/resources/blog/">Pivotal Issues Blog</a></li>
+	<li id="menu-item-10906" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10906"><a href="https://www.tlirr.com/resources/enews-sign-up/">eNews Sign Up</a></li>
+	<li id="menu-item-247" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-247"><a href="https://www.tlirr.com/resources/media-library/">Media Library</a></li>
+	<li id="menu-item-10591" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10591"><a href="https://www.tlirr.com/resources/financing/">Financing</a></li>
+	<li id="menu-item-248" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-248"><a href="https://www.tlirr.com/resources/events/">Events</a></li>
+</ul>
+</li>
+<li id="menu-item-11905" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-11905"><a href="https://www.tlirr.com/contact/">Contact</a>
+<ul class="sub-menu">
+	<li id="menu-item-282" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-282"><a href="https://www.tlirr.com/contact/">Get In Touch</a></li>
+	<li id="menu-item-11904" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11904"><a target="_blank" href="https://build.tlirr.com/lead">Request a Quote</a></li>
+</ul>
+</li>
+						</ul>
+					</div><!-- .primary-menu -->
+									<div class="secondary-menu">
+					<ul>
+													<li class="phone"><a href="tel:1-800-330-4264">1-800-330-4264</a></li>
+														<li class="languages">
+								<a href="#">Select Language</a>
+								<ul>
+																			<li><a href="https://www.tlirr.com/">English</a></li>
+																				<li><a href="https://www.tlirr.com/ru/">Русский</a></li>
+																				<li><a href="https://www.tlirr.com/es/">Español</a></li>
+																		</ul>
+							</li>
+													<li class="search">
+							<form action="https://www.tlirr.com/" method="get">
+								<input type="text" name="s" placeholder="Search here...">
+								<button type="submit"><i class="fas fa-search"></i></button>
+							</form>
+						</li>
+					</ul>
+				</div><!-- .secondary-menu -->
+			</div><!-- #mobile-menu -->
+			<div id="header">
+				<div class="container">
+					<div class="flex">
+						<div class="logo">
+							<a href="https://www.tlirr.com"><img src="https://www.tlirr.com/wp-content/themes/tlirr/img/logo.svg"></a>
+						</div><!-- .logo -->
+						<div class="menus">
+							<div class="secondary-menu">
+								<ul>
+																			<li class="phone"><a href="tel:1-800-330-4264">1-800-330-4264</a></li>
+																				<li class="languages">
+											<a href="#">Select Language</a>
+											<ul>
+																									<li class="active"><a href="https://www.tlirr.com/">English</a></li>
+																										<li><a href="https://www.tlirr.com/ru/">Русский</a></li>
+																										<li><a href="https://www.tlirr.com/es/">Español</a></li>
+																								</ul>
+										</li>
+																			<li class="search">
+										<form action="https://www.tlirr.com/" method="get">
+											<input type="text" name="s" placeholder="Search here...">
+										</form>
+										<a href="#"><i class="fas fa-search"></i></a>
+									</li>
+								</ul>
+							</div><!-- .secondary-menu -->
+															<div class="primary-menu">
+									<ul>
+										<li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-home"><a href="https://www.tlirr.com/">Home</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children has-mega-menu"><a href="https://www.tlirr.com/the-t-l-difference/">The T-L Difference</a><div class="mega-menu"><div class="flex"><div class="parent"><span>The T-L Difference</span>Learn more about how T-L irrigation systems outperform the competition.</div><div><ul class="sub-menu"><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.tlirr.com/the-t-l-difference/continuous-movement/">Continuous Movement</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.tlirr.com/the-t-l-difference/no-spoking/">No Spoking</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.tlirr.com/the-t-l-difference/no-copper-theft/">No Copper Theft</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.tlirr.com/the-t-l-difference/high-reliability/">High Reliability</a></li></ul></div><div><ul class="sub-menu"><li class="break menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.tlirr.com/the-t-l-difference/low-maintenance/">Low Maintenance</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.tlirr.com/the-t-l-difference/safety/">Safety</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.tlirr.com/the-t-l-difference/unmatched-warranty/">Unmatched Warranty</a></li></ul></div></div></div></li><li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children has-mega-menu"><a href="https://www.tlirr.com/products/">Products</a><div class="mega-menu"><div class="flex"><div class="parent"><span>Products</span>Explore T-L’s wide range of irrigation systems and management options.</div><div><ul class="sub-menu"><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.tlirr.com/products/center-pivots/">Center Pivots</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.tlirr.com/products/corner-pivots/">Corner Pivots</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.tlirr.com/products/linears/">Linear Irrigation Systems</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.tlirr.com/products/quick-tows/">Quick Tows</a></li></ul></div><div><ul class="sub-menu"><li class="break menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.tlirr.com/products/pmdi/">PMDI™</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.tlirr.com/products/pivot-control-options/">Pivot Control Options</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.tlirr.com/products/titan-hi-dration-lug/">Titan Hi-Dration Lug</a></li></ul></div></div></div></li><li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="https://www.tlirr.com/company/">Company</a><ul class="sub-menu"><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.tlirr.com/company/history/">History</a></li><li class=" menu-item menu-item-type-custom menu-item-object-custom"><a href="https://www.tlirr.com/flipbook/12296" target="_blank">T-L Through the Years</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.tlirr.com/company/careers/">Careers</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.tlirr.com/company/power-pump-division/">Power &#038; Pump Division</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.tlirr.com/company/galvanizing/">Galvanizing</a></li></ul></li><li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="https://www.tlirr.com/resources/">Resources</a><ul class="sub-menu"><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.tlirr.com/resources/testimonials/">Testimonials</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.tlirr.com/resources/literature/">Literature</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.tlirr.com/resources/news/">News</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page current_page_parent"><a href="https://www.tlirr.com/resources/blog/">Pivotal Issues Blog</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.tlirr.com/resources/enews-sign-up/">eNews Sign Up</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.tlirr.com/resources/media-library/">Media Library</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.tlirr.com/resources/financing/">Financing</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.tlirr.com/resources/events/">Events</a></li></ul></li><li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="https://www.tlirr.com/contact/">Contact</a><ul class="sub-menu"><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.tlirr.com/contact/">Get In Touch</a></li><li class=" menu-item menu-item-type-custom menu-item-object-custom"><a href="https://build.tlirr.com/lead" target="_blank">Request a Quote</a></li></ul></li>									</ul>
+								</div><!-- .primary-menu -->
+								<a href="#" class="mobile-menu-toggle"><i class="far fa-bars"></i></a>
+														</div><!-- .menus -->
+					</div><!-- .flex -->
+				</div><!-- .container -->
+			</div><!-- #header -->	<div id="subheader">
+					<div class="image" style="background-image:url('https://www.tlirr.com/wp-content/uploads/default-header-1920x480.jpg');"></div>
+			<div class="gradient"></div>
+					<div class="overlay"></div>
+		<div class="content" data-aos="fade" data-aos-delay="300" data-aos-duration="600">
+							<h1>Page Not Found</h1>
+						</div><!-- .content -->
+	</div><!-- #subheader -->
+	<div id="breadcrumbs"><div class="inner"><span><span><a href="https://www.tlirr.com/">Home</a></span> <i class="far fa-angle-right"></i> <span class="breadcrumb_last" aria-current="page">Error 404: Page not found</span></span></div></div><div id="body">
+	<div class="container">
+		<div class="notice">
+			We're sorry the requested page could not be found.		</div><!-- .notice -->
+		<ul class="styled-list">
+			<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-1079"><a href="https://www.tlirr.com/">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-145"><a href="https://www.tlirr.com/the-t-l-difference/">The T-L Difference</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150"><a href="https://www.tlirr.com/the-t-l-difference/continuous-movement/">Continuous Movement</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-152"><a href="https://www.tlirr.com/the-t-l-difference/no-spoking/">No Spoking</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-151"><a href="https://www.tlirr.com/the-t-l-difference/no-copper-theft/">No Copper Theft</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-147"><a href="https://www.tlirr.com/the-t-l-difference/high-reliability/">High Reliability</a></li>
+	<li class="break menu-item menu-item-type-post_type menu-item-object-page menu-item-146"><a href="https://www.tlirr.com/the-t-l-difference/low-maintenance/">Low Maintenance</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-148"><a href="https://www.tlirr.com/the-t-l-difference/safety/">Safety</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-149"><a href="https://www.tlirr.com/the-t-l-difference/unmatched-warranty/">Unmatched Warranty</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-493"><a href="https://www.tlirr.com/products/">Products</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-484"><a href="https://www.tlirr.com/products/center-pivots/">Center Pivots</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-483"><a href="https://www.tlirr.com/products/corner-pivots/">Corner Pivots</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-482"><a href="https://www.tlirr.com/products/linears/">Linear Irrigation Systems</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-480"><a href="https://www.tlirr.com/products/quick-tows/">Quick Tows</a></li>
+	<li class="break menu-item menu-item-type-post_type menu-item-object-page menu-item-479"><a href="https://www.tlirr.com/products/pmdi/">PMDI™</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-478"><a href="https://www.tlirr.com/products/pivot-control-options/">Pivot Control Options</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10875"><a href="https://www.tlirr.com/products/titan-hi-dration-lug/">Titan Hi-Dration Lug</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-511"><a href="https://www.tlirr.com/company/">Company</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-249"><a href="https://www.tlirr.com/company/history/">History</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12298"><a target="_blank" href="https://www.tlirr.com/flipbook/12296">T-L Through the Years</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-250"><a href="https://www.tlirr.com/company/careers/">Careers</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-251"><a href="https://www.tlirr.com/company/power-pump-division/">Power &#038; Pump Division</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-252"><a href="https://www.tlirr.com/company/galvanizing/">Galvanizing</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-510"><a href="https://www.tlirr.com/resources/">Resources</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-246"><a href="https://www.tlirr.com/resources/testimonials/">Testimonials</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-244"><a href="https://www.tlirr.com/resources/literature/">Literature</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-243"><a href="https://www.tlirr.com/resources/news/">News</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-245"><a href="https://www.tlirr.com/resources/blog/">Pivotal Issues Blog</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10906"><a href="https://www.tlirr.com/resources/enews-sign-up/">eNews Sign Up</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-247"><a href="https://www.tlirr.com/resources/media-library/">Media Library</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10591"><a href="https://www.tlirr.com/resources/financing/">Financing</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-248"><a href="https://www.tlirr.com/resources/events/">Events</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-11905"><a href="https://www.tlirr.com/contact/">Contact</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-282"><a href="https://www.tlirr.com/contact/">Get In Touch</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11904"><a target="_blank" href="https://build.tlirr.com/lead">Request a Quote</a></li>
+</ul>
+</li>
+		</ul><!-- .styled-list -->
+	</div><!-- .container -->
+</div><!-- #body -->
+			<div id="footer">
+				<div class="top">
+					<div class="container">
+						<div class="flex">
+							<div class="logo">
+								<img src="https://www.tlirr.com/wp-content/themes/tlirr/img/logo.svg">
+								<div class="tagline" data-aos="fade" data-aos-delay="300" data-aos-duration="1500">
+									Like No Other.								</div><!-- .tagline -->
+							</div><!-- .logo -->
+							<div class="contact">
+																	<ul class="phone-numbers">
+																					<li>
+												<span>Toll Free</span>
+												<a href="tel:1-800-330-4264">1-800-330-4264</a>
+											</li>
+																						<li>
+												<span>Main Office</span>
+												<a href="tel:1-402-462-4128">1-402-462-4128</a>
+											</li>
+																				</ul><!-- .phone-numbers -->
+																		<ul class="request-quote">
+										<li><a href="https://build.tlirr.com/lead" target="_blank" class="button">Request a Quote</a></li>
+									</ul><!-- .request-quote -->
+																		<ul class="social-links">
+																					<li><a href="https://www.facebook.com/tlirrigation/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+																						<li><a href="https://www.instagram.com/tlirrigation/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+																						<li><a href="http://www.youtube.com/user/TLPivotIrrigation/" target="_blank"><i class="fab fa-youtube"></i></a></li>
+																				</ul><!-- .social-links -->
+																</div><!-- .contact -->
+						</div><!-- .flex -->
+					</div><!-- .container -->
+				</div><!-- .top -->
+									<div class="menu">
+						<div class="container">
+							<ul>
+								<li id="menu-item-153" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-153"><a href="https://www.tlirr.com/the-t-l-difference/">The T-L Difference</a>
+<ul class="sub-menu">
+	<li id="menu-item-158" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-158"><a href="https://www.tlirr.com/the-t-l-difference/continuous-movement/">Continuous Movement</a></li>
+	<li id="menu-item-160" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-160"><a href="https://www.tlirr.com/the-t-l-difference/no-spoking/">No Spoking</a></li>
+	<li id="menu-item-159" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-159"><a href="https://www.tlirr.com/the-t-l-difference/no-copper-theft/">No Copper Theft</a></li>
+	<li id="menu-item-155" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-155"><a href="https://www.tlirr.com/the-t-l-difference/high-reliability/">High Reliability</a></li>
+	<li id="menu-item-154" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-154"><a href="https://www.tlirr.com/the-t-l-difference/low-maintenance/">Low Maintenance</a></li>
+	<li id="menu-item-156" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-156"><a href="https://www.tlirr.com/the-t-l-difference/safety/">Safety</a></li>
+	<li id="menu-item-157" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-157"><a href="https://www.tlirr.com/the-t-l-difference/unmatched-warranty/">Unmatched Warranty</a></li>
+</ul>
+</li>
+<li id="menu-item-485" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-485"><a href="https://www.tlirr.com/products/">Products</a>
+<ul class="sub-menu">
+	<li id="menu-item-492" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-492"><a href="https://www.tlirr.com/products/center-pivots/">Center Pivots</a></li>
+	<li id="menu-item-491" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-491"><a href="https://www.tlirr.com/products/corner-pivots/">Corner Pivots</a></li>
+	<li id="menu-item-490" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-490"><a href="https://www.tlirr.com/products/linears/">Linear Irrigation Systems</a></li>
+	<li id="menu-item-488" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-488"><a href="https://www.tlirr.com/products/quick-tows/">Quick Tows</a></li>
+	<li id="menu-item-487" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-487"><a href="https://www.tlirr.com/products/pmdi/">PMDI™</a></li>
+	<li id="menu-item-486" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-486"><a href="https://www.tlirr.com/products/pivot-control-options/">Pivot Control Options</a></li>
+	<li id="menu-item-10876" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10876"><a href="https://www.tlirr.com/products/titan-hi-dration-lug/">Titan Hi-Dration Lug</a></li>
+</ul>
+</li>
+<li id="menu-item-512" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-512"><a href="https://www.tlirr.com/company/">Company</a>
+<ul class="sub-menu">
+	<li id="menu-item-259" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-259"><a href="https://www.tlirr.com/company/history/">History</a></li>
+	<li id="menu-item-260" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-260"><a href="https://www.tlirr.com/company/careers/">Careers</a></li>
+	<li id="menu-item-261" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-261"><a href="https://www.tlirr.com/company/power-pump-division/">Power &#038; Pump Division</a></li>
+	<li id="menu-item-262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-262"><a href="https://www.tlirr.com/company/galvanizing/">Galvanizing</a></li>
+</ul>
+</li>
+<li id="menu-item-513" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-513"><a href="https://www.tlirr.com/resources/">Resources</a>
+<ul class="sub-menu">
+	<li id="menu-item-256" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-256"><a href="https://www.tlirr.com/resources/testimonials/">Testimonials</a></li>
+	<li id="menu-item-257" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-257"><a href="https://www.tlirr.com/resources/literature/">Literature</a></li>
+	<li id="menu-item-255" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-255"><a href="https://www.tlirr.com/resources/news/">News</a></li>
+	<li id="menu-item-253" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-253"><a href="https://www.tlirr.com/resources/blog/">Pivotal Issues Blog</a></li>
+	<li id="menu-item-10907" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10907"><a href="https://www.tlirr.com/resources/enews-sign-up/">eNews Sign Up</a></li>
+	<li id="menu-item-258" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-258"><a href="https://www.tlirr.com/resources/media-library/">Media Library</a></li>
+	<li id="menu-item-10803" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10803"><a href="https://www.tlirr.com/resources/financing/">Financing</a></li>
+	<li id="menu-item-254" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-254"><a href="https://www.tlirr.com/resources/events/">Events</a></li>
+</ul>
+</li>
+							</ul>
+						</div><!-- .container -->
+					</div><!-- .menu -->
+									<div class="bottom">
+					<div class="container">
+						<div class="flex">
+							<div>
+								<ul>
+									<li class="since-1955-logo"><img src="https://www.tlirr.com/wp-content/themes/tlirr/img/since-1955-logo.svg" title="Since 1955"></li>
+									<li>&copy; 2025 T-L Irrigation</li>
+																			<li><a href="https://www.tlirr.com/sitemap/">Sitemap</a></li>
+																		</ul>
+							</div>
+							<div>
+								<ul>
+																			<li>151 E Hwy 6 & AB Rd<span class="separator">&bull;</span>PO Box 1047<span class="separator">&bull;</span>Hastings, NE 68902-1047</li>
+																			<li>		<a href="https://www.providentpro.com/" target="_blank" title="Provident Promotions"><img src="https://www.tlirr.com/wp-content/plugins/pro-framework/img/provident-pro-badge/white.svg" alt="Provident Promotions" id="provident-pro-badge"></a>
+		</li>
+								</ul>
+							</div>
+						</div><!-- .flex -->
+					</div><!-- .container -->
+				</div><!-- .bottom -->
+			</div><!-- #footer -->
+			<div id="overlay"></div>
+		</div><!-- #page -->
+		<script type="text/javascript" src="https://www.tlirr.com/wp-content/themes/tlirr/js/fancybox/jquery.fancybox.min.js?ver=3.5.7" id="fancybox-js"></script>
+<script type="text/javascript" src="https://www.tlirr.com/wp-content/themes/tlirr/js/slick/slick.min.js?ver=1.8.1" id="slick-js"></script>
+<script type="text/javascript" src="https://www.tlirr.com/wp-content/themes/tlirr/js/aos/aos.js?ver=2.3.4" id="aos-js"></script>
+<script type="text/javascript" src="https://www.tlirr.com/wp-content/themes/tlirr/js/theme.js?ver=1.0.7" id="theme-js"></script>
+		<script src="https://js.adsrvr.org/up_loader.1.1.0.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			ttd_dom_ready( function() {
+				if (typeof TTDUniversalPixelApi === 'function') {
+					var universalPixelApi = new TTDUniversalPixelApi();
+					universalPixelApi.init("bu3f7gg", ["9v41srl"], "https://insight.adsrvr.org/track/up");
+				}
+			});
+		</script>
+	</body>
+</html>
