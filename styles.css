@@ -272,10 +272,11 @@ body {
 }
 
 #modal-content {
-    max-height: 90vh;
+    max-height: 95vh;
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: #00BFFF #1a1a1a;
+    position: relative;
 }
 
 #modal-content::-webkit-scrollbar {
