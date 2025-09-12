@@ -111,8 +111,95 @@ document.addEventListener('DOMContentLoaded', function() {
                 description: `<p class="text-gray-300 mb-4">As part of Milwaukee Tool's Advanced Design R&D team, designed and prototyped a digital vacuum gauge with high precision measurement capabilities. Translated high-level concepts into detailed engineering specifications and created a proof-of-concept electronic system.</p><h3 class="text-xl font-semibold text-primary-color mt-6 mb-3">Key Specifications:</h3><ul class="list-disc list-inside text-gray-400 space-y-2"><li>Range: 0 – 25,000 Microns with 5% accuracy.</li><li>Resolution: As fine as 0.1 Micron.</li><li>Maximum Overpressure: 500 PSI.</li></ul>`
             },
             'electrofusion': {
-                title: 'Electrofusion Device',
-                description: `<p class="text-gray-300 mb-4">Designed and prototyped an innovative Electrofusion device for joining MDPE and HDPE plastic pipes. This project involved creating a portable, battery-powered tool with a modified sine wave H-bridge design for Milwaukee Tool's Advanced Design R&D team.</p><h3 class="text-xl font-semibold text-primary-color mt-6 mb-3">Technical Highlights:</h3><ul class="list-disc list-inside text-gray-400 space-y-2"><li>Power Source: 72VDC portable battery.</li><li>Output: 40V, 60 Hz.</li><li>Designed inverter and comprehensive safety circuits.</li></ul>`
+                title: 'MX FUEL™ Electrofusion Processor - Genesis Project',
+                description: `
+                    <div class="space-y-6">
+                        <div class="bg-gradient-to-r from-primary-color/10 to-transparent p-4 rounded-lg border-l-4 border-primary-color">
+                            <p class="text-gray-300 mb-2"><strong class="text-primary-color">Project Genesis:</strong> Revolutionary Proof of Concept (2021-2022)</p>
+                            <p class="text-gray-400 text-sm">Led the foundational development of Milwaukee's first cordless electrofusion solution, establishing the technical architecture that became the commercial MX FUEL™ Electrofusion Processor (MXF545-XC).</p>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                            <div class="glass-card p-4 rounded-lg">
+                                <h4 class="text-primary-color font-semibold mb-2">⚡ Power Architecture</h4>
+                                <ul class="text-gray-400 text-sm space-y-1">
+                                    <li>• Input: 72V DC MX FUEL™ REDLITHIUM</li>
+                                    <li>• Output: 40V AC, 60Hz Modified Sine Wave</li>
+                                    <li>• Load Range: 0.5Ω - 12Ω Resistive Couplers</li>
+                                    <li>• Topology: Custom H-Bridge Inverter</li>
+                                </ul>
+                            </div>
+                            <div class="glass-card p-4 rounded-lg">
+                                <h4 class="text-primary-color font-semibold mb-2">🔬 Advanced Engineering</h4>
+                                <ul class="text-gray-400 text-sm space-y-1">
+                                    <li>• MOSFET Gate Ringing Mitigation</li>
+                                    <li>• Parasitic Inductance Optimization</li>
+                                    <li>• Thermal Management Integration</li>
+                                    <li>• Real-time Data Acquisition System</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h3 class="text-xl font-semibold text-primary-color mt-6 mb-3">🚀 Revolutionary System Architecture</h3>
+                        <p class="text-gray-300 mb-4">Engineered a modular, high-power electronics platform that fundamentally redefined portable electrofusion technology. The system architecture consisted of three critical stages: energy source (72V MX FUEL™ battery), power conversion (custom H-bridge inverter), and intelligent load management for HDPE pipe fusion applications.</p>
+
+                        <div class="bg-gray-900/50 p-4 rounded-lg mb-4">
+                            <h4 class="text-primary-color font-semibold mb-2">⚙️ Core Technical Specifications</h4>
+                            <div class="grid grid-cols-2 gap-4 text-sm">
+                                <div>
+                                    <span class="text-gray-400">Input Voltage:</span> <span class="text-white">72V DC</span><br>
+                                    <span class="text-gray-400">Output Voltage:</span> <span class="text-white">40V AC</span><br>
+                                    <span class="text-gray-400">Frequency:</span> <span class="text-white">60 Hz</span>
+                                </div>
+                                <div>
+                                    <span class="text-gray-400">Load Range:</span> <span class="text-white">0.5Ω - 12Ω</span><br>
+                                    <span class="text-gray-400">Waveform:</span> <span class="text-white">Modified Sine Wave</span><br>
+                                    <span class="text-gray-400">Control:</span> <span class="text-white">ST Microcontroller</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="text-xl font-semibold text-primary-color mt-6 mb-3">🔧 Advanced Component-Level Engineering</h3>
+                        <div class="space-y-4">
+                            <div class="border-l-2 border-primary-color pl-4">
+                                <h4 class="text-white font-semibold">MOSFET Selection & Gate Ringing Mitigation</h4>
+                                <p class="text-gray-400 text-sm mt-1">Solved critical power electronics challenges including parasitic oscillations through strategic component selection and PCB layout optimization. Implemented individual gate resistors (4.7Ω) and strip-line routing to achieve optimal Q-factor dampening while maintaining switching efficiency.</p>
+                            </div>
+                            <div class="border-l-2 border-primary-color pl-4">
+                                <h4 class="text-white font-semibold">Safety Circuit Architecture</h4>
+                                <p class="text-gray-400 text-sm mt-1">Designed comprehensive protection systems including over-current detection via shunt resistors, thermal monitoring with op-amp comparators, and Battery Management System (BMS) integration for over-voltage/under-voltage protection.</p>
+                            </div>
+                            <div class="border-l-2 border-primary-color pl-4">
+                                <h4 class="text-white font-semibold">Data Acquisition & Analytics</h4>
+                                <p class="text-gray-400 text-sm mt-1">Pioneered the foundational data logging system that evolved into the commercial ONE-KEY™ platform, capturing fusion time, voltage, current, and thermal parameters for quality assurance and predictive maintenance.</p>
+                            </div>
+                        </div>
+
+                        <h3 class="text-xl font-semibold text-primary-color mt-6 mb-3">📊 Validation & Performance Metrics</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                            <div class="text-center glass-card p-3 rounded-lg">
+                                <div class="text-2xl font-bold text-primary-color">95%+</div>
+                                <div class="text-gray-400 text-sm">First-Pass Yield</div>
+                            </div>
+                            <div class="text-center glass-card p-3 rounded-lg">
+                                <div class="text-2xl font-bold text-primary-color">40%</div>
+                                <div class="text-gray-400 text-sm">Weight Reduction</div>
+                            </div>
+                            <div class="text-center glass-card p-3 rounded-lg">
+                                <div class="text-2xl font-bold text-primary-color">8"</div>
+                                <div class="text-gray-400 text-sm">Max Coupling Size</div>
+                            </div>
+                        </div>
+
+                        <h3 class="text-xl font-semibold text-primary-color mt-6 mb-3">🏆 Commercial Impact & Legacy</h3>
+                        <p class="text-gray-300 mb-4">The POC's success directly enabled the development of the Milwaukee MX FUEL™ Electrofusion Processor (MXF545-XC), a market-leading product that eliminated the need for gasoline generators and AC power cords in electrofusion applications. The foundational architecture, safety systems, and data logging capabilities developed during this project became core features of the commercial product.</p>
+
+                        <div class="bg-gradient-to-r from-green-500/10 to-transparent p-4 rounded-lg border-l-4 border-green-500 mt-4">
+                            <p class="text-green-400 font-semibold mb-1">Project Outcome</p>
+                            <p class="text-gray-300 text-sm">Successfully transitioned from proof-of-concept to commercial product, establishing Milwaukee Tool as the industry leader in cordless electrofusion technology and validating the MX FUEL™ platform's capability for high-power, sustained-load applications.</p>
+                        </div>
+                    </div>
+                `
             },
             'gps-tester': {
                 title: 'GPS & Telemetry Systems',
