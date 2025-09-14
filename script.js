@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 description: `
                     <div class="space-y-6">
                         <div class="flex items-center mb-6">
-                            <img src="images/milwaukee-logo.svg" alt="Milwaukee Tool Logo" class="w-12 h-12 mr-4 bg-white rounded-full p-2">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Milwaukee_Logo.svg" alt="Milwaukee Tool Logo" class="w-12 h-12 mr-4 bg-white rounded-full p-2">
                             <div>
                                 <h2 class="text-2xl font-bold text-primary-color mb-1">Proof of Concept for a High-Power, Cordless Electrofusion Device</h2>
                                 <p class="text-gray-400 text-sm">Milwaukee Tool - Advanced Design R&D Team (2021-2022)</p>
@@ -376,7 +376,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         
                         <div class="bg-gray-900 p-6 rounded-lg border border-gray-700 my-6">
                             <div class="flex items-center mb-4">
-                                <img src="images/milwaukee-logo.svg" alt="Milwaukee Tool Logo" class="w-8 h-8 mr-3 bg-white rounded p-1">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Milwaukee_Logo.svg" alt="Milwaukee Tool Logo" class="w-8 h-8 mr-3 bg-white rounded p-1">
                                 <h4 class="text-lg font-semibold text-primary-color">MX FUEL™ Electrofusion Processor (MXF545-XC)</h4>
                             </div>
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
