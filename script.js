@@ -124,6 +124,11 @@ document.addEventListener('DOMContentLoaded', function() {
                         
                         <h2 class="text-2xl font-bold text-primary-color mb-4">I. Summary: The Genesis of the Electrofusion Processor</h2>
                         
+                        <div class="bg-gray-900 p-4 rounded-lg border border-gray-700 my-4 text-center">
+                            <img src="images/electrofusion_image_2.png" alt="Proof of Concept electrofusion device" class="w-full max-w-md mx-auto rounded-lg border border-gray-600">
+                            <p class="text-primary-color font-semibold text-sm mt-2">Proof of Concept</p>
+                        </div>
+                        
                         <p class="text-gray-300 mb-4">This report documents the design, development, and validation of a Proof of Concept (POC) for a battery-powered electrofusion device, a project undertaken during the period of 2021 to 2022. The objective of the POC was to demonstrate the feasibility of a high-power, portable electrofusion solution that could replace the cumbersome and restrictive reliance on gasoline generators or AC power cords. The project culminated in a successful validation of the core electrical and systems architecture, which subsequently served as the foundation for the commercial product known as the Milwaukee MX FUEL™ Electrofusion Processor (MXF545-XC).</p>
 
                         <p class="text-gray-300 mb-6">The contributions detailed herein were pivotal to the project's success. The scope of work encompassed a full-cycle electrical engineering effort, from initial product research and specification refinement to the physical build and rigorous testing of the prototype. Key technical achievements included the design of a robust H-bridge inverter, the development of critical safety circuits, and the successful characterization and mitigation of complex power electronics issues, such as gate ringing. Furthermore, the POC included the development of an early data logging system, a foundational capability that would later evolve into a key feature of the final product via the ONE-KEY™ digital platform.</p>
@@ -214,13 +219,9 @@ document.addEventListener('DOMContentLoaded', function() {
                         
                         <div class="bg-gray-900 p-6 rounded-lg border border-gray-700 my-6">
                             <h4 class="text-lg font-semibold text-primary-color mb-4 text-center">Electrofusion process</h4>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="flex justify-center">
                                 <div>
-                                    <img src="images/electrofusion_image_1.png" alt="Electrofusion process step 1" class="w-full rounded-lg border border-gray-600">
-                                    <p class="text-gray-400 text-sm text-center mt-2">Electrofusion process</p>
-                                </div>
-                                <div>
-                                    <img src="images/electrofusion_image_2.png" alt="Electrofusion process step 2" class="w-full rounded-lg border border-gray-600">
+                                    <img src="images/electrofusion_image_1.png" alt="Electrofusion process" class="w-full rounded-lg border border-gray-600">
                                     <p class="text-gray-400 text-sm text-center mt-2">Electrofusion process</p>
                                 </div>
                             </div>
