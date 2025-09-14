@@ -114,6 +114,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 title: 'Proof of Concept for a High-Power, Cordless Electrofusion Device',
                 description: `
                     <div class="space-y-6">
+                        <div class="flex items-center mb-6">
+                            <img src="images/milwaukee-logo.svg" alt="Milwaukee Tool Logo" class="w-12 h-12 mr-4 bg-white rounded-full p-2">
+                            <div>
+                                <h2 class="text-2xl font-bold text-primary-color mb-1">Proof of Concept for a High-Power, Cordless Electrofusion Device</h2>
+                                <p class="text-gray-400 text-sm">Milwaukee Tool - Advanced Design R&D Team (2021-2022)</p>
+                            </div>
+                        </div>
+                        
                         <h2 class="text-2xl font-bold text-primary-color mb-4">I. Summary: The Genesis of the Electrofusion Processor</h2>
                         
                         <p class="text-gray-300 mb-4">This report documents the design, development, and validation of a Proof of Concept (POC) for a battery-powered electrofusion device, a project undertaken during the period of 2021 to 2022. The objective of the POC was to demonstrate the feasibility of a high-power, portable electrofusion solution that could replace the cumbersome and restrictive reliance on gasoline generators or AC power cords. The project culminated in a successful validation of the core electrical and systems architecture, which subsequently served as the foundation for the commercial product known as the Milwaukee MX FUEL™ Electrofusion Processor (MXF545-XC).</p>
@@ -203,10 +211,53 @@ document.addEventListener('DOMContentLoaded', function() {
                         <h3 class="text-xl font-semibold text-white mb-3">C. Visualizing the System Architecture</h3>
                         
                         <p class="text-gray-300 mb-4">The high-level system design was conceptualized and prototyped as a block diagram. This visual representation of the electrical system demonstrates the key components and their interconnections. The diagram illustrates the power source as the "MKE battery" (Milwaukee battery), which supplies power to the "PCBA with H-Bridge design". This circuit board then converts the battery's power to the appropriate output for the "EF coupler with heating element".</p>
+                        
+                        <div class="bg-gray-900 p-6 rounded-lg border border-gray-700 my-6">
+                            <h4 class="text-lg font-semibold text-primary-color mb-4 text-center">Electrofusion process</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <img src="images/electrofusion_image_1.png" alt="Electrofusion process step 1" class="w-full rounded-lg border border-gray-600">
+                                    <p class="text-gray-400 text-sm text-center mt-2">Electrofusion process</p>
+                                </div>
+                                <div>
+                                    <img src="images/electrofusion_image_2.png" alt="Electrofusion process step 2" class="w-full rounded-lg border border-gray-600">
+                                    <p class="text-gray-400 text-sm text-center mt-2">Electrofusion process</p>
+                                </div>
+                            </div>
+                        </div>
 
                         <h3 class="text-xl font-semibold text-white mb-3">D. The H-Bridge Inverter and Modified Sine Wave Generation</h3>
                         
                         <p class="text-gray-300 mb-4">The H-bridge inverter was the core power conversion circuit designed and built for the POC. It utilizes four power MOSFETs in a specific configuration to convert the static 72V DC input from the battery into an alternating current output. The process involves sequentially switching the diagonal pairs of MOSFETs, which reverses the polarity across the load and generates the desired AC waveform.</p>
+                        
+                        <div class="bg-gray-900 p-6 rounded-lg border border-gray-700 my-6">
+                            <h4 class="text-lg font-semibold text-primary-color mb-4 text-center">Prototype of electrofusion device PoC</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <img src="images/electrofusion_image_3.png" alt="Complete prototype setup showing MKE battery, PCBA with H-Bridge design, and EF coupler" class="w-full rounded-lg border border-gray-600">
+                                    <p class="text-gray-400 text-sm text-center mt-2">Heating element</p>
+                                </div>
+                                <div>
+                                    <img src="images/electrofusion_image_4.png" alt="Detailed view of H-Bridge PCBA and connections" class="w-full rounded-lg border border-gray-600">
+                                    <p class="text-gray-400 text-sm text-center mt-2">H-Bridge PCBA and electrical connections</p>
+                                </div>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                                <div class="bg-gray-800 p-4 rounded">
+                                    <h5 class="text-primary-color font-semibold mb-2">MKE Battery</h5>
+                                    <p class="text-gray-400 text-sm">72V MX FUEL™ power source</p>
+                                </div>
+                                <div class="bg-gray-800 p-4 rounded">
+                                    <h5 class="text-primary-color font-semibold mb-2">H-Bridge PCBA</h5>
+                                    <p class="text-gray-400 text-sm">Custom inverter circuit</p>
+                                </div>
+                                <div class="bg-gray-800 p-4 rounded">
+                                    <h5 class="text-primary-color font-semibold mb-2">EF Coupler</h5>
+                                    <p class="text-gray-400 text-sm">Heating element load</p>
+                                </div>
+                            </div>
+                        </div>
 
                         <p class="text-gray-300 mb-6">For this application, a modified sine wave was intentionally chosen over a pure sine wave. While Milwaukee's MX FUEL™ CARRY-ON Power Supply uses a pure sine inverter to power sensitive electronics, the electrofusion coupler is a simple resistive heating element. It has no sensitive components that could be damaged by the harmonics present in a modified sine wave. Generating a pure sine wave would have required a more complex control scheme, such as Pulse Width Modulation (PWM), and additional bulky filter components. This would have added unnecessary cost, complexity, and size to the prototype. The choice to use a modified sine wave demonstrates a pragmatic engineering approach, where the solution's complexity is precisely matched to the load's requirements, resulting in a more robust, cost-effective, and simpler design.</p>
 
@@ -322,6 +373,30 @@ document.addEventListener('DOMContentLoaded', function() {
                         <p class="text-gray-300 mb-6">This early data logging work was not a trivial side task. It was the foundational proof of concept that a data logging feature for fusion events was both technically feasible and commercially valuable. The commercial product, the Milwaukee MX FUEL™ Electrofusion Processor (MXF545-XC), features a sophisticated ONE-KEY™ data logging system that allows for customizable reports and data download via USB or wireless connectivity. My initial work on the POC demonstrated that this functionality was viable and directly influenced its inclusion as a core feature and a key selling point of the final product, enabling contractors to provide detailed quality assurance reports to their clients.</p>
 
                         <h3 class="text-xl font-semibold text-white mb-3">C. The Final Product: A Triumphant Success</h3>
+                        
+                        <div class="bg-gray-900 p-6 rounded-lg border border-gray-700 my-6">
+                            <div class="flex items-center mb-4">
+                                <img src="images/milwaukee-logo.svg" alt="Milwaukee Tool Logo" class="w-8 h-8 mr-3 bg-white rounded p-1">
+                                <h4 class="text-lg font-semibold text-primary-color">MX FUEL™ Electrofusion Processor (MXF545-XC)</h4>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                                <div class="bg-gray-800 p-4 rounded">
+                                    <div class="text-3xl text-green-500 mb-2">✓</div>
+                                    <p class="text-white font-semibold">Cordless Operation</p>
+                                    <p class="text-gray-400 text-sm">No generators needed</p>
+                                </div>
+                                <div class="bg-gray-800 p-4 rounded">
+                                    <div class="text-3xl text-blue-500 mb-2">📊</div>
+                                    <p class="text-white font-semibold">ONE-KEY™ Data</p>
+                                    <p class="text-gray-400 text-sm">Digital logging system</p>
+                                </div>
+                                <div class="bg-gray-800 p-4 rounded">
+                                    <div class="text-3xl text-orange-500 mb-2">🔥</div>
+                                    <p class="text-white font-semibold">8" Capability</p>
+                                    <p class="text-gray-400 text-sm">High-power fusing</p>
+                                </div>
+                            </div>
+                        </div>
                         
                         <p class="text-gray-300 mb-4">The final product, the Milwaukee MX FUEL™ Electrofusion Processor, is a testament to the success of the POC. It embodies the core architectural and design choices that were validated during the project. The table below illustrates the direct lineage of the POC's features to the commercial product's capabilities.</p>
 
