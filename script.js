@@ -460,6 +460,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
                         <p class="text-gray-300 mb-6">This system features a two-tiered protection strategy: a Positive Temperature Coefficient (PTC) resettable fuse for dedicated overcurrent defense and a P-Channel MOSFET-based latching circuit that provides both short-circuit protection and an automatic software-controlled shutdown. The device's firmware employs a custom NMEA parser to efficiently extract and display key GPS data points, while a single-button navigation system, powered by a Finite State Machine (FSM), offers an intuitive user experience.</p>
 
+                        <div class="bg-gray-900 p-6 rounded-lg border border-gray-700 my-6">
+                            <h4 class="text-lg font-semibold text-primary-color mb-4 text-center">GPS Smart Sensor Tester - Device Overview</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <img src="images/GPS_Smart_sensor_1.png" alt="GPS Smart Sensor Tester - Front View" class="w-full rounded-lg border border-gray-600">
+                                    <p class="text-gray-400 text-sm text-center mt-2">GPS Smart Sensor Tester - Front View</p>
+                                </div>
+                                <div>
+                                    <img src="images/GPS_Smart_sensor_2.png" alt="GPS Smart Sensor Tester - Display Interface" class="w-full rounded-lg border border-gray-600">
+                                    <p class="text-gray-400 text-sm text-center mt-2">Device Display Interface</p>
+                                </div>
+                            </div>
+                        </div>
+
                         <h2 class="text-2xl font-bold text-primary-color mb-4 mt-8">1. Introduction</h2>
                         
                         <h3 class="text-xl font-semibold text-white mb-3">Project Context and Problem Statement</h3>
@@ -497,6 +511,20 @@ document.addEventListener('DOMContentLoaded', function() {
                         <h3 class="text-xl font-semibold text-white mb-3">User Interface and Display</h3>
                         
                         <p class="text-gray-300 mb-6">For the user interface, a standard 16x2 character LCD was chosen for its low power consumption, clarity, and ease of integration. A strategic decision was made to select a 16x2 LCD with an I²C interface. This design choice reduces the number of required I/O pins from six to just two (SDA and SCL), freeing up critical microcontroller pins for potential future enhancements and simplifying wiring, which reduces the overall footprint and potential points of failure.</p>
+
+                        <div class="bg-gray-900 p-6 rounded-lg border border-gray-700 my-6">
+                            <h4 class="text-lg font-semibold text-primary-color mb-4 text-center">Hardware Architecture and Components</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <img src="images/GPS_Smart_sensor_3.png" alt="GPS Smart Sensor Tester - Internal Hardware Components" class="w-full rounded-lg border border-gray-600">
+                                    <p class="text-gray-400 text-sm text-center mt-2">Internal Hardware Components and PCB Layout</p>
+                                </div>
+                                <div>
+                                    <img src="images/GPS_Smart_sensor_4.png" alt="GPS Smart Sensor Tester - Complete Assembly" class="w-full rounded-lg border border-gray-600">
+                                    <p class="text-gray-400 text-sm text-center mt-2">Complete Device Assembly and Testing Setup</p>
+                                </div>
+                            </div>
+                        </div>
 
                         <h2 class="text-2xl font-bold text-primary-color mb-4 mt-8">3. Hardware Design and Implementation</h2>
                         
