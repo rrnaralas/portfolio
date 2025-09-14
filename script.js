@@ -639,7 +639,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                         <div class="bg-gray-900 p-6 rounded-lg border border-gray-700 my-6 text-center">
                             <h4 class="text-lg font-semibold text-primary-color mb-2">Project Impact</h4>
-                            <p class="text-gray-400">This GPS Smart Sensor Tester contributed to features that increased T-L Irrigation Co. sales by over $2M annually through improved field diagnostic capabilities and reduced equipment downtime.</p>
+                            <p class="text-gray-400">This GPS Smart Sensor Tester contributed to features that increased Company sales by over 100K annually.</p>
                         </div>
                     </div>
                 `
