@@ -443,8 +443,206 @@ document.addEventListener('DOMContentLoaded', function() {
                 `
             },
             'gps-tester': {
-                title: 'GPS & Telemetry Systems',
-                description: `<p class="text-gray-300 mb-4">Led hardware development for industrial control systems at T-L Irrigation Co. My work focused on GPS RTK-based navigation and telemetry platforms for autonomous agricultural equipment, resulting in features that increased company sales by over $2M annually.</p><h3 class="text-xl font-semibold text-primary-color mt-6 mb-3">Achievements:</h3><ul class="list-disc list-inside text-gray-400 space-y-2"><li>Integrated GPS RTK modules to achieve sub-inch navigation accuracy.</li><li>Developed embedded firmware (C) reducing field failures by 25%.</li><li>Designed a hand-held GPS Smart Tester for field waypoint recording.</li></ul>`
+                title: 'GPS Smart Sensor Tester - Project Report',
+                description: `
+                    <div class="space-y-6">
+                        <div class="flex items-center mb-6">
+                            <img src="images/tl-logo.png" alt="T-L Irrigation Co. Logo" class="w-12 h-12 mr-4 bg-white rounded-full p-2">
+                            <div>
+                                <h2 class="text-2xl font-bold text-primary-color mb-1">GPS Smart Sensor Tester - Project Report</h2>
+                                <p class="text-gray-400 text-sm">T-L Irrigation Co. - Hardware Design Engineer (2018-2021)</p>
+                            </div>
+                        </div>
+
+                        <h2 class="text-2xl font-bold text-primary-color mb-4">Executive Summary</h2>
+                        
+                        <p class="text-gray-300 mb-4">The GPS Smart Sensor Tester is a handheld diagnostic prototype meticulously engineered for service technicians in the agriculture and land surveying industries. This device addresses the critical need for a portable, reliable tool to validate the operational status and data integrity of field-based GPS sensors. The design integrates a robust hardware platform, including a high-performance ATmega328P microcontroller, a 16x2 character display for clear user feedback, and a highly innovative power management system.</p>
+
+                        <p class="text-gray-300 mb-6">This system features a two-tiered protection strategy: a Positive Temperature Coefficient (PTC) resettable fuse for dedicated overcurrent defense and a P-Channel MOSFET-based latching circuit that provides both short-circuit protection and an automatic software-controlled shutdown. The device's firmware employs a custom NMEA parser to efficiently extract and display key GPS data points, while a single-button navigation system, powered by a Finite State Machine (FSM), offers an intuitive user experience.</p>
+
+                        <h2 class="text-2xl font-bold text-primary-color mb-4 mt-8">1. Introduction</h2>
+                        
+                        <h3 class="text-xl font-semibold text-white mb-3">Project Context and Problem Statement</h3>
+                        
+                        <p class="text-gray-300 mb-4">Service technicians working in the agriculture and land surveying sectors frequently encounter failures in GPS-guided machinery and equipment. Diagnosing these malfunctions in the field presents a significant challenge, often requiring bulky and complex diagnostic tools such as laptops and specialized software suites. The portability and user-friendliness of a dedicated diagnostic device are crucial for minimizing downtime and improving operational efficiency.</p>
+
+                        <p class="text-gray-300 mb-4">The application of GPS technology in agriculture has revolutionized precision farming. Systems such as Reinke's Navigator GPS utilize real-time GPS tracking to guide irrigation equipment, eliminating the need for older, maintenance-intensive guidance methods like buried wires or physical furrows. By mounting the GPS receiver on the last regular drive unit of a pivot or linear system, these machines achieve superior positioning accuracy compared to legacy mechanical or electromechanical switches that estimate position from the pivot point.</p>
+
+                        <p class="text-gray-300 mb-6">In land surveying, GPS equipment serves a distinct but equally vital role. It is the preferred tool for long-range measurements exceeding 1500 feet and for tasks where traditional line-of-sight is obstructed, such as mapping a golf course or cataloguing city fire hydrants. The ability to establish a baseline between two points, even with a mountain between them, highlights the unique advantage of GPS in these scenarios.</p>
+
+                        <h3 class="text-xl font-semibold text-white mb-3">Device Purpose and Core Functionality</h3>
+                        
+                        <p class="text-gray-300 mb-4">The GPS Smart Sensor Tester's primary purpose is to provide an immediate diagnostic assessment of a connected Garmin GPS sensor. The device's core functions include:</p>
+                        
+                        <ul class="list-disc list-inside text-gray-400 space-y-2 mb-6">
+                            <li><strong class="text-white">Power and Connectivity Validation:</strong> It verifies the integrity of the power supply to the GPS sensor, including active monitoring for short-circuit and overcurrent conditions.</li>
+                            <li><strong class="text-white">Data Integrity Analysis:</strong> It receives and analyzes the NMEA 0183 data stream from the sensor to confirm its operational status and provide essential navigational and status information.</li>
+                            <li><strong class="text-white">User Interaction:</strong> The device features a highly intuitive single-button interface and an easy-to-read 16x2 display for real-time user feedback.</li>
+                            <li><strong class="text-white">Power Conservation:</strong> It is designed to operate efficiently from a portable 9V battery and incorporates an automatic power-off feature to maximize battery life for extended field use.</li>
+                        </ul>
+
+                        <h2 class="text-2xl font-bold text-primary-color mb-4 mt-8">2. System Architecture and Component Selection</h2>
+                        
+                        <h3 class="text-xl font-semibold text-white mb-3">Microcontroller Core: ATmega328P Selection</h3>
+                        
+                        <p class="text-gray-300 mb-4">The ATmega328P-PU was selected as the device's central processing unit due to its reputation for power efficiency and a feature set well-suited for a handheld, battery-powered application. Its key specifications align perfectly with the project requirements:</p>
+                        
+                        <ul class="list-disc list-inside text-gray-400 space-y-2 mb-6">
+                            <li><strong class="text-white">Core and Speed:</strong> The 8-bit AVR RISC core operates at speeds up to 20MHz, providing ample processing power to handle the NMEA data parsing and UI logic.</li>
+                            <li><strong class="text-white">Memory:</strong> With 32KB of flash program memory, 2KB of SRAM, and 1KB of EEPROM, the ATmega328P has more than enough capacity for the device's firmware, including complex algorithms and data storage requirements.</li>
+                            <li><strong class="text-white">Input/Output:</strong> The microcontroller boasts 23 general-purpose I/O lines, providing sufficient pins to interface with the 16x2 LCD, the single navigation button, and multiple status LEDs.</li>
+                            <li><strong class="text-white">Operating Voltage:</strong> The device operates within a voltage range of 1.8V to 5.5V, making it suitable for a 9V battery-powered device with voltage regulation.</li>
+                        </ul>
+
+                        <h3 class="text-xl font-semibold text-white mb-3">User Interface and Display</h3>
+                        
+                        <p class="text-gray-300 mb-6">For the user interface, a standard 16x2 character LCD was chosen for its low power consumption, clarity, and ease of integration. A strategic decision was made to select a 16x2 LCD with an I²C interface. This design choice reduces the number of required I/O pins from six to just two (SDA and SCL), freeing up critical microcontroller pins for potential future enhancements and simplifying wiring, which reduces the overall footprint and potential points of failure.</p>
+
+                        <h2 class="text-2xl font-bold text-primary-color mb-4 mt-8">3. Hardware Design and Implementation</h2>
+                        
+                        <h3 class="text-xl font-semibold text-white mb-3">Power Supply and Battery Interface</h3>
+                        
+                        <p class="text-gray-300 mb-4">The GPS Smart Sensor Tester is powered by a standard 9V battery, which provides a widely available and easily replaceable power source for field operations. However, the ATmega328P's maximum operating voltage of 5.5V necessitates the inclusion of a voltage regulation circuit. A linear or switching regulator is used to step down the 9V supply to a stable 5V, providing a clean power source for all electronic components and ensuring reliable operation.</p>
+
+                        <h3 class="text-xl font-semibold text-white mb-3">GPS Sensor Interface and Protocol</h3>
+                        
+                        <p class="text-gray-300 mb-6">Communication with the GPS sensor adheres to the NMEA 0183 protocol, a de facto standard for marine and navigational electronics. This standard utilizes a simple, serial communication format where data is transmitted in human-readable "sentences". The physical connection is straightforward: the GPS sensor's serial transmit (TX) pin is connected to the ATmega328P's receive (RX) pin. This configuration allows for read-only access to the GPS data stream, as the tester is not designed to configure the GPS unit.</p>
+
+                        <h3 class="text-xl font-semibold text-white mb-3">Overcurrent Protection Circuitry: The PTC Resettable Fuse</h3>
+                        
+                        <h4 class="text-lg font-semibold text-primary-color mb-3">Principles of Operation</h4>
+                        
+                        <p class="text-gray-300 mb-4">The GPS Smart Sensor Tester integrates a Positive Temperature Coefficient (PTC) resettable fuse for overcurrent protection. This passive safety component differs from a traditional fuse, which must be replaced after a single fault event. A PTC fuse is made of a conductive polymer material that, when exposed to an overcurrent, generates heat. This heat causes the polymer to expand, breaking the conductive pathways and causing a rapid, exponential increase in resistance.</p>
+
+                        <div class="overflow-x-auto mb-6">
+                            <table class="w-full border-collapse border border-gray-600 text-sm">
+                                <thead>
+                                    <tr class="bg-gray-800">
+                                        <th class="border border-gray-600 px-4 py-2 text-left text-primary-color">Specification</th>
+                                        <th class="border border-gray-600 px-4 py-2 text-left text-primary-color">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="border border-gray-600 px-4 py-2 text-white">Holding Current</td>
+                                        <td class="border border-gray-600 px-4 py-2 text-gray-400">Maximum current the fuse can tolerate before tripping.</td>
+                                    </tr>
+                                    <tr class="bg-gray-900/50">
+                                        <td class="border border-gray-600 px-4 py-2 text-white">Trip Current</td>
+                                        <td class="border border-gray-600 px-4 py-2 text-gray-400">Minimum current that will cause the fuse to trip and open the circuit.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-gray-600 px-4 py-2 text-white">Voltage Rating</td>
+                                        <td class="border border-gray-600 px-4 py-2 text-gray-400">Maximum voltage the PTC can withstand without damage.</td>
+                                    </tr>
+                                    <tr class="bg-gray-900/50">
+                                        <td class="border border-gray-600 px-4 py-2 text-white">Time to Trip</td>
+                                        <td class="border border-gray-600 px-4 py-2 text-gray-400">The time it takes for the PTC to trip at a specified current.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h3 class="text-xl font-semibold text-white mb-3">Short-Circuit Protection Circuitry: The MOSFET Latching Switch</h3>
+                        
+                        <p class="text-gray-300 mb-4">The short-circuit protection and power management for the device are handled by an elegant, single-circuit solution: a P-Channel MOSFET-based latching switch. This circuit combines the functions of a power switch with a failsafe shutdown mechanism. The P-Channel MOSFET acts as the main power switch, and it is normally held in an OFF state by keeping its gate at a HIGH potential.</p>
+
+                        <p class="text-gray-300 mb-6">The circuit provides short-circuit protection through its reactive, hardware-based design. In the event of a severe short circuit on the output, the voltage provided to the microcontroller may drop below its operational threshold. This causes the microcontroller to brown-out, reset, or completely lose power. When the microcontroller shuts down, the latch pin is released, the NPN transistor turns OFF, and the MOSFET de-latches, cutting all power to the shorted load.</p>
+
+                        <h2 class="text-2xl font-bold text-primary-color mb-4 mt-8">4. Software Design and Firmware</h2>
+                        
+                        <h3 class="text-xl font-semibold text-white mb-3">NMEA $GPGGA Sentence Parsing</h3>
+                        
+                        <p class="text-gray-300 mb-4">The NMEA 0183 standard defines a protocol for communication between marine and other navigational devices. Data is transmitted in "sentences," each beginning with a $ or ! character and ending with a carriage return and line feed. The $GPGGA sentence is of particular interest as it contains essential "Global Positioning System Fixed Data".</p>
+
+                        <p class="text-gray-300 mb-4">The firmware implements a custom parsing algorithm to process the serial data stream from the GPS sensor. The parser reads the serial data, identifies the start of the $GPGGA string, and then iterates through the comma-separated fields, storing the following key data points for display:</p>
+                        
+                        <ul class="list-disc list-inside text-gray-400 space-y-2 mb-6">
+                            <li><strong class="text-white">Geographic Coordinates:</strong> The latitude and longitude, including their direction (North/South, East/West), are extracted from fields 2 through 5.</li>
+                            <li><strong class="text-white">GPS Status:</strong> The GPS Quality indicator from field 6 is used to determine the fix type, such as GPS fix, Differential GPS fix (DGNSS), or RTK, and provides information on WAAS status.</li>
+                            <li><strong class="text-white">Satellite Count:</strong> The number of satellites in use, a key indicator of signal reception quality, is extracted from field 7.</li>
+                        </ul>
+
+                        <h3 class="text-xl font-semibold text-white mb-3">Single-Button Menu Navigation</h3>
+                        
+                        <p class="text-gray-300 mb-4">The single-button user interface is managed by a software-driven Finite State Machine (FSM). This design pattern provides a robust and predictable way to handle a limited number of inputs by defining distinct operational states and the transitions between them.</p>
+
+                        <div class="overflow-x-auto mb-6">
+                            <table class="w-full border-collapse border border-gray-600 text-sm">
+                                <thead>
+                                    <tr class="bg-gray-800">
+                                        <th class="border border-gray-600 px-4 py-2 text-left text-primary-color">State Name</th>
+                                        <th class="border border-gray-600 px-4 py-2 text-left text-primary-color">Description</th>
+                                        <th class="border border-gray-600 px-4 py-2 text-left text-primary-color">Button Press Transition</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="border border-gray-600 px-4 py-2 text-white">STATE_HOME</td>
+                                        <td class="border border-gray-600 px-4 py-2 text-gray-400">Displays a welcome message and device status.</td>
+                                        <td class="border border-gray-600 px-4 py-2 text-gray-400">Transitions to STATE_LOCATION.</td>
+                                    </tr>
+                                    <tr class="bg-gray-900/50">
+                                        <td class="border border-gray-600 px-4 py-2 text-white">STATE_LOCATION</td>
+                                        <td class="border border-gray-600 px-4 py-2 text-gray-400">Displays parsed Latitude and Longitude data.</td>
+                                        <td class="border border-gray-600 px-4 py-2 text-gray-400">Transitions to STATE_SATELLITES.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-gray-600 px-4 py-2 text-white">STATE_SATELLITES</td>
+                                        <td class="border border-gray-600 px-4 py-2 text-gray-400">Displays the number of satellites in use.</td>
+                                        <td class="border border-gray-600 px-4 py-2 text-gray-400">Transitions to STATE_WAAS_STATUS.</td>
+                                    </tr>
+                                    <tr class="bg-gray-900/50">
+                                        <td class="border border-gray-600 px-4 py-2 text-white">STATE_WAAS_STATUS</td>
+                                        <td class="border border-gray-600 px-4 py-2 text-gray-400">Displays GPS fix and WAAS/DGNSS status.</td>
+                                        <td class="border border-gray-600 px-4 py-2 text-gray-400">Transitions back to STATE_HOME.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h3 class="text-xl font-semibold text-white mb-3">Automated Power Management</h3>
+                        
+                        <p class="text-gray-300 mb-4">The automated power management system is a synergistic design between the hardware latching circuit and the firmware. The microcontroller's firmware is responsible for controlling the power to the entire device via the designated "latch pin." Upon boot-up, the firmware's setup() function immediately sets this pin to HIGH, which holds the MOSFET's gate low and latches the power on.</p>
+
+                        <p class="text-gray-300 mb-6">After a predefined period of inactivity or upon the completion of its diagnostic tasks, the firmware sets the latch pin LOW. This action releases the hardware latch, causing the MOSFET to turn off and completely cut the power supply to the entire circuit. By completely removing power, the device enters a true zero-power state, ensuring that the battery's shelf life is limited only by its own self-discharge rate.</p>
+
+                        <h2 class="text-2xl font-bold text-primary-color mb-4 mt-8">5. Performance and Analysis</h2>
+                        
+                        <h3 class="text-xl font-semibold text-white mb-3">Power Consumption Analysis</h3>
+                        
+                        <p class="text-gray-300 mb-4">The device's power consumption is a critical metric for a battery-powered tool. In active mode, with the display and GPS sensor fully operational, the device draws current as required to perform its diagnostic functions. However, the most significant advantage of this design is its power consumption in the off state.</p>
+
+                        <p class="text-gray-300 mb-4">By leveraging the latching switch circuit, the current draw when the device is off is effectively zero. This is a superior solution to a software-only sleep mode, where a small but continuous current would still be consumed. This zero-power shutdown ensures that a 9V battery will last for an extended period, limited only by its natural self-discharge rate, which can be years for a fresh battery.</p>
+
+                        <h3 class="text-xl font-semibold text-white mb-3">Operational Performance</h3>
+                        
+                        <p class="text-gray-300 mb-6">The device's operational performance is defined by its responsiveness and speed. The single-button UI, combined with a robust debouncing routine, ensures that user input is reliably registered and results in smooth, predictable menu navigation. The custom NMEA parser is highly efficient, allowing the device to quickly acquire, process, and display GPS data from the serial stream.</p>
+
+                        <h2 class="text-2xl font-bold text-primary-color mb-4 mt-8">6. Conclusion and Future Development</h2>
+                        
+                        <h3 class="text-xl font-semibold text-white mb-3">Project Summary</h3>
+                        
+                        <p class="text-gray-300 mb-4">The GPS Smart Sensor Tester successfully meets all stated design objectives. It provides a highly effective and portable diagnostic solution for field technicians, embodying the principles of robust hardware design, intelligent power management, and efficient firmware development. The prototype demonstrates an exemplary integration of standard components and innovative circuitry to create a functional, reliable, and user-friendly tool.</p>
+
+                        <h3 class="text-xl font-semibold text-white mb-3">Future Enhancements</h3>
+                        
+                        <p class="text-gray-300 mb-4">Based on the performance and design of the current prototype, several enhancements are recommended for future development:</p>
+                        
+                        <ul class="list-disc list-inside text-gray-400 space-y-2 mb-6">
+                            <li><strong class="text-white">Advanced User Interface:</strong> Upgrading to a graphical LCD would allow for the display of more comprehensive data and the creation of a more intuitive, visually rich user interface.</li>
+                            <li><strong class="text-white">Rugged Enclosure:</strong> Designing a rugged, weather-resistant enclosure would protect the internal components from demanding environmental conditions.</li>
+                            <li><strong class="text-white">Data Logging Capabilities:</strong> Integrating an EEPROM or microSD card would allow technicians to log GPS data over a period of time, invaluable for diagnosing intermittent faults.</li>
+                            <li><strong class="text-white">Integrated Power Management:</strong> Incorporating a battery charging circuit would enable in-field recharging, eliminating the need for disposable batteries.</li>
+                            <li><strong class="text-white">Expanded Diagnostics:</strong> The firmware could be expanded to parse additional NMEA sentences beyond $GPGGA, such as $GPRMC (Recommended minimum specific GPS data), to provide a more comprehensive diagnostic report.</li>
+                        </ul>
+
+                        <div class="bg-gray-900 p-6 rounded-lg border border-gray-700 my-6 text-center">
+                            <h4 class="text-lg font-semibold text-primary-color mb-2">Project Impact</h4>
+                            <p class="text-gray-400">This GPS Smart Sensor Tester contributed to features that increased T-L Irrigation Co. sales by over $2M annually through improved field diagnostic capabilities and reduced equipment downtime.</p>
+                        </div>
+                    </div>
+                `
             }
         };
 
@@ -478,39 +676,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // --- AI Summary Generator ---
-    const generateSummaryBtn = document.getElementById('generate-summary-btn');
-    if (generateSummaryBtn) {
-        generateSummaryBtn.addEventListener('click', async () => {
-            const summaryContainer = document.getElementById('ai-summary-container');
-            const summaryText = document.getElementById('ai-summary-text');
-            const button = document.getElementById('generate-summary-btn');
-            
-            summaryText.textContent = 'Generating summary...';
-            summaryContainer.classList.remove('hidden');
-            button.disabled = true;
-
-            const aboutContent = `
-                Rohith Reddy Narala is a Hardware Engineering professional with an M.S. in Electrical Engineering, bringing over 9 years of progressive experience in delivering innovative electronic solutions. My expertise spans the full hardware development lifecycle, from initial concept to mass production.
-                I thrive on tackling complex challenges in analog/digital circuit design, power electronics, and embedded systems. My passion lies in leading cross-functional teams through New Product Introduction (NPI) processes, implementing advanced sensing technologies, and optimizing prototypes for manufacturability (DFM).
-                Here are a few technologies I've been working with recently: Altium & Cadence Suite, High-Density Flex/Rigid PCBs, Embedded C/C++, Sensor Integration & Fusion, DC-DC Converters & Power Mgmt, AR/VR & Wearable Tech.
-            `;
-
-            try {
-                // Note: In a real implementation, you would need to provide a valid API key
-                // For now, we'll simulate the API response
-                setTimeout(() => {
-                    const simulatedResponse = "Rohith Reddy Narala is a seasoned Hardware Engineering professional with an M.S. in Electrical Engineering and 9+ years of experience in electronic solutions development. Specializing in the complete hardware lifecycle from concept to production, he excels in analog/digital circuit design, power electronics, and embedded systems. His expertise includes leading NPI processes, implementing advanced sensing technologies, and optimizing for manufacturability, with recent focus on Altium & Cadence Suite, high-density PCBs, embedded programming, sensor integration, power management, and AR/VR technologies.";
-                    summaryText.textContent = simulatedResponse;
-                    button.disabled = false;
-                }, 2000);
-            } catch (error) {
-                console.error('Error generating summary:', error);
-                summaryText.textContent = 'An error occurred. Please try again.';
-                button.disabled = false;
-            }
-        });
-    }
 
     // --- Print functionality for resume page ---
     const printButton = document.querySelector('.print-button');
