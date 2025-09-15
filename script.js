@@ -1334,6 +1334,14 @@ document.addEventListener('DOMContentLoaded', function() {
                                     <p class="text-sm text-gray-400">High-precision antenna testing chamber with controlled RF environment, multipath simulation, and antenna pattern characterization capabilities for optimal reception analysis.</p>
                                 </div>
                             </div>
+                            <!-- Additional GPS Smart Sensor Image -->
+                            <div class="flex justify-center mt-6">
+                                <div class="text-center max-w-md">
+                                    <img src="images/GPS_Smart_sensor_5.png" alt="GPS Smart Sensor System Integration" class="w-full h-64 object-contain rounded-lg mb-2">
+                                    <h5 class="text-sm font-semibold text-white mb-1">System Integration & Validation</h5>
+                                    <p class="text-sm text-gray-400">Complete GPS smart sensor system integration showing final assembly, validation procedures, and comprehensive testing protocols for navigation accuracy and system performance verification.</p>
+                                </div>
+                            </div>
                         </div>
 
                         <h3 class="text-xl font-semibold text-white mb-4">System Architecture and Design Philosophy</h3>
