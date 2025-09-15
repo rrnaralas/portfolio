@@ -325,44 +325,84 @@ body {
     text-align: left !important;
 }
 
-/* Additional first column fixes */
-.generic-table tbody tr:hover td:first-child {
+/* Additional first column fixes - Enhanced specificity */
+.generic-table tbody tr:hover td:first-child,
+table.generic-table tbody tr:hover td:first-child,
+div .generic-table tbody tr:hover td:first-child {
     color: #ffffff !important;
     font-weight: 600 !important;
     background: linear-gradient(90deg, rgba(0, 191, 255, 0.25), rgba(0, 191, 255, 0.35)) !important;
 }
 
-.generic-table td:first-child {
-    position: relative;
-    z-index: 3;
+.generic-table td:first-child,
+table.generic-table td:first-child,
+div .generic-table td:first-child {
+    position: relative !important;
+    z-index: 3 !important;
 }
 
-.generic-table th:first-child {
-    position: relative;
-    z-index: 3;
+.generic-table th:first-child,
+table.generic-table th:first-child,
+div .generic-table th:first-child {
+    position: relative !important;
+    z-index: 3 !important;
 }
 
-/* Ensure first column is always clearly visible */
-.generic-table tbody tr td:first-child {
+/* Additional universal first column fixes */
+table tbody tr td:first-child {
     color: #ffffff !important;
-    font-weight: 600;
+    font-weight: 600 !important;
+}
+
+table thead tr th:first-child {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+}
+
+/* Force all table cells to have white text */
+table td, table th {
+    color: #ffffff !important;
+}
+
+/* Project modal specific table fixes */
+#project-modal table td:first-child,
+#project-modal table th:first-child {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    background: linear-gradient(90deg, rgba(0, 191, 255, 0.15), rgba(0, 191, 255, 0.2)) !important;
+    border-right: 1px solid rgba(0, 191, 255, 0.3) !important;
+}
+
+#project-modal table th:first-child {
+    font-weight: 700 !important;
+    background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%) !important;
+}
+
+/* Ensure first column is always clearly visible - Enhanced specificity */
+.generic-table tbody tr td:first-child,
+table.generic-table tbody tr td:first-child,
+div .generic-table tbody tr td:first-child {
+    color: #ffffff !important;
+    font-weight: 600 !important;
     background: linear-gradient(90deg, rgba(0, 191, 255, 0.15), rgba(0, 191, 255, 0.2)) !important;
     padding: 16px 20px !important;
     border-right: 1px solid rgba(0, 191, 255, 0.3) !important;
     text-align: left !important;
     vertical-align: middle !important;
-    min-width: 150px;
+    min-width: 150px !important;
 }
 
-.generic-table thead tr th:first-child {
+.generic-table thead tr th:first-child,
+table.generic-table thead tr th:first-child,
+div .generic-table thead tr th:first-child {
     color: #ffffff !important;
-    font-weight: 700;
+    font-weight: 700 !important;
     background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%) !important;
     border-right: 1px solid rgba(0, 191, 255, 0.3) !important;
     padding: 16px 20px !important;
     text-align: left !important;
     vertical-align: middle !important;
-    min-width: 150px;
+    min-width: 150px !important;
 }
 
 .generic-table .status-success {
