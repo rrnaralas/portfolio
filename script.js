@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
         'vacuum-gauge': {
             title: 'Digital Vacuum Gauge for HVAC Systems - Comprehensive Project Report',
-            content: `
+            description: `
                 <div class="space-y-8">
                     <!-- Project Header -->
                     <div class="flex items-center mb-6">
