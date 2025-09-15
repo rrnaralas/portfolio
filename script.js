@@ -1314,6 +1314,40 @@ document.addEventListener('DOMContentLoaded', function() {
                             principles to the intricate details of its analog and digital signal processing chains.
                         </p>
 
+                        <!-- System Overview Images -->
+                        <div class="bg-gray-900 p-6 rounded-lg border border-gray-700 my-6">
+                            <h4 class="text-lg font-semibold text-primary-color mb-4 text-center">Wearable PPG Monitoring System Overview</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-4">
+                                <div class="text-center">
+                                    <img src="images/Hand_Glove_1.png" alt="Complete wearable PPG hand glove system" class="w-full h-48 object-cover rounded-lg mb-2">
+                                    <h5 class="text-sm font-semibold text-white mb-1">Complete Hand Glove System</h5>
+                                    <p class="text-sm text-gray-400">Integrated wearable PPG monitoring system with embedded sensors, conductive thread wiring, and wireless communication capabilities for continuous vital signs monitoring.</p>
+                                </div>
+                                <div class="text-center">
+                                    <img src="images/Hand_Glove_2.png" alt="PPG sensor placement and signal acquisition" class="w-full h-48 object-cover rounded-lg mb-2">
+                                    <h5 class="text-sm font-semibold text-white mb-1">PPG Sensor Integration</h5>
+                                    <p class="text-sm text-gray-400">Detailed view of PPG sensor placement on finger with green LED illumination and photodetector configuration for optimal signal acquisition and motion artifact resistance.</p>
+                                </div>
+                                <div class="text-center">
+                                    <img src="images/Hand_Glove_3.png" alt="Circuit board and electronics integration" class="w-full h-48 object-cover rounded-lg mb-2">
+                                    <h5 class="text-sm font-semibold text-white mb-1">Electronics Integration</h5>
+                                    <p class="text-sm text-gray-400">Custom PCB design with analog front-end circuitry, microcontroller, and wireless communication modules integrated into the wearable platform.</p>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                                <div class="text-center">
+                                    <img src="images/Hand_Glove_4.png" alt="Power management and battery system" class="w-full h-48 object-cover rounded-lg mb-2">
+                                    <h5 class="text-sm font-semibold text-white mb-1">Power Management System</h5>
+                                    <p class="text-sm text-gray-400">Advanced power management architecture with LiPo battery, LDO regulators, and ultra-low power design optimized for extended wearable operation.</p>
+                                </div>
+                                <div class="text-center">
+                                    <img src="images/Hand_Glove_5.png" alt="Wireless communication and data transmission" class="w-full h-48 object-cover rounded-lg mb-2">
+                                    <h5 class="text-sm font-semibold text-white mb-1">Wireless Communication</h5>
+                                    <p class="text-sm text-gray-400">ZigBee-based wireless data transmission system with emergency GSM communication capability for real-time health monitoring and alert systems.</p>
+                                </div>
+                            </div>
+                        </div>
+
                         <h3 class="text-xl font-semibold text-white mb-4">2. Theoretical Framework and LED Wavelength Selection</h3>
                         
                         <h4 class="text-lg font-semibold text-primary-color mb-3">2.1. Biophysical Principles of Photoplethysmography</h4>
