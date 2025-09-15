@@ -1283,6 +1283,337 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 `
             },
+            'gps-smart-sensor': {
+                title: 'GPS Smart Sensor Tester: High-Precision Navigation System Validation Platform',
+                description: `
+                    <div class="space-y-6">
+                        <h2 class="text-2xl font-bold text-primary-color mb-4">GPS Smart Sensor Tester: High-Precision Navigation System Validation Platform</h2>
+                        
+                        <h3 class="text-xl font-semibold text-white mb-4">Executive Summary</h3>
+                        <p class="text-gray-300 mb-4">
+                            The GPS Smart Sensor Tester represents a comprehensive validation and testing platform designed 
+                            for high-precision GPS navigation systems. This sophisticated test equipment enables thorough 
+                            characterization of GPS receivers, antenna performance, and signal processing algorithms under 
+                            controlled laboratory conditions and real-world scenarios.
+                        </p>
+
+                        <!-- GPS Smart Sensor Images -->
+                        <div class="bg-gray-900 p-6 rounded-lg border border-gray-700 my-6">
+                            <h4 class="text-lg font-semibold text-primary-color mb-4 text-center">GPS Smart Sensor Testing Platform</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+                                <div class="text-center">
+                                    <img src="images/GPS_Smart_sensor_1.png" alt="GPS Smart Sensor Test Setup" class="w-full h-64 object-contain rounded-lg mb-2">
+                                    <h5 class="text-sm font-semibold text-white mb-1">Complete Test Setup</h5>
+                                    <p class="text-sm text-gray-400">Comprehensive GPS testing platform with signal generator, receiver modules, antenna arrays, and measurement instrumentation for precision navigation system validation.</p>
+                                </div>
+                                <div class="text-center">
+                                    <img src="images/GPS_Smart_sensor_2.png" alt="GPS Receiver Module Testing" class="w-full h-64 object-contain rounded-lg mb-2">
+                                    <h5 class="text-sm font-semibold text-white mb-1">Receiver Module Testing</h5>
+                                    <p class="text-sm text-gray-400">Detailed view of GPS receiver module under test with RF connections, power monitoring, and data acquisition interfaces for comprehensive performance analysis.</p>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="text-center">
+                                    <img src="images/GPS_Smart_sensor_3.png" alt="Signal Analysis Interface" class="w-full h-64 object-contain rounded-lg mb-2">
+                                    <h5 class="text-sm font-semibold text-white mb-1">Signal Analysis Interface</h5>
+                                    <p class="text-sm text-gray-400">Advanced signal analysis and monitoring interface displaying constellation tracking, signal strength metrics, and real-time positioning accuracy measurements.</p>
+                                </div>
+                                <div class="text-center">
+                                    <img src="images/GPS_Smart_sensor_4.png" alt="Precision Antenna Testing" class="w-full h-64 object-contain rounded-lg mb-2">
+                                    <h5 class="text-sm font-semibold text-White mb-1">Precision Antenna Testing</h5>
+                                    <p class="text-sm text-gray-400">High-precision antenna testing chamber with controlled RF environment, multipath simulation, and antenna pattern characterization capabilities for optimal reception analysis.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="text-xl font-semibold text-white mb-4">System Architecture and Design Philosophy</h3>
+                        <p class="text-gray-300 mb-4">
+                            The GPS Smart Sensor Tester is built around a modular architecture that supports comprehensive 
+                            testing of GPS navigation systems across multiple frequency bands and satellite constellations. 
+                            The system integrates hardware-in-the-loop testing capabilities with advanced signal analysis 
+                            tools to provide complete validation coverage from RF front-end performance to position 
+                            calculation accuracy.
+                        </p>
+
+                        <h3 class="text-xl font-semibold text-white mb-4">Core Testing Capabilities</h3>
+                        <div class="overflow-x-auto mb-6">
+                            <table class="generic-table">
+                                <thead>
+                                    <tr>
+                                        <th>Test Category</th>
+                                        <th>Capability</th>
+                                        <th>Specifications</th>
+                                        <th>Applications</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>RF Performance</td>
+                                        <td>Signal Sensitivity Testing</td>
+                                        <td>-160 dBm to -130 dBm range</td>
+                                        <td>Receiver sensitivity validation, weak signal performance</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Constellation Support</td>
+                                        <td>Multi-GNSS Testing</td>
+                                        <td>GPS, GLONASS, Galileo, BeiDou</td>
+                                        <td>Global navigation system compatibility</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Accuracy Validation</td>
+                                        <td>Position Error Analysis</td>
+                                        <td>Sub-meter to centimeter precision</td>
+                                        <td>High-precision navigation applications</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Environmental Testing</td>
+                                        <td>Multipath Simulation</td>
+                                        <td>Urban canyon, indoor scenarios</td>
+                                        <td>Real-world performance validation</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Time Synchronization</td>
+                                        <td>Clock Stability Testing</td>
+                                        <td>Nanosecond-level accuracy</td>
+                                        <td>Timing-critical applications</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h3 class="text-xl font-semibold text-white mb-4">Advanced Features and Instrumentation</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <h4 class="text-lg font-semibold text-primary-color mb-3">Hardware Components</h4>
+                                <ul class="list-disc list-inside text-gray-400 space-y-2">
+                                    <li><strong class="text-white">RF Signal Generators:</strong> Precision GPS signal simulation with programmable scenarios</li>
+                                    <li><strong class="text-white">Spectrum Analyzers:</strong> Real-time frequency domain analysis and interference detection</li>
+                                    <li><strong class="text-white">Network Analyzers:</strong> Antenna impedance and return loss characterization</li>
+                                    <li><strong class="text-white">Power Meters:</strong> Accurate RF power measurement and calibration</li>
+                                    <li><strong class="text-white">Environmental Chamber:</strong> Temperature and humidity controlled testing</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-primary-color mb-3">Software Capabilities</h4>
+                                <ul class="list-disc list-inside text-gray-400 space-y-2">
+                                    <li><strong class="text-white">Automated Test Sequences:</strong> Scripted validation protocols for consistent testing</li>
+                                    <li><strong class="text-white">Real-time Monitoring:</strong> Live constellation tracking and signal quality metrics</li>
+                                    <li><strong class="text-white">Data Logging:</strong> Comprehensive test result capture and analysis</li>
+                                    <li><strong class="text-white">Report Generation:</strong> Automated compliance and performance reporting</li>
+                                    <li><strong class="text-white">Visualization Tools:</strong> 3D constellation plots and signal strength mapping</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h3 class="text-xl font-semibold text-white mb-4">Performance Metrics and Validation</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+                            <div class="bg-gray-800 p-4 rounded">
+                                <h4 class="text-primary-color font-semibold mb-2">Position Accuracy</h4>
+                                <p class="text-white text-2xl">&lt;1 meter</p>
+                                <p class="text-gray-400 text-sm">Standard GPS conditions</p>
+                            </div>
+                            <div class="bg-gray-800 p-4 rounded">
+                                <h4 class="text-primary-color font-semibold mb-2">Time to Fix</h4>
+                                <p class="text-white text-2xl">&lt;30 sec</p>
+                                <p class="text-gray-400 text-sm">Cold start acquisition</p>
+                            </div>
+                            <div class="bg-gray-800 p-4 rounded">
+                                <h4 class="text-primary-color font-semibold mb-2">Sensitivity</h4>
+                                <p class="text-white text-2xl">-160 dBm</p>
+                                <p class="text-gray-400 text-sm">Minimum signal tracking</p>
+                            </div>
+                            <div class="bg-gray-800 p-4 rounded">
+                                <h4 class="text-primary-color font-semibold mb-2">Update Rate</h4>
+                                <p class="text-white text-2xl">10 Hz</p>
+                                <p class="text-gray-400 text-sm">Position calculation frequency</p>
+                            </div>
+                        </div>
+
+                        <h3 class="text-xl font-semibold text-white mb-4">Testing Protocols and Methodologies</h3>
+                        <div class="bg-gray-900 p-4 rounded-lg border border-gray-700 mb-6">
+                            <h4 class="text-lg font-semibold text-primary-color mb-3">Comprehensive Validation Framework</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                <div class="bg-gray-800 p-4 rounded">
+                                    <h5 class="text-white font-semibold mb-2">Laboratory Testing</h5>
+                                    <ul class="text-gray-400 text-sm space-y-1">
+                                        <li>• Controlled RF environment</li>
+                                        <li>• Calibrated signal sources</li>
+                                        <li>• Repeatable test conditions</li>
+                                        <li>• Precision measurement tools</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-gray-800 p-4 rounded">
+                                    <h5 class="text-white font-semibold mb-2">Field Validation</h5>
+                                    <ul class="text-gray-400 text-sm space-y-1">
+                                        <li>• Real-world signal conditions</li>
+                                        <li>• Multipath environment testing</li>
+                                        <li>• Mobile platform validation</li>
+                                        <li>• Environmental stress testing</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-gray-800 p-4 rounded">
+                                    <h5 class="text-white font-semibold mb-2">Performance Analysis</h5>
+                                    <ul class="text-gray-400 text-sm space-y-1">
+                                        <li>• Statistical accuracy assessment</li>
+                                        <li>• Long-term stability monitoring</li>
+                                        <li>• Interference susceptibility testing</li>
+                                        <li>• Compliance verification</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="text-xl font-semibold text-white mb-4">Technical Specifications</h3>
+                        <div class="overflow-x-auto mb-6">
+                            <table class="generic-table">
+                                <thead>
+                                    <tr>
+                                        <th>Parameter</th>
+                                        <th>Specification</th>
+                                        <th>Range</th>
+                                        <th>Accuracy</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Frequency Coverage</td>
+                                        <td class="status-info">L1/L2/L5 Bands</td>
+                                        <td>1164-1610 MHz</td>
+                                        <td>±1 kHz</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Signal Power Range</td>
+                                        <td class="status-info">Variable Attenuation</td>
+                                        <td>-170 to -100 dBm</td>
+                                        <td>±0.5 dB</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Position Accuracy</td>
+                                        <td class="status-success">High Precision</td>
+                                        <td>1 cm to 10 m CEP</td>
+                                        <td>±5% of reading</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Time Reference</td>
+                                        <td class="status-success">UTC Synchronized</td>
+                                        <td>±10 ns to ±1 μs</td>
+                                        <td>±1 ns</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Data Logging</td>
+                                        <td class="status-info">Continuous Recording</td>
+                                        <td>1 Hz to 20 Hz</td>
+                                        <td>100% capture rate</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h3 class="text-xl font-semibold text-white mb-4">Applications and Use Cases</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <h4 class="text-lg font-semibold text-primary-color mb-3">Industry Applications</h4>
+                                <ul class="list-disc list-inside text-gray-400 space-y-2">
+                                    <li><strong class="text-white">Automotive:</strong> Vehicle navigation system validation and ADAS testing</li>
+                                    <li><strong class="text-white">Aerospace:</strong> Aviation GPS equipment certification and performance verification</li>
+                                    <li><strong class="text-white">Maritime:</strong> Marine navigation system accuracy and reliability testing</li>
+                                    <li><strong class="text-white">Survey/Mapping:</strong> High-precision positioning equipment calibration</li>
+                                    <li><strong class="text-white">Agriculture:</strong> Precision farming GPS guidance system validation</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-primary-color mb-3">Research and Development</h4>
+                                <ul class="list-disc list-inside text-gray-400 space-y-2">
+                                    <li><strong class="text-white">Algorithm Development:</strong> Signal processing and positioning algorithm optimization</li>
+                                    <li><strong class="text-white">Antenna Design:</strong> GPS antenna performance characterization and optimization</li>
+                                    <li><strong class="text-white">Interference Studies:</strong> Jamming and spoofing vulnerability assessment</li>
+                                    <li><strong class="text-white">Standards Compliance:</strong> Regulatory certification and compliance testing</li>
+                                    <li><strong class="text-white">Performance Benchmarking:</strong> Competitive analysis and system comparison</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h3 class="text-xl font-semibold text-white mb-4">Advanced Testing Scenarios</h3>
+                        <div class="bg-gray-900 p-4 rounded-lg border border-gray-700 mb-6">
+                            <h4 class="text-lg font-semibold text-primary-color mb-3">Challenging Environment Simulation</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                <div class="bg-gray-800 p-4 rounded">
+                                    <h5 class="text-white font-semibold mb-2">Urban Canyon Effects</h5>
+                                    <ul class="text-gray-400 text-sm space-y-1">
+                                        <li>• Building reflection simulation</li>
+                                        <li>• Signal blockage modeling</li>
+                                        <li>• Multipath delay profiling</li>
+                                        <li>• NLOS signal identification</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-gray-800 p-4 rounded">
+                                    <h5 class="text-white font-semibold mb-2">Atmospheric Conditions</h5>
+                                    <ul class="text-gray-400 text-sm space-y-1">
+                                        <li>• Ionospheric delay modeling</li>
+                                        <li>• Tropospheric scintillation</li>
+                                        <li>• Weather-induced variations</li>
+                                        <li>• Seasonal performance analysis</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="text-xl font-semibold text-white mb-4">Quality Assurance and Calibration</h3>
+                        <p class="text-gray-300 mb-4">
+                            The GPS Smart Sensor Tester maintains traceability to national time and frequency standards, 
+                            ensuring measurement accuracy and repeatability. Regular calibration procedures validate the 
+                            test equipment against certified reference standards, providing confidence in test results 
+                            and supporting regulatory compliance requirements.
+                        </p>
+
+                        <div class="bg-gray-900 p-4 rounded-lg border border-gray-700 mb-6">
+                            <h4 class="text-lg font-semibold text-primary-color mb-3">Calibration Standards</h4>
+                            <ul class="list-disc list-inside text-gray-400 space-y-2">
+                                <li><strong class="text-white">Frequency Reference:</strong> Rubidium or cesium atomic clock standards</li>
+                                <li><strong class="text-white">Power Calibration:</strong> NIST-traceable RF power meters and standards</li>
+                                <li><strong class="text-white">Position Reference:</strong> Survey-grade coordinates with centimeter accuracy</li>
+                                <li><strong class="text-white">Time Synchronization:</strong> UTC(NIST) disciplined oscillators</li>
+                            </ul>
+                        </div>
+
+                        <h3 class="text-xl font-semibold text-white mb-4">Future Enhancements and Development</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                            <div class="bg-gray-800 p-4 rounded">
+                                <h4 class="text-primary-color font-semibold mb-2">Next-Generation Features</h4>
+                                <ul class="text-gray-400 text-sm space-y-1">
+                                    <li>• Multi-constellation GNSS support</li>
+                                    <li>• Real-time kinematic (RTK) testing</li>
+                                    <li>• Precise point positioning (PPP)</li>
+                                    <li>• Advanced spoofing simulation</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-800 p-4 rounded">
+                                <h4 class="text-primary-color font-semibold mb-2">Integration Capabilities</h4>
+                                <ul class="text-gray-400 text-sm space-y-1">
+                                    <li>• IoT device testing support</li>
+                                    <li>• 5G positioning integration</li>
+                                    <li>• Machine learning optimization</li>
+                                    <li>• Cloud-based analytics</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-800 p-4 rounded">
+                                <h4 class="text-primary-color font-semibold mb-2">Automation Features</h4>
+                                <ul class="text-gray-400 text-sm space-y-1">
+                                    <li>• Fully automated test suites</li>
+                                    <li>• AI-powered anomaly detection</li>
+                                    <li>• Predictive maintenance</li>
+                                    <li>• Remote monitoring capabilities</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-900 p-6 rounded-lg border border-gray-700 text-center">
+                            <h4 class="text-lg font-semibold text-primary-color mb-2">Project Impact</h4>
+                            <p class="text-gray-400">The GPS Smart Sensor Tester represents a comprehensive solution for validating and characterizing GPS navigation systems, providing the tools necessary for ensuring high-performance, reliable positioning across diverse applications and challenging environments.</p>
+                        </div>
+                    </div>
+                `,
+            },
             'wearables': {
                 title: 'Wireless Monitoring of Driver\'s Pulse Rate and Temperature Using Hand Gloves Approach',
                 description: `
