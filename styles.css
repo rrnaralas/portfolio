@@ -364,18 +364,109 @@ table td, table th {
     color: #ffffff !important;
 }
 
-/* Project modal specific table fixes */
-#project-modal table td:first-child,
-#project-modal table th:first-child {
+/* Aggressive fix for first column visibility - Universal targeting */
+table td:first-child,
+table th:first-child,
+.generic-table td:first-child,
+.generic-table th:first-child,
+#project-modal td:first-child,
+#project-modal th:first-child,
+#modal-content td:first-child,
+#modal-content th:first-child,
+#modal-content-container td:first-child,
+#modal-content-container th:first-child,
+div td:first-child,
+div th:first-child {
     color: #ffffff !important;
-    font-weight: 600 !important;
-    background: linear-gradient(90deg, rgba(0, 191, 255, 0.15), rgba(0, 191, 255, 0.2)) !important;
-    border-right: 1px solid rgba(0, 191, 255, 0.3) !important;
+    background: rgba(0, 191, 255, 0.3) !important;
+    font-weight: bold !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: table-cell !important;
+    border-right: 3px solid #00BFFF !important;
+    padding: 16px 20px !important;
+    text-align: left !important;
+    vertical-align: middle !important;
+    min-width: 120px !important;
+    position: relative !important;
+    z-index: 100 !important;
 }
 
-#project-modal table th:first-child {
+/* Additional aggressive targeting for any nested structures */
+* td:first-child,
+* th:first-child {
+    color: #ffffff !important;
+    background: rgba(0, 191, 255, 0.3) !important;
+    font-weight: bold !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Project modal specific table fixes - Enhanced targeting */
+#project-modal table td:first-child,
+#project-modal table th:first-child,
+#modal-content table td:first-child,
+#modal-content table th:first-child,
+#modal-content-container table td:first-child,
+#modal-content-container table th:first-child,
+div[id="modal-content-container"] table td:first-child,
+div[id="modal-content-container"] table th:first-child {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    background: linear-gradient(90deg, rgba(0, 191, 255, 0.25), rgba(0, 191, 255, 0.35)) !important;
+    border-right: 2px solid rgba(0, 191, 255, 0.5) !important;
+    padding: 16px 20px !important;
+    text-align: left !important;
+    vertical-align: middle !important;
+    min-width: 150px !important;
+    position: relative !important;
+    z-index: 10 !important;
+}
+
+#project-modal table th:first-child,
+#modal-content table th:first-child,
+#modal-content-container table th:first-child,
+div[id="modal-content-container"] table th:first-child {
     font-weight: 700 !important;
-    background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%) !important;
+    background: linear-gradient(135deg, rgba(0, 191, 255, 0.3), rgba(0, 191, 255, 0.4)) !important;
+    color: #ffffff !important;
+    border-right: 2px solid rgba(0, 191, 255, 0.6) !important;
+}
+
+/* Force all table cells in modal to be visible */
+#project-modal table td,
+#project-modal table th,
+#modal-content table td,
+#modal-content table th,
+#modal-content-container table td,
+#modal-content-container table th,
+div[id="modal-content-container"] table td,
+div[id="modal-content-container"] table th {
+    color: #ffffff !important;
+    background-color: transparent !important;
+}
+
+/* Specific override for modal table first columns */
+#project-modal .generic-table tbody tr td:first-child,
+#modal-content .generic-table tbody tr td:first-child,
+#modal-content-container .generic-table tbody tr td:first-child,
+div[id="modal-content-container"] .generic-table tbody tr td:first-child {
+    background: linear-gradient(90deg, rgba(0, 191, 255, 0.25), rgba(0, 191, 255, 0.35)) !important;
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    border-right: 2px solid rgba(0, 191, 255, 0.5) !important;
+    position: relative !important;
+    z-index: 10 !important;
+}
+
+#project-modal .generic-table thead tr th:first-child,
+#modal-content .generic-table thead tr th:first-child,
+#modal-content-container .generic-table thead tr th:first-child,
+div[id="modal-content-container"] .generic-table thead tr th:first-child {
+    background: linear-gradient(135deg, rgba(0, 191, 255, 0.3), rgba(0, 191, 255, 0.4)) !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    border-right: 2px solid rgba(0, 191, 255, 0.6) !important;
 }
 
 /* Ensure first column is always clearly visible - Enhanced specificity */
