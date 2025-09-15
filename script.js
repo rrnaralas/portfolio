@@ -1319,31 +1319,31 @@ document.addEventListener('DOMContentLoaded', function() {
                             <h4 class="text-lg font-semibold text-primary-color mb-4 text-center">Wearable PPG Monitoring System Overview</h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-4">
                                 <div class="text-center">
-                                    <img src="images/Hand_Glove_1.png" alt="Complete wearable PPG hand glove system" class="w-full h-48 object-cover rounded-lg mb-2">
-                                    <h5 class="text-sm font-semibold text-white mb-1">Complete Hand Glove System</h5>
-                                    <p class="text-sm text-gray-400">Integrated wearable PPG monitoring system with embedded sensors, conductive thread wiring, and wireless communication capabilities for continuous vital signs monitoring.</p>
+                                    <img src="images/Hand_Glove_1.png" alt="Receiver end architecture" class="w-full h-80 object-cover rounded-lg mb-2">
+                                    <h5 class="text-sm font-semibold text-white mb-1">Receiver End Architecture</h5>
+                                    <p class="text-sm text-gray-400">Complete receiver unit featuring ZigBee communication module, data processing capabilities, LCD display interface, GPS tracking, and GSM emergency communication system for comprehensive health monitoring.</p>
                                 </div>
                                 <div class="text-center">
-                                    <img src="images/Hand_Glove_2.png" alt="PPG sensor placement and signal acquisition" class="w-full h-48 object-cover rounded-lg mb-2">
-                                    <h5 class="text-sm font-semibold text-white mb-1">PPG Sensor Integration</h5>
-                                    <p class="text-sm text-gray-400">Detailed view of PPG sensor placement on finger with green LED illumination and photodetector configuration for optimal signal acquisition and motion artifact resistance.</p>
+                                    <img src="images/Hand_Glove_2.png" alt="Transmitter end architecture" class="w-full h-80 object-cover rounded-lg mb-2">
+                                    <h5 class="text-sm font-semibold text-white mb-1">Transmitter End Architecture</h5>
+                                    <p class="text-sm text-gray-400">Hand glove transmitter module with integrated PPG sensors, temperature monitoring, analog front-end processing, and ZigBee wireless transmission capabilities for continuous vital signs acquisition.</p>
                                 </div>
                                 <div class="text-center">
-                                    <img src="images/Hand_Glove_3.png" alt="Circuit board and electronics integration" class="w-full h-48 object-cover rounded-lg mb-2">
-                                    <h5 class="text-sm font-semibold text-white mb-1">Electronics Integration</h5>
-                                    <p class="text-sm text-gray-400">Custom PCB design with analog front-end circuitry, microcontroller, and wireless communication modules integrated into the wearable platform.</p>
+                                    <img src="images/Hand_Glove_3.png" alt="Subject with the glove driving" class="w-full h-80 object-cover rounded-lg mb-2">
+                                    <h5 class="text-sm font-semibold text-white mb-1">Subject with the Glove Driving</h5>
+                                    <p class="text-sm text-gray-400">Real-world application demonstration showing driver wearing the PPG monitoring glove during vehicle operation, enabling continuous health monitoring and fatigue detection for enhanced road safety.</p>
                                 </div>
                             </div>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
                                 <div class="text-center">
-                                    <img src="images/Hand_Glove_4.png" alt="Power management and battery system" class="w-full h-48 object-cover rounded-lg mb-2">
-                                    <h5 class="text-sm font-semibold text-white mb-1">Power Management System</h5>
-                                    <p class="text-sm text-gray-400">Advanced power management architecture with LiPo battery, LDO regulators, and ultra-low power design optimized for extended wearable operation.</p>
+                                    <img src="images/Hand_Glove_4.png" alt="Proof of concept setup" class="w-full h-80 object-cover rounded-lg mb-2">
+                                    <h5 class="text-sm font-semibold text-white mb-1">Proof of Concept</h5>
+                                    <p class="text-sm text-gray-400">Laboratory proof of concept demonstration showcasing the complete wearable PPG monitoring system with hand glove, receiver unit, and real-time data acquisition capabilities.</p>
                                 </div>
                                 <div class="text-center">
-                                    <img src="images/Hand_Glove_5.png" alt="Wireless communication and data transmission" class="w-full h-48 object-cover rounded-lg mb-2">
-                                    <h5 class="text-sm font-semibold text-white mb-1">Wireless Communication</h5>
-                                    <p class="text-sm text-gray-400">ZigBee-based wireless data transmission system with emergency GSM communication capability for real-time health monitoring and alert systems.</p>
+                                    <img src="images/Hand_Glove_5.png" alt="System validation and testing" class="w-full h-80 object-cover rounded-lg mb-2">
+                                    <h5 class="text-sm font-semibold text-white mb-1">System Validation and Testing</h5>
+                                    <p class="text-sm text-gray-400">Comprehensive system testing and validation setup demonstrating signal quality assessment, accuracy measurements, and performance verification of the complete wearable health monitoring solution.</p>
                                 </div>
                             </div>
                         </div>
