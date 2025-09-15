@@ -133,19 +133,19 @@ document.addEventListener('DOMContentLoaded', function() {
                         <h3 class="text-xl font-semibold text-white mb-4">Proof of Concept Development</h3>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <div class="text-center">
-                                <img src="images/Vaccume_guage_1.png" alt="Digital Vacuum Gauge - Complete Device" class="w-full h-48 object-cover rounded-lg mb-2">
-                                <h5 class="text-sm font-semibold text-white mb-1">Complete Prototype Device</h5>
-                                <p class="text-sm text-white">Fully assembled digital vacuum gauge showing the integrated display, control interface, and rugged housing designed for field use in HVAC applications.</p>
+                                <img src="images/Vaccume_guage_1.png" alt="Digital Vacuum Gauge - Posifa Sensor" class="w-full h-48 object-cover rounded-lg mb-2">
+                                <h5 class="text-sm font-semibold text-white mb-1">Posifa sensor</h5>
+                                <p class="text-sm text-white">High-precision Posifa PVC4000 series MEMS Pirani sensor providing digital I2C interface with built-in temperature compensation and linearization algorithms for accurate vacuum measurements.</p>
                             </div>
                             <div class="text-center">
-                                <img src="images/Vaccume_guage_2.png" alt="Digital Vacuum Gauge - Display Interface" class="w-full h-48 object-cover rounded-lg mb-2">
-                                <h5 class="text-sm font-semibold text-white mb-1">Digital Display & Controls</h5>
-                                <p class="text-sm text-white">High-contrast LCD display showing real-time vacuum measurements with multiple unit options. User-friendly button interface for easy operation with work gloves.</p>
+                                <img src="images/Vaccume_guage_2.png" alt="Digital Vacuum Gauge - Test Setup" class="w-full h-48 object-cover rounded-lg mb-2">
+                                <h5 class="text-sm font-semibold text-white mb-1">Test Setup for PoC</h5>
+                                <p class="text-sm text-white">Complete proof of concept test setup demonstrating the integrated measurement system with digital display, control interface, and sensor validation for HVAC applications.</p>
                             </div>
                             <div class="text-center">
-                                <img src="images/Vaccume_guage_3.png" alt="Digital Vacuum Gauge - Sensor Connection" class="w-full h-48 object-cover rounded-lg mb-2">
-                                <h5 class="text-sm font-semibold text-white mb-1">Sensor Integration & I/O</h5>
-                                <p class="text-sm text-white">Precision vacuum sensor connection port and integrated pump control outputs. Demonstrates the complete system integration approach.</p>
+                                <img src="images/Vaccume_guage_3.png" alt="Digital Vacuum Gauge - Pirani Element" class="w-full h-48 object-cover rounded-lg mb-2">
+                                <h5 class="text-sm font-semibold text-white mb-1">Pirani element</h5>
+                                <p class="text-sm text-white">Close-up view of the Pirani heating element and thermal conductivity sensor technology used for high-precision vacuum measurement with wide dynamic range capabilities.</p>
                             </div>
                         </div>
                     </div>
