@@ -1317,35 +1317,33 @@ document.addEventListener('DOMContentLoaded', function() {
                         <!-- System Overview Images -->
                         <div class="bg-gray-900 p-6 rounded-lg border border-gray-700 my-6">
                             <h4 class="text-lg font-semibold text-primary-color mb-4 text-center">Wearable PPG Monitoring System Overview</h4>
-                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-4">
-                                <div class="text-center">
-                                    <img src="images/Hand_Glove_1.png" alt="Receiver end architecture" class="w-full h-80 object-cover rounded-lg mb-2">
-                                    <h5 class="text-sm font-semibold text-white mb-1">Receiver End Architecture</h5>
-                                    <p class="text-sm text-gray-400">Complete receiver unit featuring ZigBee communication module, data processing capabilities, LCD display interface, GPS tracking, and GSM emergency communication system for comprehensive health monitoring.</p>
-                                </div>
-                                <div class="text-center">
-                                    <img src="images/Hand_Glove_2.png" alt="Transmitter end architecture" class="w-full h-80 object-cover rounded-lg mb-2">
-                                    <h5 class="text-sm font-semibold text-white mb-1">Transmitter End Architecture</h5>
-                                    <p class="text-sm text-gray-400">Hand glove transmitter module with integrated PPG sensors, temperature monitoring, analog front-end processing, and ZigBee wireless transmission capabilities for continuous vital signs acquisition.</p>
-                                </div>
-                                <div class="text-center">
-                                    <img src="images/Hand_Glove_3.png" alt="Subject with the glove driving" class="w-full h-80 object-cover rounded-lg mb-2">
-                                    <h5 class="text-sm font-semibold text-white mb-1">Subject with the Glove Driving</h5>
-                                    <p class="text-sm text-gray-400">Real-world application demonstration showing driver wearing the PPG monitoring glove during vehicle operation, enabling continuous health monitoring and fatigue detection for enhanced road safety.</p>
-                                </div>
+                        <div class="grid grid-cols-1 gap-6 mb-4">
+                            <div class="text-center">
+                                <img src="images/Hand_Glove_1.png" alt="Receiver end architecture" class="w-full h-80 object-cover rounded-lg mb-2">
+                                <h5 class="text-sm font-semibold text-white mb-1">Receiver End Architecture</h5>
+                                <p class="text-sm text-gray-400">Complete receiver unit featuring ZigBee communication module, data processing capabilities, LCD display interface, GPS tracking, and GSM emergency communication system for comprehensive health monitoring.</p>
                             </div>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
-                                <div class="text-center">
-                                    <img src="images/Hand_Glove_4.png" alt="Proof of concept setup" class="w-full h-80 object-cover rounded-lg mb-2">
-                                    <h5 class="text-sm font-semibold text-white mb-1">Proof of Concept</h5>
-                                    <p class="text-sm text-gray-400">Laboratory proof of concept demonstration showcasing the complete wearable PPG monitoring system with hand glove, receiver unit, and real-time data acquisition capabilities.</p>
-                                </div>
-                                <div class="text-center">
-                                    <img src="images/Hand_Glove_5.png" alt="System validation and testing" class="w-full h-80 object-cover rounded-lg mb-2">
-                                    <h5 class="text-sm font-semibold text-white mb-1">System Validation and Testing</h5>
-                                    <p class="text-sm text-gray-400">Comprehensive system testing and validation setup demonstrating signal quality assessment, accuracy measurements, and performance verification of the complete wearable health monitoring solution.</p>
-                                </div>
+                            <div class="text-center">
+                                <img src="images/Hand_Glove_2.png" alt="Transmitter end architecture" class="w-full h-80 object-cover rounded-lg mb-2">
+                                <h5 class="text-sm font-semibold text-white mb-1">Transmitter End Architecture</h5>
+                                <p class="text-sm text-gray-400">Hand glove transmitter module with integrated PPG sensors, temperature monitoring, analog front-end processing, and ZigBee wireless transmission capabilities for continuous vital signs acquisition.</p>
                             </div>
+                            <div class="text-center">
+                                <img src="images/Hand_Glove_3.png" alt="Subject with the glove driving" class="w-full h-80 object-cover rounded-lg mb-2">
+                                <h5 class="text-sm font-semibold text-white mb-1">Subject with the Glove Driving</h5>
+                                <p class="text-sm text-gray-400">Real-world application demonstration showing driver wearing the PPG monitoring glove during vehicle operation, enabling continuous health monitoring and fatigue detection for enhanced road safety.</p>
+                            </div>
+                            <div class="text-center">
+                                <img src="images/Hand_Glove_4.png" alt="Proof of concept setup" class="w-full h-80 object-cover rounded-lg mb-2">
+                                <h5 class="text-sm font-semibold text-white mb-1">Proof of Concept</h5>
+                                <p class="text-sm text-gray-400">Laboratory proof of concept demonstration showcasing the complete wearable PPG monitoring system with hand glove, receiver unit, and real-time data acquisition capabilities.</p>
+                            </div>
+                            <div class="text-center">
+                                <img src="images/Hand_Glove_5.png" alt="System validation and testing" class="w-full h-80 object-cover rounded-lg mb-2">
+                                <h5 class="text-sm font-semibold text-white mb-1">System Validation and Testing</h5>
+                                <p class="text-sm text-gray-400">Comprehensive system testing and validation setup demonstrating signal quality assessment, accuracy measurements, and performance verification of the complete wearable health monitoring solution.</p>
+                            </div>
+                        </div>
                         </div>
 
                         <h3 class="text-xl font-semibold text-white mb-4">2. Theoretical Framework and LED Wavelength Selection</h3>
