@@ -195,134 +195,55 @@ body {
     transform: translateY(0); 
 }
 
-/* Generic Table Styles */
-.generic-table {
+/* Simple Table Styles - Basic and Reliable */
+.generic-table, table {
     width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-    margin: 1.5rem 0;
-    background: linear-gradient(145deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.95));
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(148, 163, 184, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: #333333;
+    border: 2px solid #666666;
 }
 
-.generic-table th {
-    background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
-    color: #f1f5f9;
-    font-weight: 600;
-    padding: 16px 20px;
-    text-align: left;
-    font-size: 0.875rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    border-bottom: 2px solid rgba(100, 116, 139, 0.3);
-    position: relative;
-}
-
-.generic-table th:first-child {
-    border-top-left-radius: 12px;
-}
-
-.generic-table th:last-child {
-    border-top-right-radius: 12px;
-}
-
-.generic-table th::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, #00BFFF, transparent);
-}
-
-.generic-table td {
-    padding: 16px 20px;
-    border-bottom: 1px solid rgba(148, 163, 184, 0.1);
-    color: #e2e8f0;
-    font-size: 0.875rem;
-    line-height: 1.6;
-    position: relative;
-}
-
-.generic-table tbody tr {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-}
-
-.generic-table tbody tr:nth-child(even) {
-    background: rgba(148, 163, 184, 0.03);
-}
-
-.generic-table tbody tr:hover {
-    background: linear-gradient(90deg, rgba(0, 191, 255, 0.08), rgba(0, 191, 255, 0.12), rgba(0, 191, 255, 0.08));
-    transform: translateY(-2px);
-    box-shadow: 0 4px 20px rgba(0, 191, 255, 0.15), 0 0 0 1px rgba(0, 191, 255, 0.2);
-}
-
-.generic-table tbody tr:hover td {
-    color: #ffffff;
-}
-
-.generic-table tbody tr:last-child td:first-child {
-    border-bottom-left-radius: 12px;
-}
-
-.generic-table tbody tr:last-child td:last-child {
-    border-bottom-right-radius: 12px;
-}
-
-.generic-table .table-highlight {
-    background: linear-gradient(90deg, rgba(0, 191, 255, 0.2), rgba(0, 191, 255, 0.25));
-    font-weight: 600;
+.generic-table th, table th {
+    background: #444444 !important;
     color: #ffffff !important;
-    position: relative;
-}
-
-.generic-table .table-highlight::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 3px;
-    background: linear-gradient(180deg, #00BFFF, #0ea5e9);
-    border-radius: 0 2px 2px 0;
-}
-
-/* Ensure all table text is white and visible */
-.generic-table td {
-    padding: 16px 20px;
-    border-bottom: 1px solid rgba(148, 163, 184, 0.1);
-    color: #ffffff !important;
-    font-size: 0.875rem;
-    line-height: 1.6;
-    position: relative;
-}
-
-.generic-table th {
-    background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
-    color: #ffffff !important;
-    font-weight: 600;
-    padding: 16px 20px;
-    text-align: left;
-    font-size: 0.875rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    border-bottom: 2px solid rgba(100, 116, 139, 0.3);
-    position: relative;
-}
-
-/* Force white text for all table cells */
-.generic-table th,
-.generic-table td {
-    color: #ffffff !important;
-    vertical-align: middle !important;
+    font-weight: bold !important;
+    padding: 12px 15px !important;
     text-align: left !important;
+    border: 1px solid #666666 !important;
+}
+
+.generic-table td, table td {
+    background: #333333 !important;
+    color: #ffffff !important;
+    padding: 12px 15px !important;
+    text-align: left !important;
+    border: 1px solid #666666 !important;
+}
+
+/* First column - Simple and visible */
+.generic-table th:first-child, table th:first-child {
+    background: #00BFFF !important;
+    color: #000000 !important;
+    font-weight: bold !important;
+    border: 2px solid #ffffff !important;
+}
+
+.generic-table td:first-child, table td:first-child {
+    background: #0099cc !important;
+    color: #ffffff !important;
+    font-weight: bold !important;
+    border: 2px solid #ffffff !important;
+}
+
+/* Hover effects - Simple */
+.generic-table tr:hover, table tr:hover {
+    background: #555555 !important;
+}
+
+.generic-table tr:hover td:first-child, table tr:hover td:first-child {
+    background: #00BFFF !important;
+    color: #000000 !important;
 }
 
 /* Additional first column fixes - Enhanced specificity */
