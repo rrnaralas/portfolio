@@ -452,6 +452,178 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 `
             },
+            'aero-mouse': {
+                title: 'Aero-mouse for TV: High-Precision Motion & Haptic Remote',
+                description: `
+                    <div class="space-y-6">
+                        <h2 class="text-2xl font-bold text-primary-color mb-4">Aero-mouse for TV: High-Precision Motion & Haptic Remote</h2>
+                        
+                        <h3 class="text-xl font-semibold text-white mb-4">Overview</h3>
+                        <p class="text-gray-300 mb-4">
+                            The Aeromouse for TV is a BLE-enabled, motion-sensing remote providing high-fidelity 
+                            cursor control with integrated haptic feedback. The platform is implemented on Zephyr 
+                            RTOS using custom BLE drivers optimized for HID communication. The complete firmware 
+                            and platform setup were developed using Cline in VS Code, enabling robust sensor fusion, 
+                            haptic integration, and motion-based cursor control.
+                        </p>
+
+                        <p class="text-gray-300 mb-6">
+                            The device combines 6-axis IMU (LSM6DS3), ARM Cortex-M4 MCU (nRF52840), BLE HID communication, 
+                            Linear Resonant Actuator (LRA, VG0840001D) controlled via I²C by DRV2605L, and mechanical 
+                            tactile push buttons. This architecture addresses latency, imprecision, and lack of tactile 
+                            feedback in traditional directional-button Fire TV remotes.
+                        </p>
+
+                        <h3 class="text-xl font-semibold text-white mb-4">Problem Statement</h3>
+                        <p class="text-gray-300 mb-4">
+                            Current TV remotes, which rely primarily on directional buttons and limited touchpads, 
+                            present several critical usability and performance challenges:
+                        </p>
+
+                        <ul class="list-disc list-inside text-gray-400 space-y-3 mb-6">
+                            <li><strong class="text-white">Inefficient Navigation:</strong> Directional buttons only allow incremental movement, forcing users to repeatedly press buttons for cursor control. Selecting items in dense grids (like apps, settings, or on-screen keyboards) is slow and frustrating.</li>
+                            <li><strong class="text-white">Lack of Precision:</strong> Small menu items, thumbnails, and interactive UI elements require fine cursor control. Button-based navigation lacks smoothness, resulting in overshooting or undershooting targets.</li>
+                            <li><strong class="text-white">Cognitive Load:</strong> Users must mentally translate multiple button presses into spatial movement, which is unintuitive compared to natural hand motion. Slow navigation increases interaction time and decreases engagement with Fire TV apps.</li>
+                            <li><strong class="text-white">Absence of Tactile Feedback:</strong> Button presses provide minimal physical feedback. Users cannot confirm clicks or selections immediately, leading to repeated presses, selection errors, and frustration.</li>
+                            <li><strong class="text-white">Latency and Responsiveness:</strong> UI interactions feel sluggish due to the sequential nature of button presses. Real-time applications, like gaming or fast menu browsing, are hindered.</li>
+                        </ul>
+
+                        <p class="text-gray-300 mb-6">
+                            These limitations make the Fire TV experience cumbersome, especially for high-frequency 
+                            users or scenarios that require fast, accurate navigation. A motion-sensing, haptically-
+                            enabled remote is needed to reduce cognitive load, improve selection precision, and 
+                            provide immediate tactile feedback for an intuitive, satisfying user experience.
+                        </p>
+
+                        <h3 class="text-xl font-semibold text-white mb-4">Proposed Solution</h3>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2 mb-6">
+                            <li><strong class="text-white">High-Precision Motion Sensing:</strong> LSM6DS3 IMU captures real-time 6-axis motion, enabling natural hand movement to directly control the on-screen cursor.</li>
+                            <li><strong class="text-white">BLE HID Communication:</strong> Custom BLE drivers running on Zephyr RTOS transmit cursor position and click events with &lt;10 ms latency.</li>
+                            <li><strong class="text-white">Haptic Feedback:</strong> VG0840001D LRA, driven via I²C by DRV2605L, provides immediate tactile confirmation for every button press.</li>
+                            <li><strong class="text-white">Ergonomic Design:</strong> Lightweight, hand-friendly design optimized for motion-based pointing.</li>
+                            <li><strong class="text-white">Advanced Firmware:</strong> Developed entirely with Amazon Cline in VS Code, integrates Zephyr SDK, sensor fusion algorithms, motion-to-cursor mapping logic, I²C haptic control, and BLE HID stack for Fire TV communication.</li>
+                        </ul>
+
+                        <h3 class="text-xl font-semibold text-white mb-4">Product Architecture</h3>
+                        <div class="overflow-x-auto mb-6">
+                            <table class="generic-table">
+                                <thead>
+                                    <tr>
+                                        <th>Component</th>
+                                        <th>Part/Spec</th>
+                                        <th>Type</th>
+                                        <th>Function</th>
+                                        <th>Version</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>MCU</td>
+                                        <td>nRF52840 (ARM Cortex-M4, 64 MHz, 1 MB Flash, 256 KB RAM)</td>
+                                        <td>Hardware</td>
+                                        <td>Runs Zephyr RTOS, processes IMU data, executes sensor fusion, controls haptics, and manages BLE HID communication</td>
+                                        <td>N/A</td>
+                                    </tr>
+                                    <tr>
+                                        <td>IMU</td>
+                                        <td>LSM6DS3 (3-axis accelerometer + 3-axis gyroscope)</td>
+                                        <td>Hardware</td>
+                                        <td>Provides 6-axis motion sensing for accurate cursor mapping</td>
+                                        <td>N/A</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Haptic Actuator</td>
+                                        <td>VG0840001D LRA</td>
+                                        <td>Hardware</td>
+                                        <td>Delivers tactile feedback for button clicks</td>
+                                        <td>N/A</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Haptic Driver</td>
+                                        <td>DRV2605L</td>
+                                        <td>Hardware</td>
+                                        <td>Controlled via I²C from MCU; drives LRA with precise vibration profiles</td>
+                                        <td>N/A</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Push Buttons</td>
+                                        <td>Mechanical tactile push buttons</td>
+                                        <td>Hardware</td>
+                                        <td>Provides discrete click input for cursor actions</td>
+                                        <td>N/A</td>
+                                    </tr>
+                                    <tr>
+                                        <td>BLE module</td>
+                                        <td>Bluetooth Low Energy 5.0</td>
+                                        <td>Hardware</td>
+                                        <td>Custom Zephyr-based BLE drivers implement HID protocol for low-latency communication with Fire TV</td>
+                                        <td>N/A</td>
+                                    </tr>
+                                    <tr>
+                                        <td>HID Stack</td>
+                                        <td>Custom BLE HID</td>
+                                        <td>Software</td>
+                                        <td>Implements mouse communication over BLE using Zephyr RTOS</td>
+                                        <td>N/A</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Platform</td>
+                                        <td>Zephyr RTOS</td>
+                                        <td>Software</td>
+                                        <td>Provides real-time OS and runtime environment for motion sensing, BLE, and haptic control</td>
+                                        <td>Zephyr SDK 0.17.2, CMake 4.1.0, Python 3.13.7, Device Tree Compiler 1.7.2, West 1.4.0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>VS Code</td>
+                                        <td>Development Environment</td>
+                                        <td>Software</td>
+                                        <td>IDE used with Amazon Cline for complete platform setup, firmware development, and code generation</td>
+                                        <td>Version: 1.103.2</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h3 class="text-xl font-semibold text-white mb-4">Performance Metrics</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+                            <div class="bg-gray-800 p-4 rounded">
+                                <h4 class="text-primary-color font-semibold mb-2">Motion Latency</h4>
+                                <p class="text-white text-2xl">&lt;10 ms</p>
+                                <p class="text-gray-400 text-sm">Motion-to-cursor response</p>
+                            </div>
+                            <div class="bg-gray-800 p-4 rounded">
+                                <h4 class="text-primary-color font-semibold mb-2">Haptic Response</h4>
+                                <p class="text-white text-2xl">&lt;10 ms</p>
+                                <p class="text-gray-400 text-sm">Tactile feedback latency</p>
+                            </div>
+                            <div class="bg-gray-800 p-4 rounded">
+                                <h4 class="text-primary-color font-semibold mb-2">Cursor Precision</h4>
+                                <p class="text-white text-2xl">Sub-pixel</p>
+                                <p class="text-gray-400 text-sm">Resolution accuracy</p>
+                            </div>
+                            <div class="bg-gray-800 p-4 rounded">
+                                <h4 class="text-primary-color font-semibold mb-2">Power Consumption</h4>
+                                <p class="text-white text-2xl">&lt;15 mA</p>
+                                <p class="text-gray-400 text-sm">Average during operation</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-800 p-4 rounded mb-6">
+                            <h4 class="text-primary-color font-semibold mb-2">BLE Range</h4>
+                            <p class="text-white text-lg">~10 m line-of-sight</p>
+                        </div>
+
+                        <h3 class="text-xl font-semibold text-white mb-4">Technical Advantages</h3>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2 mb-6">
+                            <li><strong class="text-white">Low-Latency Navigation:</strong> Zephyr RTOS + custom BLE stack ensures near-instant cursor response.</li>
+                            <li><strong class="text-white">Accurate Pointing:</strong> Motion-based control allows precise selection in menus.</li>
+                            <li><strong class="text-white">Tactile Confirmation:</strong> LRA haptics provide immediate feedback for every click.</li>
+                            <li><strong class="text-white">Ergonomic Design:</strong> Intuitive hand-held form factor suitable for extended use.</li>
+                            <li><strong class="text-white">Scalable Platform:</strong> OTA firmware updates and multi-device BLE pairing supported.</li>
+                        </ul>
+                    </div>
+                `
+            },
             'electrofusion': {
                 title: 'Proof of Concept for a High-Power, Cordless Electrofusion Device',
                 description: `
