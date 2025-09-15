@@ -226,30 +226,25 @@ body {
     color: #ffffff !important;
 }
 
-/* FIRST COLUMN - Ultra-visible styling */
+/* FIRST COLUMN - Simple grey background with white text */
 .generic-table th:first-child, 
 .generic-table td:first-child,
 table th:first-child, 
 table td:first-child {
-    background: #ff6600 !important;
+    background: #555555 !important;
     color: #ffffff !important;
     font-weight: bold !important;
     font-size: 14px !important;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.8) !important;
-    border-left: 4px solid #ffaa00 !important;
-    border-right: 4px solid #ffaa00 !important;
     padding: 15px 20px !important;
-    min-width: 150px !important;
-    white-space: nowrap !important;
+    border-bottom: 1px solid #444444 !important;
+    border-right: 1px solid #444444 !important;
 }
 
-/* Header first column even more visible */
+/* Header first column */
 .generic-table th:first-child, table th:first-child {
-    background: #ff4400 !important;
+    background: #666666 !important;
     color: #ffffff !important;
-    font-weight: 900 !important;
-    text-transform: uppercase !important;
-    letter-spacing: 0.5px !important;
+    font-weight: bold !important;
 }
 
 /* Hover effects */
@@ -258,7 +253,7 @@ table td:first-child {
 }
 
 .generic-table tr:hover td:first-child, table tr:hover td:first-child {
-    background: #ff8800 !important;
+    background: #666666 !important;
     color: #ffffff !important;
 }
 
