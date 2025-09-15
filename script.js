@@ -261,39 +261,39 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div>
                         <h2 class="text-2xl font-bold text-primary-color mb-4">Performance Results</h2>
                         <div class="overflow-x-auto mb-6">
-                            <table class="generic-table">
-                                <thead>
+                            <table class="min-w-full bg-gray-800/50 backdrop-blur-sm rounded-lg border border-gray-600 shadow-lg">
+                                <thead class="bg-gray-700/50">
                                     <tr>
-                                        <th>Specification</th>
-                                        <th>Requirement</th>
-                                        <th>Achieved Performance</th>
+                                        <th class="px-6 py-4 text-left text-xs font-medium text-gray-300 uppercase tracking-wider border-b border-gray-600">Specification</th>
+                                        <th class="px-6 py-4 text-left text-xs font-medium text-gray-300 uppercase tracking-wider border-b border-gray-600">Requirement</th>
+                                        <th class="px-6 py-4 text-left text-xs font-medium text-gray-300 uppercase tracking-wider border-b border-gray-600">Achieved Performance</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Measurement Range</td>
-                                        <td>0 - 25,000 Microns</td>
-                                        <td>0 - 25,000 Microns ✓</td>
+                                <tbody class="divide-y divide-gray-600">
+                                    <tr class="hover:bg-gray-700/30 transition-colors">
+                                        <td class="px-6 py-4 text-sm font-medium text-white">Measurement Range</td>
+                                        <td class="px-6 py-4 text-sm text-gray-300">0 - 25,000 Microns</td>
+                                        <td class="px-6 py-4 text-sm text-green-400">0 - 25,000 Microns ✓</td>
                                     </tr>
-                                    <tr>
-                                        <td>Vacuum Accuracy</td>
-                                        <td>5% of Reading +/- 5 Microns</td>
-                                        <td>Meets/Exceeds requirement ✓</td>
+                                    <tr class="hover:bg-gray-700/30 transition-colors">
+                                        <td class="px-6 py-4 text-sm font-medium text-white">Vacuum Accuracy</td>
+                                        <td class="px-6 py-4 text-sm text-gray-300">5% of Reading +/- 5 Microns</td>
+                                        <td class="px-6 py-4 text-sm text-green-400">Meets/Exceeds requirement ✓</td>
                                     </tr>
-                                    <tr>
-                                        <td>Resolution</td>
-                                        <td>0.1 Micron (0-9,999.9) / 1 Micron (10,000-25,000)</td>
-                                        <td>Meets requirement ✓</td>
+                                    <tr class="hover:bg-gray-700/30 transition-colors">
+                                        <td class="px-6 py-4 text-sm font-medium text-white">Resolution</td>
+                                        <td class="px-6 py-4 text-sm text-gray-300">0.1 Micron (0-9,999.9) / 1 Micron (10,000-25,000)</td>
+                                        <td class="px-6 py-4 text-sm text-green-400">Meets requirement ✓</td>
                                     </tr>
-                                    <tr>
-                                        <td>Maximum Overpressure</td>
-                                        <td>500 PSI</td>
-                                        <td>500 PSI ✓</td>
+                                    <tr class="hover:bg-gray-700/30 transition-colors">
+                                        <td class="px-6 py-4 text-sm font-medium text-white">Maximum Overpressure</td>
+                                        <td class="px-6 py-4 text-sm text-gray-300">500 PSI</td>
+                                        <td class="px-6 py-4 text-sm text-green-400">500 PSI ✓</td>
                                     </tr>
-                                    <tr>
-                                        <td>Power Source</td>
-                                        <td>3 AA cells or 9V battery</td>
-                                        <td>Optimized for 3 AA cells ✓</td>
+                                    <tr class="hover:bg-gray-700/30 transition-colors">
+                                        <td class="px-6 py-4 text-sm font-medium text-white">Power Source</td>
+                                        <td class="px-6 py-4 text-sm text-gray-300">3 AA cells or 9V battery</td>
+                                        <td class="px-6 py-4 text-sm text-green-400">Optimized for 3 AA cells ✓</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -304,44 +304,44 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div>
                         <h3 class="text-xl font-semibold text-white mb-4">Vacuum Sensor Technology Comparison</h3>
                         <div class="overflow-x-auto mb-6">
-                            <table class="generic-table">
-                                <thead>
+                            <table class="min-w-full bg-gray-800/50 backdrop-blur-sm rounded-lg border border-gray-600 shadow-lg">
+                                <thead class="bg-gray-700/50">
                                     <tr>
-                                        <th>Feature</th>
-                                        <th>Pirani/MEMS Sensor (Selected)</th>
-                                        <th>Thermistor Gauge</th>
+                                        <th class="px-6 py-4 text-left text-xs font-medium text-gray-300 uppercase tracking-wider border-b border-gray-600">Feature</th>
+                                        <th class="px-6 py-4 text-left text-xs font-medium text-gray-300 uppercase tracking-wider border-b border-gray-600">Pirani/MEMS Sensor (Selected)</th>
+                                        <th class="px-6 py-4 text-left text-xs font-medium text-gray-300 uppercase tracking-wider border-b border-gray-600">Thermistor Gauge</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Operating Principle</td>
-                                        <td>Thermal conductivity of gases</td>
-                                        <td>Temperature-sensitive resistor</td>
+                                <tbody class="divide-y divide-gray-600">
+                                    <tr class="hover:bg-gray-700/30 transition-colors">
+                                        <td class="px-6 py-4 text-sm font-medium text-white">Operating Principle</td>
+                                        <td class="px-6 py-4 text-sm text-gray-300">Thermal conductivity of gases</td>
+                                        <td class="px-6 py-4 text-sm text-gray-300">Temperature-sensitive resistor</td>
                                     </tr>
-                                    <tr>
-                                        <td>Measurement Range</td>
-                                        <td>1 - 760,000 Microns</td>
-                                        <td>0 - 12,000 Microns</td>
+                                    <tr class="hover:bg-gray-700/30 transition-colors">
+                                        <td class="px-6 py-4 text-sm font-medium text-white">Measurement Range</td>
+                                        <td class="px-6 py-4 text-sm text-gray-300">1 - 760,000 Microns</td>
+                                        <td class="px-6 py-4 text-sm text-gray-300">0 - 12,000 Microns</td>
                                     </tr>
-                                    <tr>
-                                        <td>Output Type</td>
-                                        <td>Digital (I2C)</td>
-                                        <td>Analog</td>
+                                    <tr class="hover:bg-gray-700/30 transition-colors">
+                                        <td class="px-6 py-4 text-sm font-medium text-white">Output Type</td>
+                                        <td class="px-6 py-4 text-sm text-gray-300">Digital (I2C)</td>
+                                        <td class="px-6 py-4 text-sm text-gray-300">Analog</td>
                                     </tr>
-                                    <tr>
-                                        <td>Compensation</td>
-                                        <td>Built-in (temperature, linearization)</td>
-                                        <td>Requires external firmware compensation</td>
+                                    <tr class="hover:bg-gray-700/30 transition-colors">
+                                        <td class="px-6 py-4 text-sm font-medium text-white">Compensation</td>
+                                        <td class="px-6 py-4 text-sm text-gray-300">Built-in (temperature, linearization)</td>
+                                        <td class="px-6 py-4 text-sm text-gray-300">Requires external firmware compensation</td>
                                     </tr>
-                                    <tr>
-                                        <td>Power Consumption</td>
-                                        <td>Low (intermittent pulsed excitation)</td>
-                                        <td>Higher (continuous operation)</td>
+                                    <tr class="hover:bg-gray-700/30 transition-colors">
+                                        <td class="px-6 py-4 text-sm font-medium text-white">Power Consumption</td>
+                                        <td class="px-6 py-4 text-sm text-gray-300">Low (intermittent pulsed excitation)</td>
+                                        <td class="px-6 py-4 text-sm text-gray-300">Higher (continuous operation)</td>
                                     </tr>
-                                    <tr>
-                                        <td>Overpressure Rating</td>
-                                        <td>450 PSI</td>
-                                        <td>500 PSI</td>
+                                    <tr class="hover:bg-gray-700/30 transition-colors">
+                                        <td class="px-6 py-4 text-sm font-medium text-white">Overpressure Rating</td>
+                                        <td class="px-6 py-4 text-sm text-gray-300">450 PSI</td>
+                                        <td class="px-6 py-4 text-sm text-gray-300">500 PSI</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -352,34 +352,34 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div>
                         <h3 class="text-xl font-semibold text-white mb-4">Key Component Selection Rationale</h3>
                         <div class="overflow-x-auto mb-6">
-                            <table class="generic-table">
-                                <thead>
+                            <table class="min-w-full bg-gray-800/50 backdrop-blur-sm rounded-lg border border-gray-600 shadow-lg">
+                                <thead class="bg-gray-700/50">
                                     <tr>
-                                        <th>Component</th>
-                                        <th>Example Part</th>
-                                        <th>Selection Rationale</th>
+                                        <th class="px-6 py-4 text-left text-xs font-medium text-gray-300 uppercase tracking-wider border-b border-gray-600">Component</th>
+                                        <th class="px-6 py-4 text-left text-xs font-medium text-gray-300 uppercase tracking-wider border-b border-gray-600">Example Part</th>
+                                        <th class="px-6 py-4 text-left text-xs font-medium text-gray-300 uppercase tracking-wider border-b border-gray-600">Selection Rationale</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Vacuum Sensor</td>
-                                        <td>Posifa PVC4000 Series</td>
-                                        <td>High accuracy, wide range, low power, digital interface simplifies design</td>
+                                <tbody class="divide-y divide-gray-600">
+                                    <tr class="hover:bg-gray-700/30 transition-colors">
+                                        <td class="px-6 py-4 text-sm font-medium text-white">Vacuum Sensor</td>
+                                        <td class="px-6 py-4 text-sm text-gray-300">Posifa PVC4000 Series</td>
+                                        <td class="px-6 py-4 text-sm text-gray-300">High accuracy, wide range, low power, digital interface simplifies design</td>
                                     </tr>
-                                    <tr>
-                                        <td>Microcontroller</td>
-                                        <td>STM32L4 Series</td>
-                                        <td>Ultra-low-power MCU with sufficient resources for sensor communication and UI</td>
+                                    <tr class="hover:bg-gray-700/30 transition-colors">
+                                        <td class="px-6 py-4 text-sm font-medium text-white">Microcontroller</td>
+                                        <td class="px-6 py-4 text-sm text-gray-300">STM32L4 Series</td>
+                                        <td class="px-6 py-4 text-sm text-gray-300">Ultra-low-power MCU with sufficient resources for sensor communication and UI</td>
                                     </tr>
-                                    <tr>
-                                        <td>Display</td>
-                                        <td>Custom Segment LCD</td>
-                                        <td>Clear, durable, low-power interface suitable for field use</td>
+                                    <tr class="hover:bg-gray-700/30 transition-colors">
+                                        <td class="px-6 py-4 text-sm font-medium text-white">Display</td>
+                                        <td class="px-6 py-4 text-sm text-gray-300">Custom Segment LCD</td>
+                                        <td class="px-6 py-4 text-sm text-gray-300">Clear, durable, low-power interface suitable for field use</td>
                                     </tr>
-                                    <tr>
-                                        <td>Wireless Module</td>
-                                        <td>BLE 5.0 Module (nRF52)</td>
-                                        <td>Low-power, reliable wireless communication for smartphone integration</td>
+                                    <tr class="hover:bg-gray-700/30 transition-colors">
+                                        <td class="px-6 py-4 text-sm font-medium text-white">Wireless Module</td>
+                                        <td class="px-6 py-4 text-sm text-gray-300">BLE 5.0 Module (nRF52)</td>
+                                        <td class="px-6 py-4 text-sm text-gray-300">Low-power, reliable wireless communication for smartphone integration</td>
                                     </tr>
                                 </tbody>
                             </table>
