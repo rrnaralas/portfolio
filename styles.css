@@ -321,18 +321,48 @@ body {
 .generic-table th,
 .generic-table td {
     color: #ffffff !important;
+    vertical-align: middle !important;
+    text-align: left !important;
+}
+
+/* Additional first column fixes */
+.generic-table tbody tr:hover td:first-child {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    background: linear-gradient(90deg, rgba(0, 191, 255, 0.25), rgba(0, 191, 255, 0.35)) !important;
+}
+
+.generic-table td:first-child {
+    position: relative;
+    z-index: 3;
+}
+
+.generic-table th:first-child {
+    position: relative;
+    z-index: 3;
 }
 
 /* Ensure first column is always clearly visible */
 .generic-table tbody tr td:first-child {
     color: #ffffff !important;
     font-weight: 600;
-    background: linear-gradient(90deg, rgba(0, 191, 255, 0.15), rgba(0, 191, 255, 0.2));
+    background: linear-gradient(90deg, rgba(0, 191, 255, 0.15), rgba(0, 191, 255, 0.2)) !important;
+    padding: 16px 20px !important;
+    border-right: 1px solid rgba(0, 191, 255, 0.3) !important;
+    text-align: left !important;
+    vertical-align: middle !important;
+    min-width: 150px;
 }
 
 .generic-table thead tr th:first-child {
     color: #ffffff !important;
     font-weight: 700;
+    background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%) !important;
+    border-right: 1px solid rgba(0, 191, 255, 0.3) !important;
+    padding: 16px 20px !important;
+    text-align: left !important;
+    vertical-align: middle !important;
+    min-width: 150px;
 }
 
 .generic-table .status-success {
