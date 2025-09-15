@@ -261,39 +261,39 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div>
                         <h2 class="text-2xl font-bold text-primary-color mb-4">Performance Results</h2>
                         <div class="overflow-x-auto mb-6">
-                            <table class="min-w-full bg-gray-800/50 backdrop-blur-sm rounded-lg border border-gray-600 shadow-lg">
-                                <thead class="bg-gray-700/50">
+                            <table class="generic-table">
+                                <thead>
                                     <tr>
-                                        <th class="px-6 py-4 text-left text-xs font-medium text-gray-300 uppercase tracking-wider border-b border-gray-600">Specification</th>
-                                        <th class="px-6 py-4 text-left text-xs font-medium text-gray-300 uppercase tracking-wider border-b border-gray-600">Requirement</th>
-                                        <th class="px-6 py-4 text-left text-xs font-medium text-gray-300 uppercase tracking-wider border-b border-gray-600">Achieved Performance</th>
+                                        <th>Specification</th>
+                                        <th>Requirement</th>
+                                        <th>Achieved Performance</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y divide-gray-600">
-                                    <tr class="hover:bg-gray-700/30 transition-colors">
-                                        <td class="px-6 py-4 text-sm font-medium text-white">Measurement Range</td>
-                                        <td class="px-6 py-4 text-sm text-gray-300">0 - 25,000 Microns</td>
-                                        <td class="px-6 py-4 text-sm text-green-400">0 - 25,000 Microns ✓</td>
+                                <tbody>
+                                    <tr>
+                                        <td>Measurement Range</td>
+                                        <td>0 - 25,000 Microns</td>
+                                        <td class="status-success">0 - 25,000 Microns ✓</td>
                                     </tr>
-                                    <tr class="hover:bg-gray-700/30 transition-colors">
-                                        <td class="px-6 py-4 text-sm font-medium text-white">Vacuum Accuracy</td>
-                                        <td class="px-6 py-4 text-sm text-gray-300">5% of Reading +/- 5 Microns</td>
-                                        <td class="px-6 py-4 text-sm text-green-400">Meets/Exceeds requirement ✓</td>
+                                    <tr>
+                                        <td>Vacuum Accuracy</td>
+                                        <td>5% of Reading +/- 5 Microns</td>
+                                        <td class="status-success">Meets/Exceeds requirement ✓</td>
                                     </tr>
-                                    <tr class="hover:bg-gray-700/30 transition-colors">
-                                        <td class="px-6 py-4 text-sm font-medium text-white">Resolution</td>
-                                        <td class="px-6 py-4 text-sm text-gray-300">0.1 Micron (0-9,999.9) / 1 Micron (10,000-25,000)</td>
-                                        <td class="px-6 py-4 text-sm text-green-400">Meets requirement ✓</td>
+                                    <tr>
+                                        <td>Resolution</td>
+                                        <td>0.1 Micron (0-9,999.9) / 1 Micron (10,000-25,000)</td>
+                                        <td class="status-success">Meets requirement ✓</td>
                                     </tr>
-                                    <tr class="hover:bg-gray-700/30 transition-colors">
-                                        <td class="px-6 py-4 text-sm font-medium text-white">Maximum Overpressure</td>
-                                        <td class="px-6 py-4 text-sm text-gray-300">500 PSI</td>
-                                        <td class="px-6 py-4 text-sm text-green-400">500 PSI ✓</td>
+                                    <tr>
+                                        <td>Maximum Overpressure</td>
+                                        <td>500 PSI</td>
+                                        <td class="status-success">500 PSI ✓</td>
                                     </tr>
-                                    <tr class="hover:bg-gray-700/30 transition-colors">
-                                        <td class="px-6 py-4 text-sm font-medium text-white">Power Source</td>
-                                        <td class="px-6 py-4 text-sm text-gray-300">3 AA cells or 9V battery</td>
-                                        <td class="px-6 py-4 text-sm text-green-400">Optimized for 3 AA cells ✓</td>
+                                    <tr>
+                                        <td>Power Source</td>
+                                        <td>3 AA cells or 9V battery</td>
+                                        <td class="status-success">Optimized for 3 AA cells ✓</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -304,44 +304,44 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div>
                         <h3 class="text-xl font-semibold text-white mb-4">Vacuum Sensor Technology Comparison</h3>
                         <div class="overflow-x-auto mb-6">
-                            <table class="min-w-full bg-gray-800/50 backdrop-blur-sm rounded-lg border border-gray-600 shadow-lg">
-                                <thead class="bg-gray-700/50">
+                            <table class="generic-table">
+                                <thead>
                                     <tr>
-                                        <th class="px-6 py-4 text-left text-xs font-medium text-gray-300 uppercase tracking-wider border-b border-gray-600">Feature</th>
-                                        <th class="px-6 py-4 text-left text-xs font-medium text-gray-300 uppercase tracking-wider border-b border-gray-600">Pirani/MEMS Sensor (Selected)</th>
-                                        <th class="px-6 py-4 text-left text-xs font-medium text-gray-300 uppercase tracking-wider border-b border-gray-600">Thermistor Gauge</th>
+                                        <th>Feature</th>
+                                        <th>Pirani/MEMS Sensor (Selected)</th>
+                                        <th>Thermistor Gauge</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y divide-gray-600">
-                                    <tr class="hover:bg-gray-700/30 transition-colors">
-                                        <td class="px-6 py-4 text-sm font-medium text-white">Operating Principle</td>
-                                        <td class="px-6 py-4 text-sm text-gray-300">Thermal conductivity of gases</td>
-                                        <td class="px-6 py-4 text-sm text-gray-300">Temperature-sensitive resistor</td>
+                                <tbody>
+                                    <tr>
+                                        <td>Operating Principle</td>
+                                        <td class="table-highlight">Thermal conductivity of gases</td>
+                                        <td>Temperature-sensitive resistor</td>
                                     </tr>
-                                    <tr class="hover:bg-gray-700/30 transition-colors">
-                                        <td class="px-6 py-4 text-sm font-medium text-white">Measurement Range</td>
-                                        <td class="px-6 py-4 text-sm text-gray-300">1 - 760,000 Microns</td>
-                                        <td class="px-6 py-4 text-sm text-gray-300">0 - 12,000 Microns</td>
+                                    <tr>
+                                        <td>Measurement Range</td>
+                                        <td class="table-highlight">1 - 760,000 Microns</td>
+                                        <td>0 - 12,000 Microns</td>
                                     </tr>
-                                    <tr class="hover:bg-gray-700/30 transition-colors">
-                                        <td class="px-6 py-4 text-sm font-medium text-white">Output Type</td>
-                                        <td class="px-6 py-4 text-sm text-gray-300">Digital (I2C)</td>
-                                        <td class="px-6 py-4 text-sm text-gray-300">Analog</td>
+                                    <tr>
+                                        <td>Output Type</td>
+                                        <td class="table-highlight">Digital (I2C)</td>
+                                        <td>Analog</td>
                                     </tr>
-                                    <tr class="hover:bg-gray-700/30 transition-colors">
-                                        <td class="px-6 py-4 text-sm font-medium text-white">Compensation</td>
-                                        <td class="px-6 py-4 text-sm text-gray-300">Built-in (temperature, linearization)</td>
-                                        <td class="px-6 py-4 text-sm text-gray-300">Requires external firmware compensation</td>
+                                    <tr>
+                                        <td>Compensation</td>
+                                        <td class="table-highlight">Built-in (temperature, linearization)</td>
+                                        <td>Requires external firmware compensation</td>
                                     </tr>
-                                    <tr class="hover:bg-gray-700/30 transition-colors">
-                                        <td class="px-6 py-4 text-sm font-medium text-white">Power Consumption</td>
-                                        <td class="px-6 py-4 text-sm text-gray-300">Low (intermittent pulsed excitation)</td>
-                                        <td class="px-6 py-4 text-sm text-gray-300">Higher (continuous operation)</td>
+                                    <tr>
+                                        <td>Power Consumption</td>
+                                        <td class="table-highlight">Low (intermittent pulsed excitation)</td>
+                                        <td>Higher (continuous operation)</td>
                                     </tr>
-                                    <tr class="hover:bg-gray-700/30 transition-colors">
-                                        <td class="px-6 py-4 text-sm font-medium text-white">Overpressure Rating</td>
-                                        <td class="px-6 py-4 text-sm text-gray-300">450 PSI</td>
-                                        <td class="px-6 py-4 text-sm text-gray-300">500 PSI</td>
+                                    <tr>
+                                        <td>Overpressure Rating</td>
+                                        <td>450 PSI</td>
+                                        <td class="table-highlight">500 PSI</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -352,34 +352,34 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div>
                         <h3 class="text-xl font-semibold text-white mb-4">Key Component Selection Rationale</h3>
                         <div class="overflow-x-auto mb-6">
-                            <table class="min-w-full bg-gray-800/50 backdrop-blur-sm rounded-lg border border-gray-600 shadow-lg">
-                                <thead class="bg-gray-700/50">
+                            <table class="generic-table">
+                                <thead>
                                     <tr>
-                                        <th class="px-6 py-4 text-left text-xs font-medium text-gray-300 uppercase tracking-wider border-b border-gray-600">Component</th>
-                                        <th class="px-6 py-4 text-left text-xs font-medium text-gray-300 uppercase tracking-wider border-b border-gray-600">Example Part</th>
-                                        <th class="px-6 py-4 text-left text-xs font-medium text-gray-300 uppercase tracking-wider border-b border-gray-600">Selection Rationale</th>
+                                        <th>Parameter</th>
+                                        <th>Value</th>
+                                        <th>Justification</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y divide-gray-600">
-                                    <tr class="hover:bg-gray-700/30 transition-colors">
-                                        <td class="px-6 py-4 text-sm font-medium text-white">Vacuum Sensor</td>
-                                        <td class="px-6 py-4 text-sm text-gray-300">Posifa PVC4000 Series</td>
-                                        <td class="px-6 py-4 text-sm text-gray-300">High accuracy, wide range, low power, digital interface simplifies design</td>
+                                <tbody>
+                                    <tr>
+                                        <td>Input Voltage</td>
+                                        <td class="status-info">72V DC</td>
+                                        <td>Aligns with the native voltage of the Milwaukee MX FUEL™ platform.</td>
                                     </tr>
-                                    <tr class="hover:bg-gray-700/30 transition-colors">
-                                        <td class="px-6 py-4 text-sm font-medium text-white">Microcontroller</td>
-                                        <td class="px-6 py-4 text-sm text-gray-300">STM32L4 Series</td>
-                                        <td class="px-6 py-4 text-sm text-gray-300">Ultra-low-power MCU with sufficient resources for sensor communication and UI</td>
+                                    <tr>
+                                        <td>Output Voltage</td>
+                                        <td class="status-info">40V AC</td>
+                                        <td>Determined by the characteristic electrical and thermal requirements of the electrofusion couplers and their specific fusion schedules. This value ensures optimal energy delivery to the resistive load.</td>
                                     </tr>
-                                    <tr class="hover:bg-gray-700/30 transition-colors">
-                                        <td class="px-6 py-4 text-sm font-medium text-white">Display</td>
-                                        <td class="px-6 py-4 text-sm text-gray-300">Custom Segment LCD</td>
-                                        <td class="px-6 py-4 text-sm text-gray-300">Clear, durable, low-power interface suitable for field use</td>
+                                    <tr>
+                                        <td>Load Range</td>
+                                        <td class="status-info">0.5Ω to 12Ω</td>
+                                        <td>Accommodates the wide variety of standard electrofusion coupler sizes and types.</td>
                                     </tr>
-                                    <tr class="hover:bg-gray-700/30 transition-colors">
-                                        <td class="px-6 py-4 text-sm font-medium text-white">Wireless Module</td>
-                                        <td class="px-6 py-4 text-sm text-gray-300">BLE 5.0 Module (nRF52)</td>
-                                        <td class="px-6 py-4 text-sm text-gray-300">Low-power, reliable wireless communication for smartphone integration</td>
+                                    <tr>
+                                        <td>Output Frequency</td>
+                                        <td class="status-info">60 Hz</td>
+                                        <td>A standard frequency that provides the required alternating current for the resistive heating element.</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -531,22 +531,22 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <tbody>
                                     <tr>
                                         <td>Input Voltage</td>
-                                        <td>72V DC</td>
+                                        <td class="status-info">72V DC</td>
                                         <td>Aligns with the native voltage of the Milwaukee MX FUEL™ platform.</td>
                                     </tr>
                                     <tr>
                                         <td>Output Voltage</td>
-                                        <td>40V AC</td>
+                                        <td class="status-info">40V AC</td>
                                         <td>Determined by the characteristic electrical and thermal requirements of the electrofusion couplers and their specific fusion schedules. This value ensures optimal energy delivery to the resistive load.</td>
                                     </tr>
                                     <tr>
                                         <td>Load Range</td>
-                                        <td>0.5Ω to 12Ω</td>
+                                        <td class="status-info">0.5Ω to 12Ω</td>
                                         <td>Accommodates the wide variety of standard electrofusion coupler sizes and types.</td>
                                     </tr>
                                     <tr>
                                         <td>Output Frequency</td>
-                                        <td>60 Hz</td>
+                                        <td class="status-info">60 Hz</td>
                                         <td>A standard frequency that provides the required alternating current for the resistive heating element.</td>
                                     </tr>
                                 </tbody>
@@ -686,15 +686,15 @@ document.addEventListener('DOMContentLoaded', function() {
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>PCB Layout Optimization</td>
+                                        <td class="table-highlight">PCB Layout Optimization</td>
                                         <td>Minimized trace lengths and power loop areas to reduce parasitic inductance. Employed a strip-line approach to routing and ensured close placement of bypass capacitors.</td>
                                     </tr>
                                     <tr>
-                                        <td>Individual Gate Resistors</td>
+                                        <td class="table-highlight">Individual Gate Resistors</td>
                                         <td>A dedicated damping resistor (e.g., 4.7Ω) was placed as physically close as possible to the gate of each individual MOSFET. This resistor helps decrease the Q factor of the resonant tank, dampening the oscillations.</td>
                                     </tr>
                                     <tr>
-                                        <td>MOSFET Technology Selection</td>
+                                        <td class="table-highlight">MOSFET Technology Selection</td>
                                         <td>Selected MOSFETs with integrated gate resistors or a Kelvin-source pinout to further dampen oscillations and reduce dependencies on external layout.</td>
                                     </tr>
                                 </tbody>
@@ -948,22 +948,22 @@ document.addEventListener('DOMContentLoaded', function() {
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>STATE_HOME</td>
+                                        <td class="status-info">STATE_HOME</td>
                                         <td>Displays a welcome message and device status.</td>
                                         <td>Transitions to STATE_LOCATION.</td>
                                     </tr>
                                     <tr>
-                                        <td>STATE_LOCATION</td>
+                                        <td class="status-info">STATE_LOCATION</td>
                                         <td>Displays parsed Latitude and Longitude data.</td>
                                         <td>Transitions to STATE_SATELLITES.</td>
                                     </tr>
                                     <tr>
-                                        <td>STATE_SATELLITES</td>
+                                        <td class="status-info">STATE_SATELLITES</td>
                                         <td>Displays the number of satellites in use.</td>
                                         <td>Transitions to STATE_WAAS_STATUS.</td>
                                     </tr>
                                     <tr>
-                                        <td>STATE_WAAS_STATUS</td>
+                                        <td class="status-info">STATE_WAAS_STATUS</td>
                                         <td>Displays GPS fix and WAAS/DGNSS status.</td>
                                         <td>Transitions back to STATE_HOME.</td>
                                     </tr>
