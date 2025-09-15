@@ -120,38 +120,38 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
 
                     <!-- Technical Specifications Dashboard -->
-                    <div class="bg-gray-50 p-6 rounded-lg">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Technical Specifications</h3>
+                    <div class="glass-card p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold text-primary-color mb-4">Technical Specifications</h3>
                         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                             <div class="text-center">
-                                <div class="text-2xl font-bold text-blue-600">±5μm</div>
-                                <div class="text-sm text-gray-600">Precision Accuracy</div>
+                                <div class="text-2xl font-bold text-primary-color">±5μm</div>
+                                <div class="text-sm text-gray-300">Precision Accuracy</div>
                             </div>
                             <div class="text-center">
-                                <div class="text-2xl font-bold text-green-600">0-25K</div>
-                                <div class="text-sm text-gray-600">Micron Range</div>
+                                <div class="text-2xl font-bold text-primary-color">0-25K</div>
+                                <div class="text-sm text-gray-300">Micron Range</div>
                             </div>
                             <div class="text-center">
-                                <div class="text-2xl font-bold text-purple-600">500PSI</div>
-                                <div class="text-sm text-gray-600">Max Overpressure</div>
+                                <div class="text-2xl font-bold text-primary-color">500PSI</div>
+                                <div class="text-sm text-gray-300">Max Overpressure</div>
                             </div>
                             <div class="text-center">
-                                <div class="text-2xl font-bold text-orange-600">9V</div>
-                                <div class="text-sm text-gray-600">Battery Power</div>
+                                <div class="text-2xl font-bold text-primary-color">9V</div>
+                                <div class="text-sm text-gray-300">Battery Power</div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Executive Summary -->
                     <div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Executive Summary</h3>
-                        <p class="text-gray-600 mb-4">
+                        <h3 class="text-xl font-semibold text-white mb-4">Executive Summary</h3>
+                        <p class="text-white mb-4">
                             This report details the design, architecture, and implementation of a Proof of Concept (POC) for a digital vacuum gauge. 
                             The project was a strategic initiative aimed at creating a professional-grade, portable instrument for HVAC and refrigeration applications. 
                             The final design integrates a high-precision digital vacuum sensor with a custom microcontroller unit, a robust power management system, 
                             and wireless communication capabilities, all packaged in a durable, user-centric device.
                         </p>
-                        <p class="text-gray-600 mb-4">
+                        <p class="text-white mb-4">
                             Key achievements include the selection of a modern, low-power digital sensor that simplifies calibration and signal processing, 
                             the development of a sophisticated power management architecture to maximize battery life, and the successful integration of the device 
                             with a vacuum pump and an associated application ecosystem. The project not only met all core performance specifications but also 
@@ -161,50 +161,50 @@ document.addEventListener('DOMContentLoaded', function() {
 
                     <!-- POC Photos Section -->
                     <div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Proof of Concept Development</h3>
+                        <h3 class="text-xl font-semibold text-white mb-4">Proof of Concept Development</h3>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <div class="text-center">
                                 <img src="images/Vaccume_guage_1.png" alt="Digital Vacuum Gauge - Complete Device" class="w-full h-48 object-cover rounded-lg mb-2">
-                                <h5 class="text-sm font-semibold text-gray-700 mb-1">Complete Prototype Device</h5>
-                                <p class="text-sm text-gray-600">Fully assembled digital vacuum gauge showing the integrated display, control interface, and rugged housing designed for field use in HVAC applications.</p>
+                                <h5 class="text-sm font-semibold text-white mb-1">Complete Prototype Device</h5>
+                                <p class="text-sm text-white">Fully assembled digital vacuum gauge showing the integrated display, control interface, and rugged housing designed for field use in HVAC applications.</p>
                             </div>
                             <div class="text-center">
                                 <img src="images/Vaccume_guage_2.png" alt="Digital Vacuum Gauge - Display Interface" class="w-full h-48 object-cover rounded-lg mb-2">
-                                <h5 class="text-sm font-semibold text-gray-700 mb-1">Digital Display & Controls</h5>
-                                <p class="text-sm text-gray-600">High-contrast LCD display showing real-time vacuum measurements with multiple unit options. User-friendly button interface for easy operation with work gloves.</p>
+                                <h5 class="text-sm font-semibold text-white mb-1">Digital Display & Controls</h5>
+                                <p class="text-sm text-white">High-contrast LCD display showing real-time vacuum measurements with multiple unit options. User-friendly button interface for easy operation with work gloves.</p>
                             </div>
                             <div class="text-center">
                                 <img src="images/Vaccume_guage_3.png" alt="Digital Vacuum Gauge - Sensor Connection" class="w-full h-48 object-cover rounded-lg mb-2">
-                                <h5 class="text-sm font-semibold text-gray-700 mb-1">Sensor Integration & I/O</h5>
-                                <p class="text-sm text-gray-600">Precision vacuum sensor connection port and integrated pump control outputs. Demonstrates the complete system integration approach.</p>
+                                <h5 class="text-sm font-semibold text-white mb-1">Sensor Integration & I/O</h5>
+                                <p class="text-sm text-white">Precision vacuum sensor connection port and integrated pump control outputs. Demonstrates the complete system integration approach.</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Project Context and Motivation -->
                     <div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-4">1. Project Context and Motivation</h3>
-                        <p class="text-gray-600 mb-4">
+                        <h3 class="text-xl font-semibold text-white mb-4">1. Project Context and Motivation</h3>
+                        <p class="text-white mb-4">
                             The genesis of this project was to expand the portfolio of professional-grade instruments for the HVAC and refrigeration industries. 
                             The market for vacuum gauges was identified as a key area for innovation. Existing tools were often bulky, required power cords, 
                             or lacked the combination of high accuracy and durability demanded by field technicians. A portable, battery-powered digital vacuum gauge 
                             with an integrated pump control system and wireless connectivity represented a significant competitive advantage.
                         </p>
-                        <p class="text-gray-600 mb-4">
+                        <p class="text-white mb-4">
                             The POC was developed to demonstrate a design that was not only precise but also rugged enough to withstand the demanding conditions of a job site.
                         </p>
                     </div>
 
                     <!-- Design Objectives -->
                     <div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-4">2. Design Objectives and Functional Requirements</h3>
-                        <p class="text-gray-600 mb-4">
+                        <h3 class="text-xl font-semibold text-white mb-4">2. Design Objectives and Functional Requirements</h3>
+                        <p class="text-white mb-4">
                             The primary objective was to develop a digital vacuum gauge POC that met or exceeded the following core technical specifications, 
                             designated as the AT10702 feature set:
                         </p>
                         <div class="bg-gray-100 p-4 rounded-lg mb-4">
                             <h4 class="text-lg font-semibold text-gray-800 mb-3">Core Specifications</h4>
-                            <ul class="list-disc list-inside text-gray-600 space-y-2">
+                            <ul class="list-disc list-inside text-gray-800 space-y-2">
                                 <li><strong>Measurement Range:</strong> 0 to 25,000 Microns, with additional unit displays for Pa, mBar, mTorr, mmHg, PSI, and inHg. This range is critical for accurate monitoring of HVAC system evacuation.</li>
                                 <li><strong>Vacuum Accuracy:</strong> 5% of reading, with an absolute accuracy of +/- 5 microns. This high standard ensures reliable measurements for critical system commissioning.</li>
                                 <li><strong>Resolution:</strong> A fine resolution of 0.1 Micron for readings up to 9,999.9 Microns, transitioning to 1 Micron for the higher range of 10,000 to 25,000 Microns.</li>
@@ -217,41 +217,41 @@ document.addEventListener('DOMContentLoaded', function() {
 
                     <!-- System Architecture -->
                     <div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-4">3. System Architecture and Block-Level Design</h3>
-                        <h4 class="text-lg font-semibold text-gray-700 mb-3">3.1 Overall System Architecture</h4>
-                        <p class="text-gray-600 mb-4">
+                        <h3 class="text-xl font-semibold text-white mb-4">3. System Architecture and Block-Level Design</h3>
+                        <h4 class="text-lg font-semibold text-white mb-3">3.1 Overall System Architecture</h4>
+                        <p class="text-white mb-4">
                             The Digital Vacuum Gauge is not merely a passive measurement device but an integrated measurement and control system. 
                             The design is centered around a Microcontroller Unit (MCU) that acts as the central hub, coordinating data acquisition from the vacuum sensor, 
                             managing the user interface, and controlling external components such as the vacuum pump and a recovery tank. This architectural approach 
                             represents a deliberate design decision to centralize all functions into a single, cohesive, portable device, thereby streamlining the workflow for the field technician.
                         </p>
                         
-                        <h4 class="text-lg font-semibold text-gray-700 mb-3">3.2 Functional Block Breakdown</h4>
+                        <h4 class="text-lg font-semibold text-white mb-3">3.2 Functional Block Breakdown</h4>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                             <div class="bg-gray-100 p-4 rounded">
                                 <h5 class="font-semibold text-gray-800 mb-2">Sensing & Signal Conditioning</h5>
-                                <p class="text-gray-600 text-sm">Core measurement system responsible for acquiring raw pressure data with high-resolution measurement across a wide range of vacuum levels.</p>
+                                <p class="text-gray-800 text-sm">Core measurement system responsible for acquiring raw pressure data with high-resolution measurement across a wide range of vacuum levels.</p>
                             </div>
                             <div class="bg-gray-100 p-4 rounded">
                                 <h5 class="font-semibold text-gray-800 mb-2">Microcontroller Unit (MCU)</h5>
-                                <p class="text-gray-600 text-sm">The brain of the system, performing data acquisition, unit conversions, and user interface management.</p>
+                                <p class="text-gray-800 text-sm">The brain of the system, performing data acquisition, unit conversions, and user interface management.</p>
                             </div>
                             <div class="bg-gray-100 p-4 rounded">
                                 <h5 class="font-semibold text-gray-800 mb-2">Power Management</h5>
-                                <p class="text-gray-600 text-sm">Manages power flow from batteries with latching circuits and low voltage shutdown protection.</p>
+                                <p class="text-gray-800 text-sm">Manages power flow from batteries with latching circuits and low voltage shutdown protection.</p>
                             </div>
                             <div class="bg-gray-100 p-4 rounded">
                                 <h5 class="font-semibold text-gray-800 mb-2">Communication Module</h5>
-                                <p class="text-gray-600 text-sm">Enables wireless communication with smartphone applications via Bluetooth Low Energy (BLE).</p>
+                                <p class="text-gray-800 text-sm">Enables wireless communication with smartphone applications via Bluetooth Low Energy (BLE).</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Component Selection -->
                     <div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-4">4. Component Selection and Engineering Trade-offs</h3>
-                        <h4 class="text-lg font-semibold text-gray-700 mb-3">4.1 Vacuum Sensor Technology Evaluation</h4>
-                        <p class="text-gray-600 mb-4">
+                        <h3 class="text-xl font-semibold text-white mb-4">4. Component Selection and Engineering Trade-offs</h3>
+                        <h4 class="text-lg font-semibold text-white mb-3">4.1 Vacuum Sensor Technology Evaluation</h4>
+                        <p class="text-white mb-4">
                             The choice of the vacuum sensor was the most pivotal design decision, directly impacting the device's accuracy, power consumption, and overall complexity. 
                             A thorough evaluation was conducted between two leading technologies: MEMS Pirani sensors and thermistor sensors.
                         </p>
@@ -259,7 +259,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                             <div class="bg-gray-100 p-4 rounded-lg">
                                 <h5 class="text-lg font-semibold text-gray-800 mb-3">Pirani/MEMS Sensor (Selected)</h5>
-                                <ul class="list-disc list-inside text-gray-600 space-y-2 text-sm">
+                                <ul class="list-disc list-inside text-gray-800 space-y-2 text-sm">
                                     <li><strong>Digital I2C Interface:</strong> Calibrated, digital output via I2C interface</li>
                                     <li><strong>Wide Range:</strong> 1 to 760,000 microns (encompasses 0-25,000 requirement)</li>
                                     <li><strong>Integrated Intelligence:</strong> Built-in temperature compensation and linearization</li>
@@ -269,7 +269,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             </div>
                             <div class="bg-gray-100 p-4 rounded-lg">
                                 <h5 class="text-lg font-semibold text-gray-800 mb-3">Thermistor Sensor</h5>
-                                <ul class="list-disc list-inside text-gray-600 space-y-2 text-sm">
+                                <ul class="list-disc list-inside text-gray-800 space-y-2 text-sm">
                                     <li><strong>Non-Linear:</strong> Complex equations like Steinhart-Hart required</li>
                                     <li><strong>Analog Interface:</strong> Requires high-resolution ADC and signal conditioning</li>
                                     <li><strong>Higher Power:</strong> Continuous operation increases power consumption</li>
@@ -281,12 +281,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
                     <!-- Hardware Implementation -->
                     <div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-4">5. Hardware Design and Implementation</h3>
-                        <h4 class="text-lg font-semibold text-gray-700 mb-3">5.1 Power Management Circuitry</h4>
-                        <p class="text-gray-600 mb-4">
+                        <h3 class="text-xl font-semibold text-white mb-4">5. Hardware Design and Implementation</h3>
+                        <h4 class="text-lg font-semibold text-white mb-3">5.1 Power Management Circuitry</h4>
+                        <p class="text-white mb-4">
                             The hardware design addressed potential electronics issues, focusing on signal integrity, power management, and reliability:
                         </p>
-                        <ul class="list-disc list-inside text-gray-600 space-y-2 mb-4">
+                        <ul class="list-disc list-inside text-white space-y-2 mb-4">
                             <li><strong>Power Latching Circuit:</strong> Solid-state latching relay functionality allowing true power-off state</li>
                             <li><strong>Low Voltage Shutdown (LVD):</strong> Automatic system shutdown when battery voltage drops below safe threshold</li>
                             <li><strong>Reverse Battery Protection:</strong> P-Channel MOSFET-based protection against reverse polarity installation</li>
@@ -295,11 +295,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
                     <!-- Software and Firmware -->
                     <div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-4">6. Software Design and Algorithmic Logic</h3>
-                        <p class="text-gray-600 mb-4">
+                        <h3 class="text-xl font-semibold text-white mb-4">6. Software Design and Algorithmic Logic</h3>
+                        <p class="text-white mb-4">
                             The firmware leverages the intelligence of selected components while implementing robust power-saving and control logic:
                         </p>
-                        <ul class="list-disc list-inside text-gray-600 space-y-2 mb-4">
+                        <ul class="list-disc list-inside text-white space-y-2 mb-4">
                             <li><strong>Sensor Interface:</strong> I2C communication with PVC4000 Pirani sensor including power management state machine</li>
                             <li><strong>Algorithmic Processing:</strong> Real-time unit conversions for Microns, Pa, mBar, PSI display</li>
                             <li><strong>Power Optimization:</strong> Sensor powered for 150ms measurements then low-power off state</li>
@@ -308,13 +308,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
                     <!-- Calibration and Validation -->
                     <div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-4">7. Calibration and Validation</h3>
-                        <p class="text-gray-600 mb-4">
+                        <h3 class="text-xl font-semibold text-white mb-4">7. Calibration and Validation</h3>
+                        <p class="text-white mb-4">
                             A detailed calibration process ensured the device met stringent accuracy requirements using NIST-traceable standards:
                         </p>
                         <div class="bg-gray-100 p-4 rounded-lg mb-4">
                             <h5 class="text-lg font-semibold text-gray-800 mb-2">Calibration Process</h5>
-                            <ol class="list-decimal list-inside text-gray-600 space-y-2 text-sm">
+                            <ol class="list-decimal list-inside text-gray-800 space-y-2 text-sm">
                                 <li>Both prototype and reference gauge (Kurt J. Lesker) mounted on same vacuum manifold</li>
                                 <li>High-precision vacuum pump used to stabilize pressure at predetermined set points</li>
                                 <li>Simultaneous readings recorded from both sensors at each calibration point</li>
@@ -326,41 +326,41 @@ document.addEventListener('DOMContentLoaded', function() {
 
                     <!-- Performance Results -->
                     <div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-4">8. Performance Results</h3>
+                        <h3 class="text-xl font-semibold text-white mb-4">8. Performance Results</h3>
                         <div class="overflow-x-auto mb-6">
-                            <table class="w-full border-collapse border border-gray-300 text-sm">
+                            <table class="generic-table">
                                 <thead>
-                                    <tr class="bg-gray-200">
-                                        <th class="border border-gray-300 px-4 py-2 text-left font-semibold">Specification</th>
-                                        <th class="border border-gray-300 px-4 py-2 text-left font-semibold">Requirement</th>
-                                        <th class="border border-gray-300 px-4 py-2 text-left font-semibold">Achieved Performance</th>
+                                    <tr>
+                                        <th>Specification</th>
+                                        <th>Requirement</th>
+                                        <th>Achieved Performance</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td class="border border-gray-300 px-4 py-2">Measurement Range</td>
-                                        <td class="border border-gray-300 px-4 py-2">0 - 25,000 Microns</td>
-                                        <td class="border border-gray-300 px-4 py-2">0 - 25,000 Microns ✓</td>
-                                    </tr>
-                                    <tr class="bg-gray-50">
-                                        <td class="border border-gray-300 px-4 py-2">Vacuum Accuracy</td>
-                                        <td class="border border-gray-300 px-4 py-2">5% of Reading +/- 5 Microns</td>
-                                        <td class="border border-gray-300 px-4 py-2">Meets/Exceeds requirement ✓</td>
+                                        <td class="table-highlight">Measurement Range</td>
+                                        <td>0 - 25,000 Microns</td>
+                                        <td class="status-success">0 - 25,000 Microns ✓</td>
                                     </tr>
                                     <tr>
-                                        <td class="border border-gray-300 px-4 py-2">Resolution</td>
-                                        <td class="border border-gray-300 px-4 py-2">0.1 Micron (0-9,999.9) / 1 Micron (10,000-25,000)</td>
-                                        <td class="border border-gray-300 px-4 py-2">Meets requirement ✓</td>
-                                    </tr>
-                                    <tr class="bg-gray-50">
-                                        <td class="border border-gray-300 px-4 py-2">Maximum Overpressure</td>
-                                        <td class="border border-gray-300 px-4 py-2">500 PSI</td>
-                                        <td class="border border-gray-300 px-4 py-2">500 PSI ✓</td>
+                                        <td class="table-highlight">Vacuum Accuracy</td>
+                                        <td>5% of Reading +/- 5 Microns</td>
+                                        <td class="status-success">Meets/Exceeds requirement ✓</td>
                                     </tr>
                                     <tr>
-                                        <td class="border border-gray-300 px-4 py-2">Power Source</td>
-                                        <td class="border border-gray-300 px-4 py-2">3 AA cells or 9V battery</td>
-                                        <td class="border border-gray-300 px-4 py-2">Optimized for 3 AA cells ✓</td>
+                                        <td class="table-highlight">Resolution</td>
+                                        <td>0.1 Micron (0-9,999.9) / 1 Micron (10,000-25,000)</td>
+                                        <td class="status-success">Meets requirement ✓</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-highlight">Maximum Overpressure</td>
+                                        <td>500 PSI</td>
+                                        <td class="status-success">500 PSI ✓</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-highlight">Power Source</td>
+                                        <td>3 AA cells or 9V battery</td>
+                                        <td class="status-success">Optimized for 3 AA cells ✓</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -369,14 +369,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
                     <!-- Conclusion -->
                     <div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-4">9. Conclusion and Future Directions</h3>
-                        <p class="text-gray-600 mb-4">
+                        <h3 class="text-xl font-semibold text-white mb-4">9. Conclusion and Future Directions</h3>
+                        <p class="text-white mb-4">
                             The Digital Vacuum Gauge POC successfully met all its design objectives and functional requirements, demonstrating the feasibility 
                             of creating a professional-grade, battery-powered vacuum measurement and control system. The project's success was rooted in key 
                             engineering decisions, including the strategic selection of a modern digital Pirani sensor, the development of a sophisticated 
                             power management architecture, and the seamless integration of a pump control system and wireless connectivity.
                         </p>
-                        <p class="text-gray-600 mb-4">
+                        <p class="text-white mb-4">
                             The successful completion of this POC provides a clear pathway for commercialization and future product development. Future hardware 
                             and firmware refinements could focus on BOM optimization to reduce cost and further power efficiency improvements to extend runtime even further.
                         </p>
@@ -384,36 +384,36 @@ document.addEventListener('DOMContentLoaded', function() {
 
                     <!-- Key Components BOM -->
                     <div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-4">10. Key Component Selection Rationale</h3>
+                        <h3 class="text-xl font-semibold text-white mb-4">10. Key Component Selection Rationale</h3>
                         <div class="overflow-x-auto">
-                            <table class="w-full border-collapse border border-gray-300 text-sm">
+                            <table class="generic-table">
                                 <thead>
-                                    <tr class="bg-gray-200">
-                                        <th class="border border-gray-300 px-4 py-2 text-left font-semibold">Component</th>
-                                        <th class="border border-gray-300 px-4 py-2 text-left font-semibold">Example Part</th>
-                                        <th class="border border-gray-300 px-4 py-2 text-left font-semibold">Selection Rationale</th>
+                                    <tr>
+                                        <th>Component</th>
+                                        <th>Example Part</th>
+                                        <th>Selection Rationale</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td class="border border-gray-300 px-4 py-2">Vacuum Sensor</td>
-                                        <td class="border border-gray-300 px-4 py-2">Posifa PVC4000 Series</td>
-                                        <td class="border border-gray-300 px-4 py-2">High accuracy, wide range, low power, digital interface simplifies design</td>
-                                    </tr>
-                                    <tr class="bg-gray-50">
-                                        <td class="border border-gray-300 px-4 py-2">Microcontroller</td>
-                                        <td class="border border-gray-300 px-4 py-2">STM32L4 Series</td>
-                                        <td class="border border-gray-300 px-4 py-2">Ultra-low-power MCU with sufficient resources for sensor communication and UI</td>
+                                        <td class="table-highlight">Vacuum Sensor</td>
+                                        <td class="status-info">Posifa PVC4000 Series</td>
+                                        <td>High accuracy, wide range, low power, digital interface simplifies design</td>
                                     </tr>
                                     <tr>
-                                        <td class="border border-gray-300 px-4 py-2">Display</td>
-                                        <td class="border border-gray-300 px-4 py-2">Custom Segment LCD</td>
-                                        <td class="border border-gray-300 px-4 py-2">Clear, durable, low-power interface suitable for field use</td>
+                                        <td class="table-highlight">Microcontroller</td>
+                                        <td class="status-info">STM32L4 Series</td>
+                                        <td>Ultra-low-power MCU with sufficient resources for sensor communication and UI</td>
                                     </tr>
-                                    <tr class="bg-gray-50">
-                                        <td class="border border-gray-300 px-4 py-2">Wireless Module</td>
-                                        <td class="border border-gray-300 px-4 py-2">BLE 5.0 Module (nRF52)</td>
-                                        <td class="border border-gray-300 px-4 py-2">Low-power, reliable wireless communication for smartphone integration</td>
+                                    <tr>
+                                        <td class="table-highlight">Display</td>
+                                        <td class="status-info">Custom Segment LCD</td>
+                                        <td>Clear, durable, low-power interface suitable for field use</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-highlight">Wireless Module</td>
+                                        <td class="status-info">BLE 5.0 Module (nRF52)</td>
+                                        <td>Low-power, reliable wireless communication for smartphone integration</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -490,34 +490,34 @@ document.addEventListener('DOMContentLoaded', function() {
                         <p class="text-gray-300 mb-4">The development process began with thorough product research to refine the core electrical specifications of the device. The challenge was to deliver a precise amount of energy to the load based on a predefined fusion schedule. The table below outlines the key electrical parameters targeted during the POC phase.</p>
 
                         <div class="overflow-x-auto mb-6">
-                            <table class="w-full border-collapse border border-gray-600 text-sm">
+                            <table class="w-full border-collapse border border-gray-300 text-sm bg-white rounded-lg overflow-hidden shadow-sm">
                                 <thead>
-                                    <tr class="bg-gray-800">
-                                        <th class="border border-gray-600 px-4 py-2 text-left text-primary-color">Parameter</th>
-                                        <th class="border border-gray-600 px-4 py-2 text-left text-primary-color">Value</th>
-                                        <th class="border border-gray-600 px-4 py-2 text-left text-primary-color">Justification</th>
+                                    <tr class="bg-blue-50">
+                                        <th class="border border-gray-300 px-4 py-3 text-left text-blue-800 font-semibold">Parameter</th>
+                                        <th class="border border-gray-300 px-4 py-3 text-left text-blue-800 font-semibold">Value</th>
+                                        <th class="border border-gray-300 px-4 py-3 text-left text-blue-800 font-semibold">Justification</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td class="border border-gray-600 px-4 py-2 text-white">Input Voltage</td>
-                                        <td class="border border-gray-600 px-4 py-2 text-gray-300">72V DC</td>
-                                        <td class="border border-gray-600 px-4 py-2 text-gray-400">Aligns with the native voltage of the Milwaukee MX FUEL™ platform.</td>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="border border-gray-300 px-4 py-2 text-gray-800 font-medium">Input Voltage</td>
+                                        <td class="border border-gray-300 px-4 py-2 text-gray-700">72V DC</td>
+                                        <td class="border border-gray-300 px-4 py-2 text-gray-600">Aligns with the native voltage of the Milwaukee MX FUEL™ platform.</td>
                                     </tr>
-                                    <tr class="bg-gray-900/50">
-                                        <td class="border border-gray-600 px-4 py-2 text-white">Output Voltage</td>
-                                        <td class="border border-gray-600 px-4 py-2 text-gray-300">40V AC</td>
-                                        <td class="border border-gray-600 px-4 py-2 text-gray-400">Determined by the characteristic electrical and thermal requirements of the electrofusion couplers and their specific fusion schedules. This value ensures optimal energy delivery to the resistive load.</td>
+                                    <tr class="bg-gray-50 hover:bg-gray-100">
+                                        <td class="border border-gray-300 px-4 py-2 text-gray-800 font-medium">Output Voltage</td>
+                                        <td class="border border-gray-300 px-4 py-2 text-gray-700">40V AC</td>
+                                        <td class="border border-gray-300 px-4 py-2 text-gray-600">Determined by the characteristic electrical and thermal requirements of the electrofusion couplers and their specific fusion schedules. This value ensures optimal energy delivery to the resistive load.</td>
                                     </tr>
-                                    <tr>
-                                        <td class="border border-gray-600 px-4 py-2 text-white">Load Range</td>
-                                        <td class="border border-gray-600 px-4 py-2 text-gray-300">0.5Ω to 12Ω</td>
-                                        <td class="border border-gray-600 px-4 py-2 text-gray-400">Accommodates the wide variety of standard electrofusion coupler sizes and types.</td>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="border border-gray-300 px-4 py-2 text-gray-800 font-medium">Load Range</td>
+                                        <td class="border border-gray-300 px-4 py-2 text-gray-700">0.5Ω to 12Ω</td>
+                                        <td class="border border-gray-300 px-4 py-2 text-gray-600">Accommodates the wide variety of standard electrofusion coupler sizes and types.</td>
                                     </tr>
-                                    <tr class="bg-gray-900/50">
-                                        <td class="border border-gray-600 px-4 py-2 text-white">Output Frequency</td>
-                                        <td class="border border-gray-600 px-4 py-2 text-gray-300">60 Hz</td>
-                                        <td class="border border-gray-600 px-4 py-2 text-gray-400">A standard frequency that provides the required alternating current for the resistive heating element.</td>
+                                    <tr class="bg-gray-50 hover:bg-gray-100">
+                                        <td class="border border-gray-300 px-4 py-2 text-gray-800 font-medium">Output Frequency</td>
+                                        <td class="border border-gray-300 px-4 py-2 text-gray-700">60 Hz</td>
+                                        <td class="border border-gray-300 px-4 py-2 text-gray-600">A standard frequency that provides the required alternating current for the resistive heating element.</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -987,11 +987,25 @@ document.addEventListener('DOMContentLoaded', function() {
         };
 
         function openModal(projectId) {
+            console.log('Opening modal for project:', projectId);
             const details = projectDetails[projectId];
+            console.log('Project details found:', details ? 'Yes' : 'No');
+            
             if (details) {
                 modalContentContainer.innerHTML = `
                     <h2 class="font-display text-3xl font-bold mb-4 text-white">${details.title}</h2>
                     <div>${details.description}</div>
+                `;
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            } else {
+                console.error('No project details found for:', projectId);
+                console.log('Available project keys:', Object.keys(projectDetails));
+                // Show error message in modal
+                modalContentContainer.innerHTML = `
+                    <h2 class="font-display text-3xl font-bold mb-4 text-white">Project Not Found</h2>
+                    <p class="text-gray-300">Sorry, the project details for "${projectId}" could not be loaded.</p>
+                    <p class="text-gray-400 text-sm mt-2">Available projects: ${Object.keys(projectDetails).join(', ')}</p>
                 `;
                 modal.classList.remove('hidden');
                 document.body.style.overflow = 'hidden';

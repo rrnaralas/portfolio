@@ -508,7 +508,12 @@ body {
     box-shadow: 0 0 20px rgba(0, 191, 255, 0.8);
 }
 
-/* Project-specific styling */
+/* Project-specific styling for vacuum gauge */
+[data-project="vacuum-gauge"] .absolute {
+    background: rgba(0, 0, 0, 0.9) !important;
+}
+
+[data-project="vacuum-gauge"] .absolute h3,
 [data-project="vacuum-gauge"] .absolute p {
     color: white !important;
 }
