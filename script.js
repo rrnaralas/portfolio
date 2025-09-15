@@ -520,34 +520,34 @@ document.addEventListener('DOMContentLoaded', function() {
                         <p class="text-gray-300 mb-4">The development process began with thorough product research to refine the core electrical specifications of the device. The challenge was to deliver a precise amount of energy to the load based on a predefined fusion schedule. The table below outlines the key electrical parameters targeted during the POC phase.</p>
 
                         <div class="overflow-x-auto mb-6">
-                            <table class="w-full border-collapse border border-gray-300 text-sm bg-white rounded-lg overflow-hidden shadow-sm">
+                            <table class="generic-table">
                                 <thead>
-                                    <tr class="bg-blue-50">
-                                        <th class="border border-gray-300 px-4 py-3 text-left text-blue-800 font-semibold">Parameter</th>
-                                        <th class="border border-gray-300 px-4 py-3 text-left text-blue-800 font-semibold">Value</th>
-                                        <th class="border border-gray-300 px-4 py-3 text-left text-blue-800 font-semibold">Justification</th>
+                                    <tr>
+                                        <th>Parameter</th>
+                                        <th>Value</th>
+                                        <th>Justification</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="hover:bg-gray-50">
-                                        <td class="border border-gray-300 px-4 py-2 text-gray-800 font-medium">Input Voltage</td>
-                                        <td class="border border-gray-300 px-4 py-2 text-gray-700">72V DC</td>
-                                        <td class="border border-gray-300 px-4 py-2 text-gray-600">Aligns with the native voltage of the Milwaukee MX FUEL™ platform.</td>
+                                    <tr>
+                                        <td>Input Voltage</td>
+                                        <td>72V DC</td>
+                                        <td>Aligns with the native voltage of the Milwaukee MX FUEL™ platform.</td>
                                     </tr>
-                                    <tr class="bg-gray-50 hover:bg-gray-100">
-                                        <td class="border border-gray-300 px-4 py-2 text-gray-800 font-medium">Output Voltage</td>
-                                        <td class="border border-gray-300 px-4 py-2 text-gray-700">40V AC</td>
-                                        <td class="border border-gray-300 px-4 py-2 text-gray-600">Determined by the characteristic electrical and thermal requirements of the electrofusion couplers and their specific fusion schedules. This value ensures optimal energy delivery to the resistive load.</td>
+                                    <tr>
+                                        <td>Output Voltage</td>
+                                        <td>40V AC</td>
+                                        <td>Determined by the characteristic electrical and thermal requirements of the electrofusion couplers and their specific fusion schedules. This value ensures optimal energy delivery to the resistive load.</td>
                                     </tr>
-                                    <tr class="hover:bg-gray-50">
-                                        <td class="border border-gray-300 px-4 py-2 text-gray-800 font-medium">Load Range</td>
-                                        <td class="border border-gray-300 px-4 py-2 text-gray-700">0.5Ω to 12Ω</td>
-                                        <td class="border border-gray-300 px-4 py-2 text-gray-600">Accommodates the wide variety of standard electrofusion coupler sizes and types.</td>
+                                    <tr>
+                                        <td>Load Range</td>
+                                        <td>0.5Ω to 12Ω</td>
+                                        <td>Accommodates the wide variety of standard electrofusion coupler sizes and types.</td>
                                     </tr>
-                                    <tr class="bg-gray-50 hover:bg-gray-100">
-                                        <td class="border border-gray-300 px-4 py-2 text-gray-800 font-medium">Output Frequency</td>
-                                        <td class="border border-gray-300 px-4 py-2 text-gray-700">60 Hz</td>
-                                        <td class="border border-gray-300 px-4 py-2 text-gray-600">A standard frequency that provides the required alternating current for the resistive heating element.</td>
+                                    <tr>
+                                        <td>Output Frequency</td>
+                                        <td>60 Hz</td>
+                                        <td>A standard frequency that provides the required alternating current for the resistive heating element.</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -633,34 +633,34 @@ document.addEventListener('DOMContentLoaded', function() {
                         <p class="text-gray-300 mb-4">The following table summarizes the critical criteria used for MOSFET selection.</p>
 
                         <div class="overflow-x-auto mb-6">
-                            <table class="w-full border-collapse border border-gray-600 text-sm">
+                            <table class="generic-table">
                                 <thead>
-                                    <tr class="bg-gray-800">
-                                        <th class="border border-gray-600 px-4 py-2 text-left text-primary-color">Parameter</th>
-                                        <th class="border border-gray-600 px-4 py-2 text-left text-primary-color">Symbol</th>
-                                        <th class="border border-gray-600 px-4 py-2 text-left text-primary-color">Engineering Rationale</th>
+                                    <tr>
+                                        <th>Parameter</th>
+                                        <th>Symbol</th>
+                                        <th>Engineering Rationale</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td class="border border-gray-600 px-4 py-2 text-white">Drain-Source Voltage</td>
-                                        <td class="border border-gray-600 px-4 py-2 text-gray-300">V<sub>DS</sub></td>
-                                        <td class="border border-gray-600 px-4 py-2 text-gray-400">Must exceed the maximum input voltage (72VDC) with a sufficient safety margin to handle any voltage spikes.</td>
-                                    </tr>
-                                    <tr class="bg-gray-900/50">
-                                        <td class="border border-gray-600 px-4 py-2 text-white">Continuous Drain Current</td>
-                                        <td class="border border-gray-600 px-4 py-2 text-gray-300">I<sub>D</sub></td>
-                                        <td class="border border-gray-600 px-4 py-2 text-gray-400">Must be rated for the sustained, high-current flow required by the lowest-resistance loads in the specified range.</td>
+                                        <td>Drain-Source Voltage</td>
+                                        <td>V<sub>DS</sub></td>
+                                        <td>Must exceed the maximum input voltage (72VDC) with a sufficient safety margin to handle any voltage spikes.</td>
                                     </tr>
                                     <tr>
-                                        <td class="border border-gray-600 px-4 py-2 text-white">On-Resistance</td>
-                                        <td class="border border-gray-600 px-4 py-2 text-gray-300">R<sub>DS(on)</sub></td>
-                                        <td class="border border-gray-600 px-4 py-2 text-gray-400">A critical parameter for minimizing conduction losses (P<sub>loss</sub> = I² × R<sub>DS(on)</sub>), which directly impacts the thermal performance and overall efficiency of the inverter.</td>
+                                        <td>Continuous Drain Current</td>
+                                        <td>I<sub>D</sub></td>
+                                        <td>Must be rated for the sustained, high-current flow required by the lowest-resistance loads in the specified range.</td>
                                     </tr>
-                                    <tr class="bg-gray-900/50">
-                                        <td class="border border-gray-600 px-4 py-2 text-white">Total Gate Charge</td>
-                                        <td class="border border-gray-600 px-4 py-2 text-gray-300">Q<sub>g</sub></td>
-                                        <td class="border border-gray-600 px-4 py-2 text-gray-400">Directly influences switching speed. A lower gate charge allows for faster switching, which reduces switching losses and improves efficiency.</td>
+                                    <tr>
+                                        <td>On-Resistance</td>
+                                        <td>R<sub>DS(on)</sub></td>
+                                        <td>A critical parameter for minimizing conduction losses (P<sub>loss</sub> = I² × R<sub>DS(on)</sub>), which directly impacts the thermal performance and overall efficiency of the inverter.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Total Gate Charge</td>
+                                        <td>Q<sub>g</sub></td>
+                                        <td>Directly influences switching speed. A lower gate charge allows for faster switching, which reduces switching losses and improves efficiency.</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -677,25 +677,25 @@ document.addEventListener('DOMContentLoaded', function() {
                         <p class="text-gray-300 mb-4">The following table details the mitigation strategies employed to solve the gate ringing issue.</p>
 
                         <div class="overflow-x-auto mb-6">
-                            <table class="w-full border-collapse border border-gray-600 text-sm">
+                            <table class="generic-table">
                                 <thead>
-                                    <tr class="bg-gray-800">
-                                        <th class="border border-gray-600 px-4 py-2 text-left text-primary-color">Strategy</th>
-                                        <th class="border border-gray-600 px-4 py-2 text-left text-primary-color">Rationale & Implementation</th>
+                                    <tr>
+                                        <th>Strategy</th>
+                                        <th>Rationale & Implementation</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td class="border border-gray-600 px-4 py-2 text-white">PCB Layout Optimization</td>
-                                        <td class="border border-gray-600 px-4 py-2 text-gray-400">Minimized trace lengths and power loop areas to reduce parasitic inductance. Employed a strip-line approach to routing and ensured close placement of bypass capacitors.</td>
-                                    </tr>
-                                    <tr class="bg-gray-900/50">
-                                        <td class="border border-gray-600 px-4 py-2 text-white">Individual Gate Resistors</td>
-                                        <td class="border border-gray-600 px-4 py-2 text-gray-400">A dedicated damping resistor (e.g., 4.7Ω) was placed as physically close as possible to the gate of each individual MOSFET. This resistor helps decrease the Q factor of the resonant tank, dampening the oscillations.</td>
+                                        <td>PCB Layout Optimization</td>
+                                        <td>Minimized trace lengths and power loop areas to reduce parasitic inductance. Employed a strip-line approach to routing and ensured close placement of bypass capacitors.</td>
                                     </tr>
                                     <tr>
-                                        <td class="border border-gray-600 px-4 py-2 text-white">MOSFET Technology Selection</td>
-                                        <td class="border border-gray-600 px-4 py-2 text-gray-400">Selected MOSFETs with integrated gate resistors or a Kelvin-source pinout to further dampen oscillations and reduce dependencies on external layout.</td>
+                                        <td>Individual Gate Resistors</td>
+                                        <td>A dedicated damping resistor (e.g., 4.7Ω) was placed as physically close as possible to the gate of each individual MOSFET. This resistor helps decrease the Q factor of the resonant tank, dampening the oscillations.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>MOSFET Technology Selection</td>
+                                        <td>Selected MOSFETs with integrated gate resistors or a Kelvin-source pinout to further dampen oscillations and reduce dependencies on external layout.</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -744,33 +744,33 @@ document.addEventListener('DOMContentLoaded', function() {
                         <p class="text-gray-300 mb-4">The final product, the Milwaukee MX FUEL™ Electrofusion Processor, is a testament to the success of the POC. It embodies the core architectural and design choices that were validated during the project. The table below illustrates the direct lineage of the POC's features to the commercial product's capabilities.</p>
 
                         <div class="overflow-x-auto mb-6">
-                            <table class="w-full border-collapse border border-gray-600 text-sm">
+                            <table class="generic-table">
                                 <thead>
-                                    <tr class="bg-gray-800">
-                                        <th class="border border-gray-600 px-4 py-2 text-left text-primary-color">Proof of Concept (POC) Feature</th>
-                                        <th class="border border-gray-600 px-4 py-2 text-left text-primary-color">Final Product (MXF545-XC) Feature</th>
+                                    <tr>
+                                        <th>Proof of Concept (POC) Feature</th>
+                                        <th>Final Product (MXF545-XC) Feature</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td class="border border-gray-600 px-4 py-2 text-white">72V DC Input</td>
-                                        <td class="border border-gray-600 px-4 py-2 text-gray-400">Part of the Milwaukee MX FUEL™ platform.</td>
-                                    </tr>
-                                    <tr class="bg-gray-900/50">
-                                        <td class="border border-gray-600 px-4 py-2 text-white">Custom-Designed H-Bridge Inverter</td>
-                                        <td class="border border-gray-600 px-4 py-2 text-gray-400">A cordless device that provides the power previously only available from generators or cords.</td>
+                                        <td>72V DC Input</td>
+                                        <td>Part of the Milwaukee MX FUEL™ platform.</td>
                                     </tr>
                                     <tr>
-                                        <td class="border border-gray-600 px-4 py-2 text-white">Data Logging System</td>
-                                        <td class="border border-gray-600 px-4 py-2 text-gray-400">Integrated with the sophisticated ONE-KEY™ platform, providing customizable reports and data download.</td>
-                                    </tr>
-                                    <tr class="bg-gray-900/50">
-                                        <td class="border border-gray-600 px-4 py-2 text-white">Extensive Fusing Test</td>
-                                        <td class="border border-gray-600 px-4 py-2 text-gray-400">Capable of fusing up to 8" couplings and 12" saddles, demonstrating high-power reliability.</td>
+                                        <td>Custom-Designed H-Bridge Inverter</td>
+                                        <td>A cordless device that provides the power previously only available from generators or cords.</td>
                                     </tr>
                                     <tr>
-                                        <td class="border border-gray-600 px-4 py-2 text-white">Physical Prototype Build</td>
-                                        <td class="border border-gray-600 px-4 py-2 text-gray-400">The commercial product is up to 40% lighter than previous solutions, with field-replaceable components, an outcome of early design considerations.</td>
+                                        <td>Data Logging System</td>
+                                        <td>Integrated with the sophisticated ONE-KEY™ platform, providing customizable reports and data download.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Extensive Fusing Test</td>
+                                        <td>Capable of fusing up to 8" couplings and 12" saddles, demonstrating high-power reliability.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Physical Prototype Build</td>
+                                        <td>The commercial product is up to 40% lighter than previous solutions, with field-replaceable components, an outcome of early design considerations.</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -885,29 +885,29 @@ document.addEventListener('DOMContentLoaded', function() {
                         <p class="text-gray-300 mb-4">The GPS Smart Sensor Tester integrates a Positive Temperature Coefficient (PTC) resettable fuse for overcurrent protection. This passive safety component differs from a traditional fuse, which must be replaced after a single fault event. A PTC fuse is made of a conductive polymer material that, when exposed to an overcurrent, generates heat. This heat causes the polymer to expand, breaking the conductive pathways and causing a rapid, exponential increase in resistance.</p>
 
                         <div class="overflow-x-auto mb-6">
-                            <table class="w-full border-collapse border border-gray-600 text-sm">
+                            <table class="generic-table">
                                 <thead>
-                                    <tr class="bg-gray-800">
-                                        <th class="border border-gray-600 px-4 py-2 text-left text-primary-color">Specification</th>
-                                        <th class="border border-gray-600 px-4 py-2 text-left text-primary-color">Description</th>
+                                    <tr>
+                                        <th>Specification</th>
+                                        <th>Description</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td class="border border-gray-600 px-4 py-2 text-white">Holding Current</td>
-                                        <td class="border border-gray-600 px-4 py-2 text-gray-400">Maximum current the fuse can tolerate before tripping.</td>
-                                    </tr>
-                                    <tr class="bg-gray-900/50">
-                                        <td class="border border-gray-600 px-4 py-2 text-white">Trip Current</td>
-                                        <td class="border border-gray-600 px-4 py-2 text-gray-400">Minimum current that will cause the fuse to trip and open the circuit.</td>
+                                        <td>Holding Current</td>
+                                        <td>Maximum current the fuse can tolerate before tripping.</td>
                                     </tr>
                                     <tr>
-                                        <td class="border border-gray-600 px-4 py-2 text-white">Voltage Rating</td>
-                                        <td class="border border-gray-600 px-4 py-2 text-gray-400">Maximum voltage the PTC can withstand without damage.</td>
+                                        <td>Trip Current</td>
+                                        <td>Minimum current that will cause the fuse to trip and open the circuit.</td>
                                     </tr>
-                                    <tr class="bg-gray-900/50">
-                                        <td class="border border-gray-600 px-4 py-2 text-white">Time to Trip</td>
-                                        <td class="border border-gray-600 px-4 py-2 text-gray-400">The time it takes for the PTC to trip at a specified current.</td>
+                                    <tr>
+                                        <td>Voltage Rating</td>
+                                        <td>Maximum voltage the PTC can withstand without damage.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Time to Trip</td>
+                                        <td>The time it takes for the PTC to trip at a specified current.</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -938,34 +938,34 @@ document.addEventListener('DOMContentLoaded', function() {
                         <p class="text-gray-300 mb-4">The single-button user interface is managed by a software-driven Finite State Machine (FSM). This design pattern provides a robust and predictable way to handle a limited number of inputs by defining distinct operational states and the transitions between them.</p>
 
                         <div class="overflow-x-auto mb-6">
-                            <table class="w-full border-collapse border border-gray-600 text-sm">
+                            <table class="generic-table">
                                 <thead>
-                                    <tr class="bg-gray-800">
-                                        <th class="border border-gray-600 px-4 py-2 text-left text-primary-color">State Name</th>
-                                        <th class="border border-gray-600 px-4 py-2 text-left text-primary-color">Description</th>
-                                        <th class="border border-gray-600 px-4 py-2 text-left text-primary-color">Button Press Transition</th>
+                                    <tr>
+                                        <th>State Name</th>
+                                        <th>Description</th>
+                                        <th>Button Press Transition</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td class="border border-gray-600 px-4 py-2 text-white">STATE_HOME</td>
-                                        <td class="border border-gray-600 px-4 py-2 text-gray-400">Displays a welcome message and device status.</td>
-                                        <td class="border border-gray-600 px-4 py-2 text-gray-400">Transitions to STATE_LOCATION.</td>
-                                    </tr>
-                                    <tr class="bg-gray-900/50">
-                                        <td class="border border-gray-600 px-4 py-2 text-white">STATE_LOCATION</td>
-                                        <td class="border border-gray-600 px-4 py-2 text-gray-400">Displays parsed Latitude and Longitude data.</td>
-                                        <td class="border border-gray-600 px-4 py-2 text-gray-400">Transitions to STATE_SATELLITES.</td>
+                                        <td>STATE_HOME</td>
+                                        <td>Displays a welcome message and device status.</td>
+                                        <td>Transitions to STATE_LOCATION.</td>
                                     </tr>
                                     <tr>
-                                        <td class="border border-gray-600 px-4 py-2 text-white">STATE_SATELLITES</td>
-                                        <td class="border border-gray-600 px-4 py-2 text-gray-400">Displays the number of satellites in use.</td>
-                                        <td class="border border-gray-600 px-4 py-2 text-gray-400">Transitions to STATE_WAAS_STATUS.</td>
+                                        <td>STATE_LOCATION</td>
+                                        <td>Displays parsed Latitude and Longitude data.</td>
+                                        <td>Transitions to STATE_SATELLITES.</td>
                                     </tr>
-                                    <tr class="bg-gray-900/50">
-                                        <td class="border border-gray-600 px-4 py-2 text-white">STATE_WAAS_STATUS</td>
-                                        <td class="border border-gray-600 px-4 py-2 text-gray-400">Displays GPS fix and WAAS/DGNSS status.</td>
-                                        <td class="border border-gray-600 px-4 py-2 text-gray-400">Transitions back to STATE_HOME.</td>
+                                    <tr>
+                                        <td>STATE_SATELLITES</td>
+                                        <td>Displays the number of satellites in use.</td>
+                                        <td>Transitions to STATE_WAAS_STATUS.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>STATE_WAAS_STATUS</td>
+                                        <td>Displays GPS fix and WAAS/DGNSS status.</td>
+                                        <td>Transitions back to STATE_HOME.</td>
                                     </tr>
                                 </tbody>
                             </table>
