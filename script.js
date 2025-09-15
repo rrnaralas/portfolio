@@ -523,6 +523,16 @@ document.addEventListener('DOMContentLoaded', function() {
                             field technician.
                         </p>
 
+                        <!-- System Block Diagram -->
+                        <div class="bg-gray-900 p-6 rounded-lg border border-gray-700 my-6">
+                            <h4 class="text-lg font-semibold text-primary-color mb-4 text-center">System Block Diagram</h4>
+                            <div class="text-center">
+                                <img src="images/Vacuum_Gauge_5.png" alt="Digital Vacuum Gauge System Block Diagram" class="w-full h-96 object-contain rounded-lg mb-2">
+                                <h5 class="text-sm font-semibold text-white mb-1">System Architecture Block Diagram</h5>
+                                <p class="text-sm text-gray-400">Complete system block diagram showing the interconnection of all functional blocks including vacuum sensor, microcontroller unit, power management, user interface, communication module, and vacuum pump control subsystems.</p>
+                            </div>
+                        </div>
+
                         <h3 class="text-xl font-semibold text-white mb-3">2.2. Functional Block Breakdown</h3>
                         <p class="text-gray-300 mb-4">The overall system architecture can be broken down into several interconnected functional blocks:</p>
                         <ul class="list-disc list-inside text-gray-400 space-y-2 mb-6">
