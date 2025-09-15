@@ -107,8 +107,269 @@ document.addEventListener('DOMContentLoaded', function() {
                     </ul>`
             },
             'vacuum-gauge': {
-                title: 'Digital Vacuum Gauge',
-                description: `<p class="text-gray-300 mb-4">As part of Milwaukee Tool's Advanced Design R&D team, designed and prototyped a digital vacuum gauge with high precision measurement capabilities. Translated high-level concepts into detailed engineering specifications and created a proof-of-concept electronic system.</p><h3 class="text-xl font-semibold text-primary-color mt-6 mb-3">Key Specifications:</h3><ul class="list-disc list-inside text-gray-400 space-y-2"><li>Range: 0 – 25,000 Microns with 5% accuracy.</li><li>Resolution: As fine as 0.1 Micron.</li><li>Maximum Overpressure: 500 PSI.</li></ul>`
+                title: 'Digital Vacuum Gauge - Project Report',
+                description: `
+                    <div class="space-y-6">
+                        <div class="flex items-center mb-6">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Milwaukee_Logo.svg" alt="Milwaukee Tool Logo" class="w-12 h-12 mr-4 bg-white rounded-full p-2">
+                            <div>
+                                <h2 class="text-2xl font-bold text-primary-color mb-1">Design and Implementation of a Digital Vacuum Gauge</h2>
+                                <p class="text-gray-400 text-sm">Milwaukee Tool - Advanced Design R&D Team (2021-2022)</p>
+                            </div>
+                        </div>
+
+                        <h2 class="text-2xl font-bold text-primary-color mb-4">Executive Summary</h2>
+                        
+                        <p class="text-gray-300 mb-4">This report details the design, architecture, and implementation of a Proof of Concept (POC) for a digital vacuum gauge. The project was a strategic initiative aimed at creating a professional-grade, portable instrument for HVAC and refrigeration applications. The final design integrates a high-precision digital vacuum sensor with a custom microcontroller unit, a robust power management system, and wireless communication capabilities, all packaged in a durable, user-centric device.</p>
+
+                        <p class="text-gray-300 mb-6">Key achievements include the selection of a modern, low-power digital sensor that simplifies calibration and signal processing, the development of a sophisticated power management architecture to maximize battery life, and the successful integration of the device with a vacuum pump and an associated application ecosystem. The project not only met all core performance specifications but also established a clear pathway for commercialization and future product enhancements.</p>
+
+                        <div class="bg-gray-900 p-6 rounded-lg border border-gray-700 my-6">
+                            <h4 class="text-lg font-semibold text-primary-color mb-4 text-center">Digital Vacuum Gauge Proof of Concept</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                                <div>
+                                    <img src="images/Vaccume_guage_1.png" alt="Digital Vacuum Gauge - Front View" class="w-full rounded-lg border border-gray-600">
+                                    <p class="text-gray-400 text-sm text-center mt-2">Digital Vacuum Gauge - Front View</p>
+                                </div>
+                                <div>
+                                    <img src="images/Vaccume_guage_2.png" alt="Digital Vacuum Gauge - Display and Controls" class="w-full rounded-lg border border-gray-600">
+                                    <p class="text-gray-400 text-sm text-center mt-2">Display Interface and Control Panel</p>
+                                </div>
+                                <div>
+                                    <img src="images/Vaccume_guage_3.png" alt="Digital Vacuum Gauge - Side Profile" class="w-full rounded-lg border border-gray-600">
+                                    <p class="text-gray-400 text-sm text-center mt-2">Device Profile and Sensor Connection</p>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-gray-800 p-4 rounded text-center">
+                                <p class="text-white font-semibold">Professional-Grade Digital Vacuum Gauge</p>
+                                <p class="text-gray-400 text-sm">High-precision measurement for HVAC applications</p>
+                            </div>
+                        </div>
+
+                        <h2 class="text-2xl font-bold text-primary-color mb-4 mt-8">1. Introduction and Project Mandate</h2>
+                        
+                        <h3 class="text-xl font-semibold text-white mb-3">Project Context and Motivation</h3>
+                        
+                        <p class="text-gray-300 mb-4">The genesis of this project was to expand the portfolio of professional-grade instruments for the HVAC and refrigeration industries. The market for vacuum gauges was identified as a key area for innovation. Existing tools were often bulky, required power cords, or lacked the combination of high accuracy and durability demanded by field technicians.</p>
+
+                        <p class="text-gray-300 mb-6">A portable, battery-powered digital vacuum gauge with an integrated pump control system and wireless connectivity represented a significant competitive advantage. The POC was developed to demonstrate a design that was not only precise but also rugged enough to withstand the demanding conditions of a job site.</p>
+
+                        <h3 class="text-xl font-semibold text-white mb-3">Design Objectives and Functional Requirements</h3>
+                        
+                        <p class="text-gray-300 mb-4">The primary objective was to develop a digital vacuum gauge POC that met or exceeded the following core technical specifications, designated as the AT10702 feature set:</p>
+                        
+                        <div class="bg-gray-900 p-4 rounded-lg border border-gray-700 mb-6">
+                            <h4 class="text-lg font-semibold text-primary-color mb-3">Core Specifications</h4>
+                            <ul class="list-disc list-inside text-gray-400 space-y-2">
+                                <li><strong class="text-white">Measurement Range:</strong> 0 to 25,000 Microns, with additional unit displays for Pa, mBar, mTorr, mmHg, PSI, and inHg</li>
+                                <li><strong class="text-white">Vacuum Accuracy:</strong> 5% of reading, with an absolute accuracy of +/- 5 microns</li>
+                                <li><strong class="text-white">Resolution:</strong> 0.1 Micron for readings up to 9,999.9 Microns, transitioning to 1 Micron for 10,000 to 25,000 Microns</li>
+                                <li><strong class="text-white">Maximum Overpressure:</strong> 500 PSI to protect the sensor and internal electronics</li>
+                                <li><strong class="text-white">Power Source:</strong> Three AA cells in series (4.5V) or a single 9V battery</li>
+                            </ul>
+                        </div>
+
+                        <h2 class="text-2xl font-bold text-primary-color mb-4 mt-8">2. System Architecture and Block-Level Design</h2>
+                        
+                        <h3 class="text-xl font-semibold text-white mb-3">Overall System Architecture</h3>
+                        
+                        <p class="text-gray-300 mb-4">The Digital Vacuum Gauge is not merely a passive measurement device but an integrated measurement and control system. The design is centered around a Microcontroller Unit (MCU) that acts as the central hub, coordinating data acquisition from the vacuum sensor, managing the user interface, and controlling external components such as the vacuum pump and a recovery tank.</p>
+
+                        <h3 class="text-xl font-semibold text-white mb-3">Functional Block Breakdown</h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                            <div class="bg-gray-800 p-4 rounded">
+                                <h4 class="text-primary-color font-semibold mb-2">Sensing & Signal Conditioning</h4>
+                                <p class="text-gray-400 text-sm">High-resolution measurement across wide vacuum levels with digital output</p>
+                            </div>
+                            <div class="bg-gray-800 p-4 rounded">
+                                <h4 class="text-primary-color font-semibold mb-2">Microcontroller Unit (MCU)</h4>
+                                <p class="text-gray-400 text-sm">Central processing for data acquisition, UI management, and power control</p>
+                            </div>
+                            <div class="bg-gray-800 p-4 rounded">
+                                <h4 class="text-primary-color font-semibold mb-2">Power Management</h4>
+                                <p class="text-gray-400 text-sm">Voltage regulation, consumption management, and battery protection</p>
+                            </div>
+                            <div class="bg-gray-800 p-4 rounded">
+                                <h4 class="text-primary-color font-semibold mb-2">Communication Module</h4>
+                                <p class="text-gray-400 text-sm">Bluetooth Low Energy (BLE) for smartphone integration</p>
+                            </div>
+                        </div>
+
+                        <h2 class="text-2xl font-bold text-primary-color mb-4 mt-8">3. Component Selection and Engineering Trade-Off Analysis</h2>
+                        
+                        <h3 class="text-xl font-semibold text-white mb-3">Vacuum Sensor Technology Evaluation</h3>
+                        
+                        <p class="text-gray-300 mb-4">The choice of the vacuum sensor was the most pivotal design decision, directly impacting the device's accuracy, power consumption, and overall complexity. A thorough evaluation was conducted between two leading technologies: MEMS Pirani sensors and thermistor sensors.</p>
+
+                        <h4 class="text-lg font-semibold text-primary-color mb-3">Pirani/MEMS Sensor (Selected Solution)</h4>
+                        
+                        <p class="text-gray-300 mb-4">A modern Pirani sensor, such as the Posifa PVC4000 series, operates on the principle of thermal conductivity. The PVC4000 was selected due to its advanced features:</p>
+                        
+                        <ul class="list-disc list-inside text-gray-400 space-y-2 mb-6">
+                            <li><strong class="text-white">Wide Range:</strong> Measurement range of 1 to 760,000 microns perfectly encompasses the project requirement</li>
+                            <li><strong class="text-white">Digital I2C Interface:</strong> Provides calibrated, digital output directly, offloading complex signal processing</li>
+                            <li><strong class="text-white">Integrated Intelligence:</strong> Built-in temperature compensation and optional piecewise linearization</li>
+                            <li><strong class="text-white">Low-Power Design:</strong> Pulsed excitation scheme (150ms on, 1s off) maximizes battery life</li>
+                            <li><strong class="text-white">Robustness:</strong> Overpressure rating of 450 PSI, close to the 500 PSI requirement</li>
+                        </ul>
+
+                        <div class="overflow-x-auto mb-6">
+                            <table class="w-full border-collapse border border-gray-600 text-sm">
+                                <thead>
+                                    <tr class="bg-gray-800">
+                                        <th class="border border-gray-600 px-4 py-2 text-left text-primary-color">Feature</th>
+                                        <th class="border border-gray-600 px-4 py-2 text-left text-primary-color">Pirani/MEMS (PVC4000)</th>
+                                        <th class="border border-gray-600 px-4 py-2 text-left text-primary-color">Thermistor Gauge</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="border border-gray-600 px-4 py-2 text-white">Operating Principle</td>
+                                        <td class="border border-gray-600 px-4 py-2 text-gray-300">Thermal conductivity of gases</td>
+                                        <td class="border border-gray-600 px-4 py-2 text-gray-400">Temperature-sensitive resistor</td>
+                                    </tr>
+                                    <tr class="bg-gray-900/50">
+                                        <td class="border border-gray-600 px-4 py-2 text-white">Output Type</td>
+                                        <td class="border border-gray-600 px-4 py-2 text-gray-300">Digital (I2C)</td>
+                                        <td class="border border-gray-600 px-4 py-2 text-gray-400">Analog</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-gray-600 px-4 py-2 text-white">Compensation</td>
+                                        <td class="border border-gray-600 px-4 py-2 text-gray-300">Built-in (temperature, linearization)</td>
+                                        <td class="border border-gray-600 px-4 py-2 text-gray-400">Requires external firmware</td>
+                                    </tr>
+                                    <tr class="bg-gray-900/50">
+                                        <td class="border border-gray-600 px-4 py-2 text-white">Power Consumption</td>
+                                        <td class="border border-gray-600 px-4 py-2 text-gray-300">Low (intermittent pulsed)</td>
+                                        <td class="border border-gray-600 px-4 py-2 text-gray-400">Higher (continuous operation)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h2 class="text-2xl font-bold text-primary-color mb-4 mt-8">4. Detailed Implementation and Engineering Solutions</h2>
+                        
+                        <h3 class="text-xl font-semibold text-white mb-3">Hardware Design and Circuitry</h3>
+                        
+                        <p class="text-gray-300 mb-4">The hardware design addressed potential electronics issues, focusing on signal integrity, power management, and reliability:</p>
+
+                        <h4 class="text-lg font-semibold text-primary-color mb-3">Power Latching Circuit</h4>
+                        
+                        <p class="text-gray-300 mb-4">To allow the device to be truly powered off, eliminating parasitic current draw and maximizing long-term battery life, a power latching circuit was implemented. This circuit functions similarly to a solid-state latching relay. When the power button is momentarily pressed, a transistor is switched on, which in turn latches the power to the microcontroller.</p>
+
+                        <h4 class="text-lg font-semibold text-primary-color mb-3">Low Voltage Shutdown Circuit</h4>
+                        
+                        <p class="text-gray-300 mb-4">To prevent damage to the batteries from over-discharge, a low voltage shutdown (LVD) circuit was incorporated. This circuit monitors the battery voltage and automatically shuts down the system when the voltage drops below a predetermined threshold.</p>
+
+                        <h4 class="text-lg font-semibold text-primary-color mb-3">Reverse Battery Protection</h4>
+                        
+                        <p class="text-gray-300 mb-6">A P-Channel MOSFET-based circuit protects the device from damage caused by reverse polarity battery installation. This method is more efficient than using a series diode, as the MOSFET's on-resistance is typically lower, reducing power loss.</p>
+
+                        <h3 class="text-xl font-semibold text-white mb-3">Firmware Development and Algorithmic Logic</h3>
+                        
+                        <p class="text-gray-300 mb-4">The project's specified accuracy and resolution are heavily dependent on sophisticated firmware designed to leverage component intelligence while implementing robust power-saving and control logic:</p>
+                        
+                        <ul class="list-disc list-inside text-gray-400 space-y-2 mb-6">
+                            <li><strong class="text-white">Sensor Interface:</strong> I2C communication with power-saving state machine (150ms on, low-power off state)</li>
+                            <li><strong class="text-white">Algorithmic Processing:</strong> Real-time unit conversions for Microns, Pa, mBar, PSI, and other units</li>
+                            <li><strong class="text-white">Temperature Compensation:</strong> Utilizes sensor's built-in temperature sensor for accurate readings</li>
+                        </ul>
+
+                        <h3 class="text-xl font-semibold text-white mb-3">Calibration and Validation</h3>
+                        
+                        <p class="text-gray-300 mb-4">To ensure the device met its stringent accuracy requirements, a detailed calibration process was conducted using a Kurt J. Lesker gauge as the reference standard. Both sensors were mounted on the same vacuum manifold to ensure identical pressure exposure.</p>
+
+                        <p class="text-gray-300 mb-6">The calibration process involved creating a calibration curve by comparing readings at specific pressure points, then programming the sensor's internal piecewise linearization algorithm with up to ten calibration point pairs.</p>
+
+                        <h2 class="text-2xl font-bold text-primary-color mb-4 mt-8">5. Performance Specifications and Achievements</h2>
+                        
+                        <div class="overflow-x-auto mb-6">
+                            <table class="w-full border-collapse border border-gray-600 text-sm">
+                                <thead>
+                                    <tr class="bg-gray-800">
+                                        <th class="border border-gray-600 px-4 py-2 text-left text-primary-color">Specification</th>
+                                        <th class="border border-gray-600 px-4 py-2 text-left text-primary-color">Project Requirement</th>
+                                        <th class="border border-gray-600 px-4 py-2 text-left text-primary-color">Achieved Performance</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="border border-gray-600 px-4 py-2 text-white">Measurement Range</td>
+                                        <td class="border border-gray-600 px-4 py-2 text-gray-300">0 - 25,000 Microns</td>
+                                        <td class="border border-gray-600 px-4 py-2 text-green-400">✓ 0 - 25,000 Microns</td>
+                                    </tr>
+                                    <tr class="bg-gray-900/50">
+                                        <td class="border border-gray-600 px-4 py-2 text-white">Vacuum Accuracy</td>
+                                        <td class="border border-gray-600 px-4 py-2 text-gray-300">5% of Reading +/- 5 Microns</td>
+                                        <td class="border border-gray-600 px-4 py-2 text-green-400">✓ Meets/Exceeds requirement</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-gray-600 px-4 py-2 text-white">Resolution</td>
+                                        <td class="border border-gray-600 px-4 py-2 text-gray-300">0.1 Micron (0.0 to 9,999.9)<br>1 Micron (10,000 to 25,000)</td>
+                                        <td class="border border-gray-600 px-4 py-2 text-green-400">✓ Meets requirement</td>
+                                    </tr>
+                                    <tr class="bg-gray-900/50">
+                                        <td class="border border-gray-600 px-4 py-2 text-white">Maximum Overpressure</td>
+                                        <td class="border border-gray-600 px-4 py-2 text-gray-300">500 PSI</td>
+                                        <td class="border border-gray-600 px-4 py-2 text-green-400">✓ 500 PSI</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-gray-600 px-4 py-2 text-white">Power Source</td>
+                                        <td class="border border-gray-600 px-4 py-2 text-gray-300">3 AA cells or 9V battery</td>
+                                        <td class="border border-gray-600 px-4 py-2 text-green-400">✓ Optimized for 3 AA cells</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h2 class="text-2xl font-bold text-primary-color mb-4 mt-8">6. Key Components and Selection Rationale</h2>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                            <div class="bg-gray-800 p-4 rounded">
+                                <h4 class="text-primary-color font-semibold mb-2">Vacuum Sensor</h4>
+                                <p class="text-white text-sm mb-1">Posifa PVC4000 Series</p>
+                                <p class="text-gray-400 text-xs">High accuracy, wide range, low power, digital interface simplifies design and firmware development</p>
+                            </div>
+                            <div class="bg-gray-800 p-4 rounded">
+                                <h4 class="text-primary-color font-semibold mb-2">Microcontroller</h4>
+                                <p class="text-white text-sm mb-1">STM32L4 Series</p>
+                                <p class="text-gray-400 text-xs">Ultra-low-power MCU with sufficient resources for sensor communication, UI, and power management</p>
+                            </div>
+                            <div class="bg-gray-800 p-4 rounded">
+                                <h4 class="text-primary-color font-semibold mb-2">Display</h4>
+                                <p class="text-white text-sm mb-1">Custom Segment LCD with Backlight</p>
+                                <p class="text-gray-400 text-xs">Clear, durable, low-power user interface suitable for field use</p>
+                            </div>
+                            <div class="bg-gray-800 p-4 rounded">
+                                <h4 class="text-primary-color font-semibold mb-2">Wireless Module</h4>
+                                <p class="text-white text-sm mb-1">BLE 5.0 Module (nRF52)</p>
+                                <p class="text-gray-400 text-xs">Low-power, reliable wireless communication for smartphone integration</p>
+                            </div>
+                        </div>
+
+                        <h2 class="text-2xl font-bold text-primary-color mb-4 mt-8">7. Conclusion and Future Directions</h2>
+                        
+                        <p class="text-gray-300 mb-4">The Digital Vacuum Gauge POC successfully met all its design objectives and functional requirements, demonstrating the feasibility of creating a professional-grade, battery-powered vacuum measurement and control system. The project's success was rooted in key engineering decisions, including the strategic selection of a modern digital Pirani sensor, the development of a sophisticated power management architecture, and the seamless integration of a pump control system and wireless connectivity.</p>
+
+                        <p class="text-gray-300 mb-4">The project not only delivered a functional prototype but also demonstrated a clear understanding of the design trade-offs required to build a product that aligns with the professional requirements of durability, accuracy, and performance.</p>
+
+                        <h3 class="text-xl font-semibold text-white mb-3">Future Enhancements</h3>
+                        
+                        <ul class="list-disc list-inside text-gray-400 space-y-2 mb-6">
+                            <li><strong class="text-white">BOM Optimization:</strong> Cost reduction and further power efficiency improvements</li>
+                            <li><strong class="text-white">Enhanced Functionality:</strong> Real-time data logging and evacuation curve graphing</li>
+                            <li><strong class="text-white">Application Integration:</strong> Job report generation and sharing capabilities</li>
+                            <li><strong class="text-white">Multiple Battery Platforms:</strong> Adaptation for various power sources</li>
+                        </ul>
+
+                        <div class="bg-gray-900 p-6 rounded-lg border border-gray-700 my-6 text-center">
+                            <h4 class="text-lg font-semibold text-primary-color mb-2">Project Impact</h4>
+                            <p class="text-gray-400">The successful completion of this POC provides a clear pathway for commercialization and establishes the foundation for future product development in professional-grade measurement instruments.</p>
+                        </div>
+                    </div>
+                `
             },
             'electrofusion': {
                 title: 'Proof of Concept for a High-Power, Cordless Electrofusion Device',
