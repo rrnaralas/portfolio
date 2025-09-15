@@ -329,13 +329,14 @@ table tr:hover td, .generic-table tr:hover td {
 }
 
 /* Project-specific styling for vacuum gauge */
-[data-project="vacuum-gauge"] .absolute {
-    background: rgba(0, 0, 0, 0.9) !important;
+[data-project="vacuum-gauge"] .project-image-overlay {
+    background: linear-gradient(to top, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 70%) !important;
 }
 
 [data-project="vacuum-gauge"] .absolute h3,
 [data-project="vacuum-gauge"] .absolute p {
     color: white !important;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
 }
 
 /* Modal styles */
