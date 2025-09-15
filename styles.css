@@ -195,6 +195,226 @@ body {
     transform: translateY(0); 
 }
 
+/* Generic Table Styles */
+.generic-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 1.5rem 0;
+    background: linear-gradient(145deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.95));
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(148, 163, 184, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.generic-table th {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
+    color: #f1f5f9;
+    font-weight: 600;
+    padding: 16px 20px;
+    text-align: left;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-bottom: 2px solid rgba(100, 116, 139, 0.3);
+    position: relative;
+}
+
+.generic-table th:first-child {
+    border-top-left-radius: 12px;
+}
+
+.generic-table th:last-child {
+    border-top-right-radius: 12px;
+}
+
+.generic-table th::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #00BFFF, transparent);
+}
+
+.generic-table td {
+    padding: 16px 20px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+    color: #e2e8f0;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    position: relative;
+}
+
+.generic-table tbody tr {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.generic-table tbody tr:nth-child(even) {
+    background: rgba(148, 163, 184, 0.03);
+}
+
+.generic-table tbody tr:hover {
+    background: linear-gradient(90deg, rgba(0, 191, 255, 0.08), rgba(0, 191, 255, 0.12), rgba(0, 191, 255, 0.08));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 191, 255, 0.15), 0 0 0 1px rgba(0, 191, 255, 0.2);
+}
+
+.generic-table tbody tr:hover td {
+    color: #ffffff;
+}
+
+.generic-table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 12px;
+}
+
+.generic-table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 12px;
+}
+
+.generic-table .table-highlight {
+    background: linear-gradient(90deg, rgba(0, 191, 255, 0.2), rgba(0, 191, 255, 0.25));
+    font-weight: 600;
+    color: #ffffff;
+    position: relative;
+}
+
+.generic-table .table-highlight::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, #00BFFF, #0ea5e9);
+    border-radius: 0 2px 2px 0;
+}
+
+.generic-table .status-success {
+    color: #22c55e;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.generic-table .status-success::before {
+    content: '●';
+    color: #22c55e;
+    font-size: 1.2em;
+    filter: drop-shadow(0 0 4px #22c55e);
+}
+
+.generic-table .status-warning {
+    color: #f59e0b;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.generic-table .status-warning::before {
+    content: '▲';
+    color: #f59e0b;
+    font-size: 0.8em;
+    filter: drop-shadow(0 0 4px #f59e0b);
+}
+
+.generic-table .status-info {
+    color: #3b82f6;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.generic-table .status-info::before {
+    content: '◆';
+    color: #3b82f6;
+    font-size: 0.9em;
+    filter: drop-shadow(0 0 4px #3b82f6);
+}
+
+/* Enhanced table animations and effects */
+.generic-table tbody tr::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    background: linear-gradient(180deg, #00BFFF, #0ea5e9);
+    transition: width 0.3s ease;
+    z-index: 1;
+}
+
+.generic-table tbody tr:hover::before {
+    width: 3px;
+}
+
+.generic-table td {
+    position: relative;
+    z-index: 2;
+}
+
+/* Responsive table styles */
+@media (max-width: 768px) {
+    .generic-table {
+        font-size: 0.75rem;
+        margin: 1rem 0;
+        border-radius: 8px;
+    }
+    
+    .generic-table th,
+    .generic-table td {
+        padding: 12px 16px;
+    }
+    
+    .generic-table th {
+        font-size: 0.75rem;
+        padding: 14px 16px;
+    }
+    
+    .generic-table th:first-child {
+        border-top-left-radius: 8px;
+    }
+    
+    .generic-table th:last-child {
+        border-top-right-radius: 8px;
+    }
+    
+    .generic-table tbody tr:last-child td:first-child {
+        border-bottom-left-radius: 8px;
+    }
+    
+    .generic-table tbody tr:last-child td:last-child {
+        border-bottom-right-radius: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .generic-table {
+        font-size: 0.7rem;
+    }
+    
+    .generic-table th,
+    .generic-table td {
+        padding: 10px 12px;
+    }
+    
+    .generic-table .table-highlight::before {
+        width: 2px;
+    }
+    
+    .generic-table tbody tr:hover::before {
+        width: 2px;
+    }
+}
+
 /* Print styles for resume page */
 @media print {
     body {
@@ -225,6 +445,28 @@ body {
         border: 1px solid #ccc;
         color: #333;
         background: #f5f5f5;
+    }
+    
+    /* Print table styles */
+    .generic-table {
+        background: white;
+        color: black;
+        box-shadow: none;
+    }
+    
+    .generic-table th {
+        background: #f0f0f0 !important;
+        color: black !important;
+        border: 1px solid #333 !important;
+    }
+    
+    .generic-table td {
+        color: black !important;
+        border: 1px solid #333 !important;
+    }
+    
+    .generic-table tbody tr:nth-child(even) {
+        background: #f9f9f9 !important;
     }
 }
 
@@ -264,6 +506,11 @@ body {
 .print-button:hover {
     transform: scale(1.1);
     box-shadow: 0 0 20px rgba(0, 191, 255, 0.8);
+}
+
+/* Project-specific styling */
+[data-project="vacuum-gauge"] .absolute p {
+    color: white !important;
 }
 
 /* Modal styles */
