@@ -226,11 +226,17 @@ body {
     color: #ffffff !important;
 }
 
-/* FIRST COLUMN - Simple grey background with white text */
+/* FIRST COLUMN - Simple grey background with white text - FORCE UPDATE */
 .generic-table th:first-child, 
 .generic-table td:first-child,
 table th:first-child, 
-table td:first-child {
+table td:first-child,
+#project-modal .generic-table th:first-child,
+#project-modal .generic-table td:first-child,
+#modal-content .generic-table th:first-child,
+#modal-content .generic-table td:first-child,
+#modal-content-container .generic-table th:first-child,
+#modal-content-container .generic-table td:first-child {
     background: #555555 !important;
     color: #ffffff !important;
     font-weight: bold !important;
@@ -238,10 +244,15 @@ table td:first-child {
     padding: 15px 20px !important;
     border-bottom: 1px solid #444444 !important;
     border-right: 1px solid #444444 !important;
+    border-left: 1px solid #444444 !important;
 }
 
-/* Header first column */
-.generic-table th:first-child, table th:first-child {
+/* Header first column - FORCE UPDATE */
+.generic-table th:first-child, 
+table th:first-child,
+#project-modal .generic-table th:first-child,
+#modal-content .generic-table th:first-child,
+#modal-content-container .generic-table th:first-child {
     background: #666666 !important;
     color: #ffffff !important;
     font-weight: bold !important;
