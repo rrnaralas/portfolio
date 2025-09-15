@@ -107,55 +107,24 @@ document.addEventListener('DOMContentLoaded', function() {
                     </ul>`
             },
         'vacuum-gauge': {
-            title: 'Digital Vacuum Gauge for HVAC Systems - Comprehensive Project Report',
+            title: 'Digital Vacuum Gauge - Project Report: Design and Implementation of a Digital Vacuum Gauge',
             description: `
                 <div class="space-y-8">
-                    <!-- Project Header -->
-                    <div class="flex items-center mb-6">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Milwaukee_Logo.svg" alt="Milwaukee Tool Logo" class="w-12 h-12 mr-4 bg-white rounded-full p-2">
-                        <div>
-                            <h2 class="text-2xl font-bold text-primary-color mb-1">Design and Implementation of a Digital Vacuum Gauge</h2>
-                            <p class="text-gray-400 text-sm">Milwaukee Tool - Advanced Design R&D Team</p>
-                        </div>
-                    </div>
-
-                    <!-- Technical Specifications Dashboard -->
-                    <div class="glass-card p-6 rounded-lg">
-                        <h3 class="text-xl font-semibold text-primary-color mb-4">Technical Specifications</h3>
-                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                            <div class="text-center">
-                                <div class="text-2xl font-bold text-primary-color">±5μm</div>
-                                <div class="text-sm text-gray-300">Precision Accuracy</div>
-                            </div>
-                            <div class="text-center">
-                                <div class="text-2xl font-bold text-primary-color">0-25K</div>
-                                <div class="text-sm text-gray-300">Micron Range</div>
-                            </div>
-                            <div class="text-center">
-                                <div class="text-2xl font-bold text-primary-color">500PSI</div>
-                                <div class="text-sm text-gray-300">Max Overpressure</div>
-                            </div>
-                            <div class="text-center">
-                                <div class="text-2xl font-bold text-primary-color">9V</div>
-                                <div class="text-sm text-gray-300">Battery Power</div>
-                            </div>
-                        </div>
-                    </div>
-
                     <!-- Executive Summary -->
                     <div>
                         <h3 class="text-xl font-semibold text-white mb-4">Executive Summary</h3>
                         <p class="text-white mb-4">
-                            This report details the design, architecture, and implementation of a Proof of Concept (POC) for a digital vacuum gauge. 
-                            The project was a strategic initiative aimed at creating a professional-grade, portable instrument for HVAC and refrigeration applications. 
-                            The final design integrates a high-precision digital vacuum sensor with a custom microcontroller unit, a robust power management system, 
-                            and wireless communication capabilities, all packaged in a durable, user-centric device.
-                        </p>
-                        <p class="text-white mb-4">
-                            Key achievements include the selection of a modern, low-power digital sensor that simplifies calibration and signal processing, 
-                            the development of a sophisticated power management architecture to maximize battery life, and the successful integration of the device 
-                            with a vacuum pump and an associated application ecosystem. The project not only met all core performance specifications but also 
-                            established a clear pathway for commercialization and future product enhancements.
+                            This report details the design, architecture, and implementation of a Proof of Concept (POC) for 
+                            a digital vacuum gauge. The project was a strategic initiative aimed at creating a 
+                            professional-grade, portable instrument for HVAC and refrigeration applications. The final design 
+                            integrates a high-precision digital vacuum sensor with a custom microcontroller unit, a robust 
+                            power management system, and wireless communication capabilities, all packaged in a 
+                            durable, user-centric device. Key achievements include the selection of a modern, low-power 
+                            digital sensor that simplifies calibration and signal processing, the development of a 
+                            sophisticated power management architecture to maximize battery life, and the successful 
+                            integration of the device with a vacuum pump and an associated application ecosystem. The 
+                            project not only met all core performance specifications but also established a clear pathway for 
+                            commercialization and future product enhancements.
                         </p>
                     </div>
 
@@ -181,152 +150,9 @@ document.addEventListener('DOMContentLoaded', function() {
                         </div>
                     </div>
 
-                    <!-- Project Context and Motivation -->
-                    <div>
-                        <h3 class="text-xl font-semibold text-white mb-4">1. Project Context and Motivation</h3>
-                        <p class="text-white mb-4">
-                            The genesis of this project was to expand the portfolio of professional-grade instruments for the HVAC and refrigeration industries. 
-                            The market for vacuum gauges was identified as a key area for innovation. Existing tools were often bulky, required power cords, 
-                            or lacked the combination of high accuracy and durability demanded by field technicians. A portable, battery-powered digital vacuum gauge 
-                            with an integrated pump control system and wireless connectivity represented a significant competitive advantage.
-                        </p>
-                        <p class="text-white mb-4">
-                            The POC was developed to demonstrate a design that was not only precise but also rugged enough to withstand the demanding conditions of a job site.
-                        </p>
-                    </div>
-
-                    <!-- Design Objectives -->
-                    <div>
-                        <h3 class="text-xl font-semibold text-white mb-4">2. Design Objectives and Functional Requirements</h3>
-                        <p class="text-white mb-4">
-                            The primary objective was to develop a digital vacuum gauge POC that met or exceeded the following core technical specifications, 
-                            designated as the AT10702 feature set:
-                        </p>
-                        <div class="bg-gray-100 p-4 rounded-lg mb-4">
-                            <h4 class="text-lg font-semibold text-gray-800 mb-3">Core Specifications</h4>
-                            <ul class="list-disc list-inside text-gray-800 space-y-2">
-                                <li><strong>Measurement Range:</strong> 0 to 25,000 Microns, with additional unit displays for Pa, mBar, mTorr, mmHg, PSI, and inHg. This range is critical for accurate monitoring of HVAC system evacuation.</li>
-                                <li><strong>Vacuum Accuracy:</strong> 5% of reading, with an absolute accuracy of +/- 5 microns. This high standard ensures reliable measurements for critical system commissioning.</li>
-                                <li><strong>Resolution:</strong> A fine resolution of 0.1 Micron for readings up to 9,999.9 Microns, transitioning to 1 Micron for the higher range of 10,000 to 25,000 Microns.</li>
-                                <li><strong>Maximum Overpressure:</strong> A robust rating of 500 PSI to protect the sensor and internal electronics from unexpected pressure surges.</li>
-                                <li><strong>Power Source:</strong> The design was required to operate from standard alkaline batteries, specifically three AA cells in series (4.5V) or a single 9V battery.</li>
-                                <li><strong>Additional Functionality:</strong> The design included a user interface with an LCD and physical buttons for control, a communication link to a smartphone application, and the ability to control a vacuum pump and monitor a recovery tank.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- System Architecture -->
-                    <div>
-                        <h3 class="text-xl font-semibold text-white mb-4">3. System Architecture and Block-Level Design</h3>
-                        <h4 class="text-lg font-semibold text-white mb-3">3.1 Overall System Architecture</h4>
-                        <p class="text-white mb-4">
-                            The Digital Vacuum Gauge is not merely a passive measurement device but an integrated measurement and control system. 
-                            The design is centered around a Microcontroller Unit (MCU) that acts as the central hub, coordinating data acquisition from the vacuum sensor, 
-                            managing the user interface, and controlling external components such as the vacuum pump and a recovery tank. This architectural approach 
-                            represents a deliberate design decision to centralize all functions into a single, cohesive, portable device, thereby streamlining the workflow for the field technician.
-                        </p>
-                        
-                        <h4 class="text-lg font-semibold text-white mb-3">3.2 Functional Block Breakdown</h4>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                            <div class="bg-gray-100 p-4 rounded">
-                                <h5 class="font-semibold text-gray-800 mb-2">Sensing & Signal Conditioning</h5>
-                                <p class="text-gray-800 text-sm">Core measurement system responsible for acquiring raw pressure data with high-resolution measurement across a wide range of vacuum levels.</p>
-                            </div>
-                            <div class="bg-gray-100 p-4 rounded">
-                                <h5 class="font-semibold text-gray-800 mb-2">Microcontroller Unit (MCU)</h5>
-                                <p class="text-gray-800 text-sm">The brain of the system, performing data acquisition, unit conversions, and user interface management.</p>
-                            </div>
-                            <div class="bg-gray-100 p-4 rounded">
-                                <h5 class="font-semibold text-gray-800 mb-2">Power Management</h5>
-                                <p class="text-gray-800 text-sm">Manages power flow from batteries with latching circuits and low voltage shutdown protection.</p>
-                            </div>
-                            <div class="bg-gray-100 p-4 rounded">
-                                <h5 class="font-semibold text-gray-800 mb-2">Communication Module</h5>
-                                <p class="text-gray-800 text-sm">Enables wireless communication with smartphone applications via Bluetooth Low Energy (BLE).</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Component Selection -->
-                    <div>
-                        <h3 class="text-xl font-semibold text-white mb-4">4. Component Selection and Engineering Trade-offs</h3>
-                        <h4 class="text-lg font-semibold text-white mb-3">4.1 Vacuum Sensor Technology Evaluation</h4>
-                        <p class="text-white mb-4">
-                            The choice of the vacuum sensor was the most pivotal design decision, directly impacting the device's accuracy, power consumption, and overall complexity. 
-                            A thorough evaluation was conducted between two leading technologies: MEMS Pirani sensors and thermistor sensors.
-                        </p>
-                        
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                            <div class="bg-gray-100 p-4 rounded-lg">
-                                <h5 class="text-lg font-semibold text-gray-800 mb-3">Pirani/MEMS Sensor (Selected)</h5>
-                                <ul class="list-disc list-inside text-gray-800 space-y-2 text-sm">
-                                    <li><strong>Digital I2C Interface:</strong> Calibrated, digital output via I2C interface</li>
-                                    <li><strong>Wide Range:</strong> 1 to 760,000 microns (encompasses 0-25,000 requirement)</li>
-                                    <li><strong>Integrated Intelligence:</strong> Built-in temperature compensation and linearization</li>
-                                    <li><strong>Low Power:</strong> Pulsed excitation scheme (150ms on, 1s off)</li>
-                                    <li><strong>Robust:</strong> 450 PSI overpressure rating</li>
-                                </ul>
-                            </div>
-                            <div class="bg-gray-100 p-4 rounded-lg">
-                                <h5 class="text-lg font-semibold text-gray-800 mb-3">Thermistor Sensor</h5>
-                                <ul class="list-disc list-inside text-gray-800 space-y-2 text-sm">
-                                    <li><strong>Non-Linear:</strong> Complex equations like Steinhart-Hart required</li>
-                                    <li><strong>Analog Interface:</strong> Requires high-resolution ADC and signal conditioning</li>
-                                    <li><strong>Higher Power:</strong> Continuous operation increases power consumption</li>
-                                    <li><strong>Complex Firmware:</strong> Extensive linearization algorithms needed</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Hardware Implementation -->
-                    <div>
-                        <h3 class="text-xl font-semibold text-white mb-4">5. Hardware Design and Implementation</h3>
-                        <h4 class="text-lg font-semibold text-white mb-3">5.1 Power Management Circuitry</h4>
-                        <p class="text-white mb-4">
-                            The hardware design addressed potential electronics issues, focusing on signal integrity, power management, and reliability:
-                        </p>
-                        <ul class="list-disc list-inside text-white space-y-2 mb-4">
-                            <li><strong>Power Latching Circuit:</strong> Solid-state latching relay functionality allowing true power-off state</li>
-                            <li><strong>Low Voltage Shutdown (LVD):</strong> Automatic system shutdown when battery voltage drops below safe threshold</li>
-                            <li><strong>Reverse Battery Protection:</strong> P-Channel MOSFET-based protection against reverse polarity installation</li>
-                        </ul>
-                    </div>
-
-                    <!-- Software and Firmware -->
-                    <div>
-                        <h3 class="text-xl font-semibold text-white mb-4">6. Software Design and Algorithmic Logic</h3>
-                        <p class="text-white mb-4">
-                            The firmware leverages the intelligence of selected components while implementing robust power-saving and control logic:
-                        </p>
-                        <ul class="list-disc list-inside text-white space-y-2 mb-4">
-                            <li><strong>Sensor Interface:</strong> I2C communication with PVC4000 Pirani sensor including power management state machine</li>
-                            <li><strong>Algorithmic Processing:</strong> Real-time unit conversions for Microns, Pa, mBar, PSI display</li>
-                            <li><strong>Power Optimization:</strong> Sensor powered for 150ms measurements then low-power off state</li>
-                        </ul>
-                    </div>
-
-                    <!-- Calibration and Validation -->
-                    <div>
-                        <h3 class="text-xl font-semibold text-white mb-4">7. Calibration and Validation</h3>
-                        <p class="text-white mb-4">
-                            A detailed calibration process ensured the device met stringent accuracy requirements using NIST-traceable standards:
-                        </p>
-                        <div class="bg-gray-100 p-4 rounded-lg mb-4">
-                            <h5 class="text-lg font-semibold text-gray-800 mb-2">Calibration Process</h5>
-                            <ol class="list-decimal list-inside text-gray-800 space-y-2 text-sm">
-                                <li>Both prototype and reference gauge (Kurt J. Lesker) mounted on same vacuum manifold</li>
-                                <li>High-precision vacuum pump used to stabilize pressure at predetermined set points</li>
-                                <li>Simultaneous readings recorded from both sensors at each calibration point</li>
-                                <li>Calibration curve generated and programmed into sensor's piecewise linearization algorithm</li>
-                                <li>Individual unit calibration ensures each device meets accuracy specifications</li>
-                            </ol>
-                        </div>
-                    </div>
-
                     <!-- Performance Results -->
                     <div>
-                        <h3 class="text-xl font-semibold text-white mb-4">8. Performance Results</h3>
+                        <h3 class="text-xl font-semibold text-white mb-4">Performance Results</h3>
                         <div class="overflow-x-auto mb-6">
                             <table class="generic-table">
                                 <thead>
@@ -338,53 +164,86 @@ document.addEventListener('DOMContentLoaded', function() {
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td class="table-highlight">Measurement Range</td>
+                                        <td>Measurement Range</td>
                                         <td>0 - 25,000 Microns</td>
-                                        <td class="status-success">0 - 25,000 Microns ✓</td>
+                                        <td>0 - 25,000 Microns ✓</td>
                                     </tr>
                                     <tr>
-                                        <td class="table-highlight">Vacuum Accuracy</td>
+                                        <td>Vacuum Accuracy</td>
                                         <td>5% of Reading +/- 5 Microns</td>
-                                        <td class="status-success">Meets/Exceeds requirement ✓</td>
+                                        <td>Meets/Exceeds requirement ✓</td>
                                     </tr>
                                     <tr>
-                                        <td class="table-highlight">Resolution</td>
+                                        <td>Resolution</td>
                                         <td>0.1 Micron (0-9,999.9) / 1 Micron (10,000-25,000)</td>
-                                        <td class="status-success">Meets requirement ✓</td>
+                                        <td>Meets requirement ✓</td>
                                     </tr>
                                     <tr>
-                                        <td class="table-highlight">Maximum Overpressure</td>
+                                        <td>Maximum Overpressure</td>
                                         <td>500 PSI</td>
-                                        <td class="status-success">500 PSI ✓</td>
+                                        <td>500 PSI ✓</td>
                                     </tr>
                                     <tr>
-                                        <td class="table-highlight">Power Source</td>
+                                        <td>Power Source</td>
                                         <td>3 AA cells or 9V battery</td>
-                                        <td class="status-success">Optimized for 3 AA cells ✓</td>
+                                        <td>Optimized for 3 AA cells ✓</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
 
-                    <!-- Conclusion -->
+                    <!-- Component Comparison -->
                     <div>
-                        <h3 class="text-xl font-semibold text-white mb-4">9. Conclusion and Future Directions</h3>
-                        <p class="text-white mb-4">
-                            The Digital Vacuum Gauge POC successfully met all its design objectives and functional requirements, demonstrating the feasibility 
-                            of creating a professional-grade, battery-powered vacuum measurement and control system. The project's success was rooted in key 
-                            engineering decisions, including the strategic selection of a modern digital Pirani sensor, the development of a sophisticated 
-                            power management architecture, and the seamless integration of a pump control system and wireless connectivity.
-                        </p>
-                        <p class="text-white mb-4">
-                            The successful completion of this POC provides a clear pathway for commercialization and future product development. Future hardware 
-                            and firmware refinements could focus on BOM optimization to reduce cost and further power efficiency improvements to extend runtime even further.
-                        </p>
+                        <h3 class="text-xl font-semibold text-white mb-4">Vacuum Sensor Technology Comparison</h3>
+                        <div class="overflow-x-auto mb-6">
+                            <table class="generic-table">
+                                <thead>
+                                    <tr>
+                                        <th>Feature</th>
+                                        <th>Pirani/MEMS Sensor (Selected)</th>
+                                        <th>Thermistor Gauge</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Operating Principle</td>
+                                        <td>Thermal conductivity of gases</td>
+                                        <td>Temperature-sensitive resistor</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Measurement Range</td>
+                                        <td>1 - 760,000 Microns</td>
+                                        <td>0 - 12,000 Microns</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Output Type</td>
+                                        <td>Digital (I2C)</td>
+                                        <td>Analog</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Compensation</td>
+                                        <td>Built-in (temperature, linearization)</td>
+                                        <td>Requires external firmware compensation</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Power Consumption</td>
+                                        <td>Low (intermittent pulsed excitation)</td>
+                                        <td>Higher (continuous operation)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Overpressure Rating</td>
+                                        <td>450 PSI</td>
+                                        <td>500 PSI</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
 
                     <!-- Key Components BOM -->
                     <div>
-                        <h3 class="text-xl font-semibold text-white mb-4">10. Key Component Selection Rationale</h3>
+                        <h3 class="text-xl font-semibold text-white mb-4">Key Component Selection Rationale</h3>
                         <div class="overflow-x-auto">
                             <table class="generic-table">
                                 <thead>
@@ -396,23 +255,23 @@ document.addEventListener('DOMContentLoaded', function() {
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td class="table-highlight">Vacuum Sensor</td>
-                                        <td class="status-info">Posifa PVC4000 Series</td>
+                                        <td>Vacuum Sensor</td>
+                                        <td>Posifa PVC4000 Series</td>
                                         <td>High accuracy, wide range, low power, digital interface simplifies design</td>
                                     </tr>
                                     <tr>
-                                        <td class="table-highlight">Microcontroller</td>
-                                        <td class="status-info">STM32L4 Series</td>
+                                        <td>Microcontroller</td>
+                                        <td>STM32L4 Series</td>
                                         <td>Ultra-low-power MCU with sufficient resources for sensor communication and UI</td>
                                     </tr>
                                     <tr>
-                                        <td class="table-highlight">Display</td>
-                                        <td class="status-info">Custom Segment LCD</td>
+                                        <td>Display</td>
+                                        <td>Custom Segment LCD</td>
                                         <td>Clear, durable, low-power interface suitable for field use</td>
                                     </tr>
                                     <tr>
-                                        <td class="table-highlight">Wireless Module</td>
-                                        <td class="status-info">BLE 5.0 Module (nRF52)</td>
+                                        <td>Wireless Module</td>
+                                        <td>BLE 5.0 Module (nRF52)</td>
                                         <td>Low-power, reliable wireless communication for smartphone integration</td>
                                     </tr>
                                 </tbody>
