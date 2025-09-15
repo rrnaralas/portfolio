@@ -195,198 +195,44 @@ body {
     transform: translateY(0); 
 }
 
-/* Ultra-Simple Table Styles - Maximum Compatibility */
-.generic-table, table {
+/* ULTRA BASIC TABLE STYLES - REMOVE ALL COMPLEX CSS */
+table, .generic-table {
     width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-    margin: 20px 0;
-    background: #222222;
-    border: 2px solid #555555;
-    border-radius: 8px;
-    overflow: hidden;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    background: #1a1a1a;
+    border: 1px solid #333;
 }
 
-/* All table cells - ensure basic visibility */
-.generic-table th, .generic-table td, table th, table td {
-    padding: 15px 20px !important;
-    text-align: left !important;
-    border-bottom: 1px solid #444444 !important;
-    border-right: 1px solid #444444 !important;
-    color: #ffffff !important;
-    background: #333333 !important;
-    font-size: 14px !important;
-    line-height: 1.4 !important;
+table th, table td, .generic-table th, .generic-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #333;
+    color: #ffffff;
+    background: #1a1a1a;
 }
 
-/* Header cells */
-.generic-table th, table th {
-    background: #444444 !important;
-    font-weight: bold !important;
-    color: #ffffff !important;
+table th, .generic-table th {
+    background: #333;
+    font-weight: bold;
 }
 
-/* FIRST COLUMN - Simple grey background with white text - FORCE UPDATE */
-.generic-table th:first-child, 
-.generic-table td:first-child,
-table th:first-child, 
-table td:first-child,
-#project-modal .generic-table th:first-child,
-#project-modal .generic-table td:first-child,
-#modal-content .generic-table th:first-child,
-#modal-content .generic-table td:first-child,
-#modal-content-container .generic-table th:first-child,
-#modal-content-container .generic-table td:first-child {
-    background: #555555 !important;
-    color: #ffffff !important;
-    font-weight: bold !important;
-    font-size: 14px !important;
-    padding: 15px 20px !important;
-    border-bottom: 1px solid #444444 !important;
-    border-right: 1px solid #444444 !important;
-    border-left: 1px solid #444444 !important;
+/* Basic hover - no positioning tricks */
+table tr:hover td, .generic-table tr:hover td {
+    background: #2a2a2a;
 }
 
-/* Header first column - FORCE UPDATE */
-.generic-table th:first-child, 
-table th:first-child,
-#project-modal .generic-table th:first-child,
-#modal-content .generic-table th:first-child,
-#modal-content-container .generic-table th:first-child {
-    background: #666666 !important;
-    color: #ffffff !important;
-    font-weight: bold !important;
-}
-
-/* Hover effects */
-.generic-table tr:hover td, table tr:hover td {
-    background: #444444 !important;
-}
-
-.generic-table tr:hover td:first-child, table tr:hover td:first-child {
-    background: #666666 !important;
-    color: #ffffff !important;
-}
-
+/* Simple status colors - no pseudo elements */
 .generic-table .status-success {
     color: #22c55e;
-    font-weight: 600;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.generic-table .status-success::before {
-    content: '●';
-    color: #22c55e;
-    font-size: 1.2em;
-    filter: drop-shadow(0 0 4px #22c55e);
 }
 
 .generic-table .status-warning {
     color: #f59e0b;
-    font-weight: 600;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.generic-table .status-warning::before {
-    content: '▲';
-    color: #f59e0b;
-    font-size: 0.8em;
-    filter: drop-shadow(0 0 4px #f59e0b);
 }
 
 .generic-table .status-info {
     color: #3b82f6;
-    font-weight: 600;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.generic-table .status-info::before {
-    content: '◆';
-    color: #3b82f6;
-    font-size: 0.9em;
-    filter: drop-shadow(0 0 4px #3b82f6);
-}
-
-/* Enhanced table animations and effects */
-.generic-table tbody tr::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 0;
-    background: linear-gradient(180deg, #00BFFF, #0ea5e9);
-    transition: width 0.3s ease;
-    z-index: 1;
-}
-
-.generic-table tbody tr:hover::before {
-    width: 3px;
-}
-
-.generic-table td {
-    position: relative;
-    z-index: 2;
-}
-
-/* Responsive table styles */
-@media (max-width: 768px) {
-    .generic-table {
-        font-size: 0.75rem;
-        margin: 1rem 0;
-        border-radius: 8px;
-    }
-    
-    .generic-table th,
-    .generic-table td {
-        padding: 12px 16px;
-    }
-    
-    .generic-table th {
-        font-size: 0.75rem;
-        padding: 14px 16px;
-    }
-    
-    .generic-table th:first-child {
-        border-top-left-radius: 8px;
-    }
-    
-    .generic-table th:last-child {
-        border-top-right-radius: 8px;
-    }
-    
-    .generic-table tbody tr:last-child td:first-child {
-        border-bottom-left-radius: 8px;
-    }
-    
-    .generic-table tbody tr:last-child td:last-child {
-        border-bottom-right-radius: 8px;
-    }
-}
-
-@media (max-width: 480px) {
-    .generic-table {
-        font-size: 0.7rem;
-    }
-    
-    .generic-table th,
-    .generic-table td {
-        padding: 10px 12px;
-    }
-    
-    .generic-table .table-highlight::before {
-        width: 2px;
-    }
-    
-    .generic-table tbody tr:hover::before {
-        width: 2px;
-    }
 }
 
 /* Print styles for resume page */
