@@ -150,9 +150,116 @@ document.addEventListener('DOMContentLoaded', function() {
                         </div>
                     </div>
 
+                    <!-- Introduction -->
+                    <div>
+                        <h2 class="text-2xl font-bold text-primary-color mb-4">1. Introduction and Project Mandate</h2>
+                        
+                        <h3 class="text-xl font-semibold text-white mb-3">1.1. Project Context and Motivation</h3>
+                        <p class="text-gray-300 mb-4">
+                            The genesis of this project was to expand the portfolio of professional-grade instruments for the 
+                            HVAC and refrigeration industries. The market for vacuum gauges was identified as a key area 
+                            for innovation. Existing tools were often bulky, required power cords, or lacked the combination 
+                            of high accuracy and durability demanded by field technicians. A portable, battery-powered 
+                            digital vacuum gauge with an integrated pump control system and wireless connectivity 
+                            represented a significant competitive advantage. The POC was developed to demonstrate a 
+                            design that was not only precise but also rugged enough to withstand the demanding conditions 
+                            of a job site.
+                        </p>
+
+                        <h3 class="text-xl font-semibold text-white mb-3">1.2. Design Objectives and Functional Requirements</h3>
+                        <p class="text-gray-300 mb-4">
+                            The primary objective was to develop a digital vacuum gauge POC that met or exceeded the 
+                            following core technical specifications, designated as the AT10702 feature set:
+                        </p>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2 mb-6">
+                            <li><strong class="text-white">Measurement Range:</strong> 0 to 25,000 Microns, with additional unit displays for Pa, mBar, mTorr, mmHg, PSI, and inHg. This range is critical for accurate monitoring of HVAC system evacuation.</li>
+                            <li><strong class="text-white">Vacuum Accuracy:</strong> 5% of reading, with an absolute accuracy of +/- 5 microns. This high standard ensures reliable measurements for critical system commissioning.</li>
+                            <li><strong class="text-white">Resolution:</strong> A fine resolution of 0.1 Micron for readings up to 9,999.9 Microns, transitioning to 1 Micron for the higher range of 10,000 to 25,000 Microns.</li>
+                            <li><strong class="text-white">Maximum Overpressure:</strong> A robust rating of 500 PSI to protect the sensor and internal electronics from unexpected pressure surges.</li>
+                            <li><strong class="text-white">Power Source:</strong> The design was required to operate from standard alkaline batteries, specifically three AA cells in series (4.5V) or a single 9V battery.</li>
+                            <li><strong class="text-white">Additional Functionality:</strong> The design included a user interface with an LCD and physical buttons for control, a communication link to a smartphone application, and the ability to control a vacuum pump and monitor a recovery tank.</li>
+                        </ul>
+                    </div>
+
+                    <!-- System Architecture -->
+                    <div>
+                        <h2 class="text-2xl font-bold text-primary-color mb-4">2. System Architecture and Block-Level Design</h2>
+                        
+                        <h3 class="text-xl font-semibold text-white mb-3">2.1. Overall System Architecture</h3>
+                        <p class="text-gray-300 mb-4">
+                            The Digital Vacuum Gauge is not merely a passive measurement device but an integrated 
+                            measurement and control system. The design is centered around a Microcontroller Unit (MCU) 
+                            that acts as the central hub, coordinating data acquisition from the vacuum sensor, managing 
+                            the user interface, and controlling external components such as the vacuum pump and a 
+                            recovery tank. This architectural approach represents a deliberate design decision to centralize 
+                            all functions into a single, cohesive, portable device, thereby streamlining the workflow for the 
+                            field technician.
+                        </p>
+
+                        <h3 class="text-xl font-semibold text-white mb-3">2.2. Functional Block Breakdown</h3>
+                        <p class="text-gray-300 mb-4">The overall system architecture can be broken down into several interconnected functional blocks:</p>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2 mb-6">
+                            <li><strong class="text-white">Sensing and Signal Conditioning:</strong> This block, the core of the measurement system, is responsible for acquiring the raw pressure data. It must be a sensor capable of high-resolution measurement across a wide range of vacuum levels.</li>
+                            <li><strong class="text-white">Microcontroller Unit (MCU):</strong> The brain of the system, the MCU performs multiple critical functions. It is responsible for reading the sensor data, performing any necessary unit conversions, and managing the user interface.</li>
+                            <li><strong class="text-white">Power Management Subsystem:</strong> This subsystem manages the flow of power from the batteries to all other components. It includes a Power Control circuit, a Power Latching Circuit, and a Low Voltage Shutdown Circuit.</li>
+                            <li><strong class="text-white">User Interface (UI):</strong> The UI provides the technician with the necessary information and control. It consists of a backlit LCD for displaying pressure readings and a series of physical buttons for easy navigation and control.</li>
+                            <li><strong class="text-white">Communication Module:</strong> This block, the Com Link, enables wireless communication with a smartphone application. Given the need for a low-power, short-range connection, Bluetooth Low Energy (BLE) is the most suitable technology for this module.</li>
+                            <li><strong class="text-white">Vacuum Pump Control:</strong> This section is an integral part of the gauge's functionality, transforming it from a simple meter into a process control tool. The MCU sends control signals to the Vacuum Pump and can receive status information from the Recovery Tank.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Component Selection -->
+                    <div>
+                        <h2 class="text-2xl font-bold text-primary-color mb-4">3. Component Selection and Engineering Trade-Off Analysis</h2>
+                        
+                        <h3 class="text-xl font-semibold text-white mb-3">3.1. Vacuum Sensor Technology Evaluation</h3>
+                        <p class="text-gray-300 mb-4">
+                            The choice of the vacuum sensor was the most pivotal design decision, directly impacting the 
+                            device's accuracy, power consumption, and overall complexity. A thorough evaluation was 
+                            conducted between two leading technologies: MEMS Pirani sensors and thermistor sensors.
+                        </p>
+
+                        <h4 class="text-lg font-semibold text-primary-color mb-3">3.1.1. Pirani/MEMS Sensor</h4>
+                        <p class="text-gray-300 mb-4">
+                            A modern Pirani sensor, such as the Posifa PVC4000 series, operates on the principle of 
+                            thermal conductivity. A heated MEMS element loses heat to the surrounding gas, and this heat 
+                            loss is proportional to the gas pressure. The PVC4000 is a highly suitable candidate for this 
+                            application due to its advanced features:
+                        </p>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2 mb-6">
+                            <li><strong class="text-white">Wide and Relevant Range:</strong> Its measurement range of 1 to 760,000 microns perfectly encompasses the project's requirement of 0-25,000 microns.</li>
+                            <li><strong class="text-white">Digital I2C Interface:</strong> The sensor provides a calibrated, digital output directly via an I2C interface, which offloads complex analog-to-digital conversion and signal processing from the MCU.</li>
+                            <li><strong class="text-white">Integrated Intelligence:</strong> The sensor includes a built-in temperature compensation algorithm. An optional piecewise linearization algorithm can also be leveraged by providing up to ten pairs of calibration points via the I2C interface.</li>
+                            <li><strong class="text-white">Low-Power Design:</strong> The PVC4000 is designed for intermittent operation. A key power-saving feature is its pulsed excitation scheme, where the sensor is powered on for approximately 150 milliseconds to take a reading and then turned off for one second.</li>
+                            <li><strong class="text-white">Robustness:</strong> The sensor has an impressive overpressure rating of 450 PSI, which is very close to the 500 PSI project requirement.</li>
+                        </ul>
+
+                        <h4 class="text-lg font-semibold text-primary-color mb-3">3.1.2. Thermistor Sensor</h4>
+                        <p class="text-gray-300 mb-4">
+                            A thermistor vacuum gauge works by using a temperature-sensitive resistor whose electrical 
+                            resistance changes based on the surrounding gas pressure. While a viable technology, it 
+                            presents several significant design challenges:
+                        </p>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2 mb-6">
+                            <li><strong class="text-white">Non-Linearity:</strong> The relationship between a thermistor's resistance and pressure is highly non-linear and is often described by complex equations like the Steinhart-Hart equation.</li>
+                            <li><strong class="text-white">Analog Interface:</strong> Thermistors typically provide an analog output, which requires the use of a high-resolution, low-noise analog-to-digital converter (ADC) and sophisticated signal conditioning circuitry on the main PCB.</li>
+                            <li><strong class="text-white">Higher Power Consumption:</strong> The operating current can be higher, with some thermistor-based gauges using multiple D-cell or 9V batteries to achieve acceptable runtime.</li>
+                        </ul>
+
+                        <h4 class="text-lg font-semibold text-primary-color mb-3">3.1.3. Final Selection and Rationale</h4>
+                        <p class="text-gray-300 mb-6">
+                            The Pirani/MEMS sensor was the superior choice for this project. The decision to use a modern 
+                            digital sensor with an I2C interface and built-in calibration algorithms was a key architectural 
+                            choice that simplified the entire design. It minimized the required PCB area, reduced component 
+                            count by eliminating complex analog circuitry, and accelerated firmware development by 
+                            allowing the team to focus on higher-level system integration rather than low-level signal 
+                            processing.
+                        </p>
+                    </div>
+
                     <!-- Performance Results -->
                     <div>
-                        <h3 class="text-xl font-semibold text-white mb-4">Performance Results</h3>
+                        <h2 class="text-2xl font-bold text-primary-color mb-4">Performance Results</h2>
                         <div class="overflow-x-auto mb-6">
                             <table class="generic-table">
                                 <thead>
@@ -244,7 +351,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <!-- Key Components BOM -->
                     <div>
                         <h3 class="text-xl font-semibold text-white mb-4">Key Component Selection Rationale</h3>
-                        <div class="overflow-x-auto">
+                        <div class="overflow-x-auto mb-6">
                             <table class="generic-table">
                                 <thead>
                                     <tr>
@@ -278,9 +385,73 @@ document.addEventListener('DOMContentLoaded', function() {
                             </table>
                         </div>
                     </div>
-                </div>
-            `
-        },
+
+                    <!-- Hardware Implementation -->
+                    <div>
+                        <h2 class="text-2xl font-bold text-primary-color mb-4">4. Detailed Implementation and Engineering Solutions</h2>
+                        
+                        <h3 class="text-xl font-semibold text-white mb-3">4.1. Hardware Design and Circuitry</h3>
+                        <p class="text-gray-300 mb-4">
+                            The hardware design went beyond a simple schematic to address potential electronics issues, 
+                            focusing on signal integrity, power management, and reliability.
+                        </p>
+
+                        <h4 class="text-lg font-semibold text-primary-color mb-3">4.1.1. Power Latching Circuit</h4>
+                        <p class="text-gray-300 mb-4">
+                            To allow the device to be truly powered off, eliminating parasitic current draw and maximizing 
+                            long-term battery life, a power latching circuit was implemented. This circuit functions similarly to 
+                            a solid-state latching relay. When the power button is momentarily pressed, a transistor is 
+                            switched on, which in turn latches the power to the microcontroller. The MCU can then maintain 
+                            power by sending a HIGH signal to a specific GPIO pin. When the user is finished, or the device 
+                            needs to shut down automatically, the MCU simply sets that same GPIO pin to a LOW state, 
+                            which unlatches the circuit and cuts power completely, allowing for a complete shutdown.
+                        </p>
+
+                        <h4 class="text-lg font-semibold text-primary-color mb-3">4.1.2. Low Voltage Shutdown Circuit</h4>
+                        <p class="text-gray-300 mb-4">
+                            To prevent damage to the batteries from over-discharge, a low voltage shutdown (LVD) circuit 
+                            was incorporated. This circuit is designed to monitor the battery voltage and automatically shut 
+                            down the system when the voltage drops below a predetermined threshold. A typical 
+                            implementation consists of a voltage divider to scale the battery voltage, a voltage reference, 
+                            and a comparator (op-amp) that compares the scaled battery voltage to the reference.
+                        </p>
+
+                        <h4 class="text-lg font-semibold text-primary-color mb-3">4.1.3. Reverse Battery Protection</h4>
+                        <p class="text-gray-300 mb-6">
+                            To protect the device from damage caused by a battery being installed with reverse polarity, a 
+                            reverse battery protection circuit was integrated. One effective method is to use a P-Channel 
+                            MOSFET as a high-side switch in the positive supply line. When the battery is installed correctly, 
+                            the MOSFET's gate voltage is pulled low relative to its source, allowing current to flow to the 
+                            load. If the battery is reversed, the voltage at the gate and source are the same, which turns the 
+                            MOSFET OFF, blocking the flow of current and protecting the device.
+                        </p>
+
+                        <h3 class="text-xl font-semibold text-white mb-3">4.2. Firmware Development and Algorithmic Logic</h3>
+                        <p class="text-gray-300 mb-4">
+                            The project's specified accuracy and resolution are heavily dependent on sophisticated 
+                            firmware, which was designed to leverage the intelligence of the selected components while 
+                            implementing robust power-saving and control logic.
+                        </p>
+
+                        <h3 class="text-xl font-semibold text-white mb-3">4.3. Calibration and Validation</h3>
+                        <p class="text-gray-300 mb-4">
+                            To ensure the device met its stringent accuracy requirements, a detailed calibration process was 
+                            conducted. The gold standard for vacuum gauge calibration is a primary pressure standard 
+                            maintained by institutions like the National Institute of Standards and Technology (NIST).
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-primary-color mb-4 mt-8">5. Conclusion and Future Directions</h2>
+                        <p class="text-gray-300 mb-6">
+                            The Digital Vacuum Gauge POC successfully met all its design objectives and functional 
+                            requirements, demonstrating the feasibility of creating a professional-grade, battery-powered 
+                            vacuum measurement and control system. The project's success was rooted in key engineering 
+                            decisions, including the strategic selection of a modern digital Pirani sensor, the development of 
+                            a sophisticated power management architecture, and the seamless integration of a pump 
+                            control system and wireless connectivity.
+                        </p>
+                    </div>
+                `
+            },
             'electrofusion': {
                 title: 'Proof of Concept for a High-Power, Cordless Electrofusion Device',
                 description: `
