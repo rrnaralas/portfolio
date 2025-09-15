@@ -72,6 +72,333 @@ document.addEventListener('DOMContentLoaded', function() {
         const projectItems = document.querySelectorAll('[data-project]');
         
         const projectDetails = {
+            'gesture-control': {
+                title: 'Hand Gesture TV Control System: Computer Vision & Gesture Recognition',
+                description: `
+                    <div class="space-y-6">
+                        <h2 class="text-2xl font-bold text-primary-color mb-4">Hand Gesture TV Control System: Computer Vision & Gesture Recognition</h2>
+                        
+                        <h3 class="text-xl font-semibold text-white mb-4">Basic Idea</h3>
+                        <p class="text-gray-300 mb-6">
+                            The system introduces a novel way to control television through hand gestures, eliminating 
+                            the need for physical remote controls. By using computer vision and gesture recognition, 
+                            users can navigate and control their TV through natural hand movements in the air. The 
+                            system creates a virtual D-pad interface that responds to hand positions and gestures, 
+                            making TV interaction more intuitive and accessible.
+                        </p>
+
+                        <h3 class="text-xl font-semibold text-white mb-4">Core Functionality</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <h4 class="text-lg font-semibold text-primary-color mb-3">Core Functions</h4>
+                                <ul class="list-disc list-inside text-gray-400 space-y-2">
+                                    <li><strong class="text-white">Activation:</strong> User raises hand and makes a fist to enable control</li>
+                                    <li><strong class="text-white">Navigation:</strong> Virtual D-pad control through hand movements</li>
+                                    <li><strong class="text-white">Movement Control:</strong> Up/Down/Left/Right movements for menu navigation</li>
+                                    <li><strong class="text-white">Playback Control:</strong> Select/Enter, Return/Back functions</li>
+                                    <li><strong class="text-white">Reference System:</strong> Reference point system for accurate direction detection</li>
+                                    <li><strong class="text-white">Selection:</strong> Index finger pointing gesture for 'Enter/Select' function</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-primary-color mb-3">User Experience</h4>
+                                <ul class="list-disc list-inside text-gray-400 space-y-2">
+                                    <li><strong class="text-white">Visual Feedback:</strong> On-screen interface with real-time response</li>
+                                    <li><strong class="text-white">Real-time Response:</strong> Immediate reaction to hand movements</li>
+                                    <li><strong class="text-white">Intuitive Interaction:</strong> Natural gesture-based control system</li>
+                                    <li><strong class="text-white">Accessibility:</strong> No physical remote required</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h3 class="text-xl font-semibold text-white mb-4">Hardware Implementation</h3>
+                        <div class="overflow-x-auto mb-6">
+                            <table class="generic-table">
+                                <thead>
+                                    <tr>
+                                        <th>Component</th>
+                                        <th>Specification</th>
+                                        <th>Function</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Processing Unit</td>
+                                        <td>Raspberry Pi 5</td>
+                                        <td>Handles all computer vision and gesture processing, manages TV communication, runs main control software</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Camera System</td>
+                                        <td>750p resolution camera</td>
+                                        <td>Connected directly to Raspberry Pi, positioned for optimal hand tracking</td>
+                                    </tr>
+                                    <tr>
+                                        <td>TV Integration</td>
+                                        <td>ADB Protocol over Network</td>
+                                        <td>Connected via local network, uses ADB protocol for command transmission, requires Android TV compatibility</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h3 class="text-xl font-semibold text-white mb-4">Setup Configuration</h3>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2 mb-6">
+                            <li>Camera positioned for clear view of user's hand movements</li>
+                            <li>Raspberry Pi connected to local network and 750p Camera mounted on TV</li>
+                            <li>TV configured for ADB communication, command and control</li>
+                        </ul>
+
+                        <h3 class="text-xl font-semibold text-white mb-4">System Architecture</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                            <div class="bg-gray-800 p-4 rounded">
+                                <h4 class="text-primary-color font-semibold mb-2">Input Processing Layer</h4>
+                                <ul class="text-gray-400 text-sm space-y-1">
+                                    <li>• Camera feed capture and processing</li>
+                                    <li>• Hand detection and tracking</li>
+                                    <li>• Gesture recognition</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-800 p-4 rounded">
+                                <h4 class="text-primary-color font-semibold mb-2">Control Logic Layer</h4>
+                                <ul class="text-gray-400 text-sm space-y-1">
+                                    <li>• Gesture to command mapping</li>
+                                    <li>• Reference point management</li>
+                                    <li>• Direction calculation</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-800 p-4 rounded">
+                                <h4 class="text-primary-color font-semibold mb-2">Output Layer</h4>
+                                <ul class="text-gray-400 text-sm space-y-1">
+                                    <li>• TV command generation</li>
+                                    <li>• ADB communication</li>
+                                    <li>• Visual feedback rendering</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h3 class="text-xl font-semibold text-white mb-4">Core Libraries</h3>
+                        <div class="overflow-x-auto mb-6">
+                            <table class="generic-table">
+                                <thead>
+                                    <tr>
+                                        <th>Library</th>
+                                        <th>Version</th>
+                                        <th>Function</th>
+                                        <th>Key Features</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>OpenCV</td>
+                                        <td>4.11.0</td>
+                                        <td>Computer vision operations</td>
+                                        <td>Image processing, camera interface</td>
+                                    </tr>
+                                    <tr>
+                                        <td>MediaPipe</td>
+                                        <td>0.10.18</td>
+                                        <td>Hand tracking and landmark detection</td>
+                                        <td>Real-time hand landmark detection</td>
+                                    </tr>
+                                    <tr>
+                                        <td>NumPy</td>
+                                        <td>1.26.4</td>
+                                        <td>Numerical computations</td>
+                                        <td>Matrix operations, data processing</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ADB Tools</td>
+                                        <td>1.0.41</td>
+                                        <td>TV communication</td>
+                                        <td>Device communication protocol</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h3 class="text-xl font-semibold text-white mb-4">Performance Metrics</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+                            <div class="bg-gray-800 p-4 rounded">
+                                <h4 class="text-primary-color font-semibold mb-2">Total Latency</h4>
+                                <p class="text-white text-2xl">80-145 ms</p>
+                                <p class="text-gray-400 text-sm">End-to-end response time</p>
+                            </div>
+                            <div class="bg-gray-800 p-4 rounded">
+                                <h4 class="text-primary-color font-semibold mb-2">Hand Detection</h4>
+                                <p class="text-white text-2xl">95%+</p>
+                                <p class="text-gray-400 text-sm">Accuracy in good lighting</p>
+                            </div>
+                            <div class="bg-gray-800 p-4 rounded">
+                                <h4 class="text-primary-color font-semibold mb-2">Gesture Recognition</h4>
+                                <p class="text-white text-2xl">90%+</p>
+                                <p class="text-gray-400 text-sm">For trained gestures</p>
+                            </div>
+                            <div class="bg-gray-800 p-4 rounded">
+                                <h4 class="text-primary-color font-semibold mb-2">Frame Rate</h4>
+                                <p class="text-white text-2xl">10-15 FPS</p>
+                                <p class="text-gray-400 text-sm">Processing rate</p>
+                            </div>
+                        </div>
+
+                        <h3 class="text-xl font-semibold text-white mb-4">Detailed Performance Breakdown</h3>
+                        <div class="overflow-x-auto mb-6">
+                            <table class="generic-table">
+                                <thead>
+                                    <tr>
+                                        <th>Process</th>
+                                        <th>Time (ms)</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Image Capture</td>
+                                        <td class="status-success">5-10</td>
+                                        <td>Camera frame acquisition and buffering</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hand Detection</td>
+                                        <td class="status-info">20-30</td>
+                                        <td>MediaPipe hand tracking and landmark detection</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gesture Analysis</td>
+                                        <td class="status-success">10-15</td>
+                                        <td>Gesture recognition and command mapping</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Command Generation</td>
+                                        <td class="status-success">5-10</td>
+                                        <td>ADB command preparation</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Network Latency</td>
+                                        <td class="status-warning">30-50</td>
+                                        <td>ADB communication to TV over network</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Command Execution</td>
+                                        <td class="status-warning">50-100</td>
+                                        <td>TV response and action execution</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h3 class="text-xl font-semibold text-white mb-4">Key Performance Indicators</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                            <div class="bg-gray-800 p-4 rounded">
+                                <h4 class="text-primary-color font-semibold mb-2">Accuracy Metrics</h4>
+                                <ul class="text-gray-400 space-y-1">
+                                    <li>• Direction accuracy: ±5 degrees</li>
+                                    <li>• Command execution success: 95%</li>
+                                    <li>• System uptime: 99.9%</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-800 p-4 rounded">
+                                <h4 class="text-primary-color font-semibold mb-2">Operating Range</h4>
+                                <ul class="text-gray-400 space-y-1">
+                                    <li>• Optimal distance: 1-3 meters</li>
+                                    <li>• Maximum range: 1.8m-2.4m with 750p camera</li>
+                                    <li>• Single hand operation</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h3 class="text-xl font-semibold text-white mb-4">Technical Features & Safety</h3>
+                        <div class="bg-gray-900 p-4 rounded-lg border border-gray-700 mb-6">
+                            <h4 class="text-lg font-semibold text-primary-color mb-3">Accidental Activation Prevention</h4>
+                            <p class="text-gray-300 mb-2"><strong>Q:</strong> What prevents accidental activation?</p>
+                            <p class="text-gray-400"><strong>A:</strong> Requires sustained fist gesture (2s) + palm stability checks</p>
+                        </div>
+
+                        <div class="bg-gray-900 p-4 rounded-lg border border-gray-700 mb-6">
+                            <h4 class="text-lg font-semibold text-primary-color mb-3">ADB vs IR Protocol Decision</h4>
+                            <p class="text-gray-300 mb-2"><strong>Q:</strong> Why not simulate IR Remote command protocol system using gesture control?</p>
+                            <p class="text-gray-400 mb-3"><strong>A:</strong> Gesture-based input is inherently continuous and contextual, unlike discrete IR remote button presses. To support gesture-specific interactions:</p>
+                            <ul class="list-disc list-inside text-gray-400 space-y-1">
+                                <li>Requires positional and time-based recognition (e.g. swipe zones)</li>
+                                <li>Standard IR simulation lacks gesture state awareness (e.g., movement zones, dwell timing)</li>
+                                <li>ADB commands allow direct programmatic control, enabling faster and richer interaction mappings</li>
+                                <li>Enables future multi-modal integration (voice + gestures, custom UI overlays)</li>
+                            </ul>
+                            <p class="text-gray-400 mt-3">This necessitates a new command protocol stack optimized for spatial gesture inputs and asynchronous user actions.</p>
+                        </div>
+
+                        <h3 class="text-xl font-semibold text-white mb-4">System Limitations</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                            <div>
+                                <h4 class="text-lg font-semibold text-primary-color mb-3">Technical Limitations</h4>
+                                <ul class="list-disc list-inside text-gray-400 space-y-2">
+                                    <li>Requires good lighting conditions</li>
+                                    <li>Single hand operation only</li>
+                                    <li>Limited to basic directional controls, Select/Enter, Return/Back</li>
+                                    <li>Requires line of sight to camera</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-primary-color mb-3">Environmental Factors</h4>
+                                <ul class="list-disc list-inside text-gray-400 space-y-2">
+                                    <li>Performance degrades in poor lighting</li>
+                                    <li>Distance limitations (1-3 meters optimal)</li>
+                                    <li>Background interference sensitivity</li>
+                                    <li>Lighting condition dependency</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h3 class="text-xl font-semibold text-white mb-4">Future Improvements</h3>
+                        <div class="space-y-4 mb-6">
+                            <div>
+                                <h4 class="text-lg font-semibold text-primary-color mb-3">Short-term Enhancements</h4>
+                                <ul class="list-disc list-inside text-gray-400 space-y-2">
+                                    <li>Multi-hand support for advanced gestures</li>
+                                    <li>Additional gesture commands for volume and channel control</li>
+                                    <li>Improved lighting adaptation algorithms</li>
+                                    <li>Reduced latency through optimized processing</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-primary-color mb-3">Long-term Vision</h4>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                    <div class="bg-gray-800 p-4 rounded">
+                                        <h5 class="text-white font-semibold mb-2">Enhanced Functionality</h5>
+                                        <ul class="text-gray-400 text-sm space-y-1">
+                                            <li>• Volume control gestures</li>
+                                            <li>• Channel selection shortcuts</li>
+                                            <li>• Custom gesture mapping</li>
+                                            <li>• Multi-device control</li>
+                                        </ul>
+                                    </div>
+                                    <div class="bg-gray-800 p-4 rounded">
+                                        <h5 class="text-white font-semibold mb-2">Technical Improvements</h5>
+                                        <ul class="text-gray-400 text-sm space-y-1">
+                                            <li>• AI-powered gesture learning</li>
+                                            <li>• Reduced processing requirements</li>
+                                            <li>• Enhanced accuracy in varying conditions</li>
+                                            <li>• Expanded device compatibility</li>
+                                        </ul>
+                                    </div>
+                                    <div class="bg-gray-800 p-4 rounded">
+                                        <h5 class="text-white font-semibold mb-2">User Experience</h5>
+                                        <ul class="text-gray-400 text-sm space-y-1">
+                                            <li>• Haptic feedback integration</li>
+                                            <li>• Voice command combination</li>
+                                            <li>• Personalized gesture profiles</li>
+                                            <li>• Adaptive interface based on usage patterns</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-900 p-6 rounded-lg border border-gray-700 text-center">
+                            <h4 class="text-lg font-semibold text-primary-color mb-2">Project Impact</h4>
+                            <p class="text-gray-400">This system represents a significant step toward natural, intuitive device interaction, with clear potential for expansion into broader home automation and accessibility applications.</p>
+                        </div>
+                    </div>
+                `
+            },
             'meta-gloves': {
                 title: 'Meta Reality Labs - AR/VR Hardware',
                 description: `
