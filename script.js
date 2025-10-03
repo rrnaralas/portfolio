@@ -790,25 +790,34 @@ document.addEventListener('DOMContentLoaded', function() {
                 `
             },
             'aero-mouse': {
-                title: 'Aero-mouse for TV: High-Precision Motion & Haptic Remote',
+                title: 'Aero-Mouse Prototype: Wireless 3D Air Mouse Control System',
                 description: `
                     <div class="space-y-6">
-                        <h2 class="text-2xl font-bold text-primary-color mb-4">Aero-mouse for TV: High-Precision Motion & Haptic Remote</h2>
+                        <h2 class="text-2xl font-bold text-primary-color mb-4">Aero-Mouse Prototype: Wireless 3D Air Mouse Control System</h2>
                         
+                        <!-- Prototype Overview -->
+                        <div class="bg-gray-900 p-6 rounded-lg border border-gray-700 my-6">
+                            <h4 class="text-lg font-semibold text-primary-color mb-4 text-center">Aero Mouse Prototype</h4>
+                            <div class="text-center">
+                                <img src="images/aero-mouse-pcb.png" alt="Aero Mouse Prototype showing LRA Driver and Haptic Motor, MCU, BLE, IMU Dev Board" class="w-full h-96 object-contain rounded-lg mb-2">
+                                <h5 class="text-sm font-semibold text-white mb-1">Complete Prototype Architecture</h5>
+                                <p class="text-sm text-gray-400">Integrated prototype featuring LSM6D sensor module, ESP32C6 development board with BLE/Wi-Fi capabilities, and Linear Resonant Actuator (LRA) driver for haptic feedback control.</p>
+                            </div>
+                        </div>
+
                         <h3 class="text-xl font-semibold text-white mb-4">Overview</h3>
                         <p class="text-gray-300 mb-4">
-                            The Aeromouse for TV is a BLE-enabled, motion-sensing remote providing high-fidelity 
-                            cursor control with integrated haptic feedback. The platform is implemented on Zephyr 
-                            RTOS using custom BLE drivers optimized for HID communication. The complete firmware 
-                            and platform setup were developed using Cline in VS Code, enabling robust sensor fusion, 
-                            haptic integration, and motion-based cursor control.
+                            The Aero-Mouse prototype represents an innovative wireless 3D air mouse control system designed 
+                            for intuitive TV and media center navigation. This advanced prototype combines motion sensing, 
+                            haptic feedback, and wireless communication to deliver a seamless user experience that replaces 
+                            traditional remote controls with natural hand movements.
                         </p>
 
                         <p class="text-gray-300 mb-6">
-                            The device combines 6-axis IMU (LSM6DS3), ARM Cortex-M4 MCU (nRF52840), BLE HID communication, 
-                            Linear Resonant Actuator (LRA, VG0840001D) controlled via I²C by DRV2605L, and mechanical 
-                            tactile push buttons. This architecture addresses latency, imprecision, and lack of tactile 
-                            feedback in traditional directional-button Fire TV remotes.
+                            Built around the ESP32C6 microcontroller platform, the system integrates a high-precision 
+                            LSM6D 6-axis IMU for motion detection, a Linear Resonant Actuator (LRA) for tactile feedback, 
+                            and wireless communication capabilities. The prototype demonstrates advanced sensor fusion 
+                            algorithms and real-time motion processing for accurate cursor control.
                         </p>
 
                         <h3 class="text-xl font-semibold text-white mb-4">Problem Statement</h3>
