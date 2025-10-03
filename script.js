@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // --- Typed.js Initialization ---
     if (document.getElementById('typed-text')) {
         new Typed('#typed-text', {
-            strings: ['Hardware Development Engineer.', 'Embedded Systems Specialist.', 'Rapid Prototyping Expert.', 'Electronics Innovator.'],
+            strings: ['Embedded Systems Specialist.', 'Electrical Engineer.', 'Rapid Prototyper.'],
             typeSpeed: 50,
             backSpeed: 30,
             loop: true,
