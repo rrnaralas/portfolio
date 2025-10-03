@@ -2321,6 +2321,35 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
 
+    // --- Email button functionality ---
+    const emailButton = document.querySelector('a[href="mailto:rohithreddy.narala@gmail.com"]');
+    if (emailButton) {
+        emailButton.addEventListener('click', (e) => {
+            const email = 'rohithreddy.narala@gmail.com';
+            const subject = 'Hello from your Portfolio Website';
+            const body = 'Hi Rohith,\n\nI found your portfolio website and would like to get in touch.\n\nBest regards,';
+            
+            // Try multiple methods to ensure email functionality works
+            try {
+                // Method 1: Standard mailto (works if email client is configured)
+                const mailtoUrl = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                window.location.href = mailtoUrl;
+                
+                // Method 2: If mailto fails, try opening Gmail web interface
+                setTimeout(() => {
+                    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                    window.open(gmailUrl, '_blank');
+                }, 1000);
+                
+            } catch (error) {
+                // Fallback: Copy email to clipboard and show alert
+                navigator.clipboard.writeText(email).then(() => {
+                    alert(`Email copied to clipboard: ${email}\n\nYou can also reach me through LinkedIn or GitHub (links in footer)`);
+                });
+            }
+        });
+    }
+
     // --- Print functionality for resume page ---
     const printButton = document.querySelector('.print-button');
     if (printButton) {
