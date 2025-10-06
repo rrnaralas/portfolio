@@ -1060,18 +1060,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 `
             },
-            'meta-gloves': {
-                title: 'Meta Reality Labs - AR/VR Hardware',
-                description: `
-                    <p class="text-gray-300 mb-4">Led end-to-end development of multiple proof-of-concept hardware platforms for next-generation AR/VR and wearable technologies, focusing on sensor integration, ultra-low-power design, and rapid prototyping.</p>
-                    <h3 class="text-xl font-semibold text-primary-color mt-6 mb-3">Key Contributions:</h3>
-                    <ul class="list-disc list-inside text-gray-400 space-y-2">
-                        <li>Directed development of 5+ PoC hardware platforms from schematic to validation.</li>
-                        <li>Designed high-density rigid/flex PCBs using Altium and Cadence, reducing board spins by 30%.</li>
-                        <li>Engineered precision analog front-end circuits for EMG, optical, and capacitive touch sensors.</li>
-                        <li>Owned validation and test planning, achieving over 95% first-pass yield.</li>
-                    </ul>`
-            },
             'dc-dc-converter': {
                 title: 'DC-DC Converter for Thermoelectric Cooler',
                 description: `
