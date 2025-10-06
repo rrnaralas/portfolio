@@ -73,20 +73,663 @@ document.addEventListener('DOMContentLoaded', function() {
         
         const projectDetails = {
             'imu-selection': {
-                title: 'IMU Selection & Characterization for Wearable Applications',
+                title: 'IMU and LRA Down selection and Characterization',
                 description: `<div class="space-y-6">
-                    <h2 class="text-2xl font-bold text-primary-color mb-4">IMU Selection & Characterization for Wearable Applications</h2>
-                    <p class="text-gray-300 mb-4">Comprehensive evaluation and characterization of high-performance IMUs for precision motion tracking in wearable devices.</p>
-                    <h3 class="text-xl font-semibold text-white mb-4">Key Performance Metrics</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <h2 class="text-2xl font-bold text-primary-color mb-4">Component Down-Selection and Integration Analysis for a Wearable Haptic System</h2>
+                    
+                    <!-- Project Images Section -->
+                    <div class="bg-gray-900 p-6 rounded-lg border border-gray-700 my-6">
+                        <h4 class="text-lg font-semibold text-primary-color mb-4 text-center">IMU and LRA Integration Testing</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+                            <div class="text-center">
+                                <img src="images/Images for IMU and LRA /Test setup.jpg" alt="Test Setup Configuration" class="w-full h-64 object-contain rounded-lg mb-2">
+                                <h5 class="text-sm font-semibold text-white mb-1">Test Setup Configuration</h5>
+                                <p class="text-sm text-gray-400">Complete testbed configuration with STM32 Nucleo board, custom FPC interface, and measurement instrumentation for comprehensive component characterization.</p>
+                            </div>
+                            <div class="text-center">
+                                <img src="images/Images for IMU and LRA /FPC.jpg" alt="Custom FPC Interface Board" class="w-full h-64 object-contain rounded-lg mb-2">
+                                <h5 class="text-sm font-semibold text-white mb-1">Custom FPC Interface</h5>
+                                <p class="text-sm text-gray-400">Flexible Printed Circuit (FPC) designed for direct A/B comparison of IMU candidates with identical thermal and mechanical conditions.</p>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+                            <div class="text-center">
+                                <img src="images/Images for IMU and LRA /LRA vs IMU top and Bottom.jpg" alt="Component Layout Analysis" class="w-full h-64 object-contain rounded-lg mb-2">
+                                <h5 class="text-sm font-semibold text-white mb-1">Component Layout Analysis</h5>
+                                <p class="text-sm text-gray-400">Top and bottom view analysis of IMU and LRA component placement for optimal integration and minimal interference.</p>
+                            </div>
+                            <div class="text-center">
+                                <img src="images/Images for IMU and LRA /IMU coupled to LRA .jpg" alt="Co-existence Testing Setup" class="w-full h-64 object-contain rounded-lg mb-2">
+                                <h5 class="text-sm font-semibold text-white mb-1">Co-existence Testing</h5>
+                                <p class="text-sm text-gray-400">Direct mechanical coupling analysis between IMU and LRA to quantify vibrational interference and cross-talk effects.</p>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+                            <div class="text-center">
+                                <img src="images/Images for IMU and LRA /LRA and IMU on Silicon.jpg" alt="Silicon Substrate Testing" class="w-full h-64 object-contain rounded-lg mb-2">
+                                <h5 class="text-sm font-semibold text-white mb-1">Silicon Substrate Testing</h5>
+                                <p class="text-sm text-gray-400">Tissue phantom simulation using silicon substrate to evaluate vibrational transmission and damping characteristics in wearable applications.</p>
+                            </div>
+                            <div class="text-center">
+                                <img src="images/Images for IMU and LRA /LRA and IMU on grm weight test.jpg" alt="Standardized Weight Testing" class="w-full h-64 object-contain rounded-lg mb-2">
+                                <h5 class="text-sm font-semibold text-white mb-1">Standardized Weight Testing</h5>
+                                <p class="text-sm text-gray-400">LRA characterization using standardized 100g mass jig for accurate resonant frequency and acceleration measurements per datasheet methodology.</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-center">
+                            <div class="text-center max-w-md">
+                                <img src="images/Images for IMU and LRA /LRA and IMU on finger for haptics and tracking.jpg" alt="Wearable Application Testing" class="w-full h-64 object-contain rounded-lg mb-2">
+                                <h5 class="text-sm font-semibold text-white mb-1">Wearable Application Testing</h5>
+                                <p class="text-sm text-gray-400">Real-world application demonstration showing IMU and LRA integration on finger for simultaneous haptic feedback and motion tracking validation.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-semibold text-white mb-4">1.0 Summary</h3>
+                    <p class="text-gray-300 mb-4">
+                        This report documents a comprehensive engineering investigation into the selection and 
+                        integration of critical components for a next-generation wearable haptic device. The primary 
+                        objective of this project was to perform a rigorous, data-driven down-selection of an Inertial 
+                        Measurement Unit (IMU) and a Linear Resonant Actuator (LRA), followed by an analysis of their 
+                        co-existence to mitigate vibrational interference.
+                    </p>
+
+                    <p class="text-gray-300 mb-4">
+                        The project encompassed three principal phases of investigation. First, a comparative 
+                        performance analysis was conducted between two leading 6-axis IMUs: the STMicroelectronics 
+                        LSM6DSV32X and the TDK InvenSense ICM-45688-P. The primary evaluation metric was long-
+                        term stability, quantified by analyzing zero-rate drift over a 24-hour period using Fast Fourier 
+                        Transform (FFT) spectral analysis. The results identified the ICM-45688-P as the superior 
+                        candidate, demonstrating lower low-frequency noise power, indicative of greater bias stability, 
+                        which is critical for robust motion tracking applications.
+                    </p>
+
+                    <p class="text-gray-300 mb-4">
+                        Second, two coin-type LRAs from Vybronics, the VG0840001D and the VG0825001U, were 
+                        characterized to determine their suitability for providing crisp, high-fidelity haptic feedback. Key 
+                        performance parameters, including resonant frequency, acceleration amplitude, and transient 
+                        response (rise and fall times), were empirically measured. The VG0840001D was selected for 
+                        its significantly higher acceleration (G-force) and faster rise time, aligning with the requirements 
+                        for sharp, distinct haptic events.
+                    </p>
+
+                    <p class="text-gray-300 mb-6">
+                        Finally, a vibrational co-existence study was performed to quantify the mechanical cross-talk 
+                        between the selected LRA (VG0840001D) and IMU (ICM-45688-P). The components were 
+                        tested in two configurations on a silicon substrate simulating human tissue: a side-by-side 
+                        placement and a configuration with a silicon damping layer between them. The analysis 
+                        confirmed significant vibrational coupling at the LRA's resonant frequency. The study 
+                        quantitatively demonstrated the efficacy of mechanical isolation, showing a measurable 
+                        reduction in induced IMU noise.
+                    </p>
+
+                    <div class="bg-gray-800 p-4 rounded mb-6">
+                        <p class="text-primary-color font-semibold mb-2">Key Findings:</p>
+                        <p class="text-gray-300">
+                            Based on these findings, this report recommends the selection of the TDK InvenSense ICM-
+                            45688-P IMU and the Vybronics VG0840001D LRA for the final product Bill of Materials (BOM). 
+                            Furthermore, a set of critical design guidelines is presented, including recommendations for 
+                            physical component placement, the use of mechanical damping materials, and the 
+                            implementation of a firmware-based notch filter to ensure the integrity of motion sensing data 
+                            during haptic actuation.
+                        </p>
+                    </div>
+
+                    <h3 class="text-xl font-semibold text-white mb-4">2.0 System Architecture and Testbed Configuration</h3>
+                    <p class="text-gray-300 mb-4">
+                        A robust and well-defined testbed is fundamental to ensuring the validity and reproducibility of 
+                        component characterization and system-level analysis. The hardware and software architecture 
+                        for this project was designed to provide a high-fidelity environment for data acquisition and 
+                        control, minimizing external variables and enabling direct, A/B comparison of the components 
+                        under evaluation.
+                    </p>
+
+                    <h4 class="text-lg font-semibold text-primary-color mb-3">2.1 Hardware Platform</h4>
+                    <p class="text-gray-300 mb-4">
+                        The core of the testbed is a high-performance microcontroller platform coupled with a custom-
+                        designed interface board to host the sensors under test.
+                    </p>
+
+                    <h5 class="text-md font-semibold text-white mb-3">2.1.1 Microcontroller Unit (MCU) Platform</h5>
+                    <p class="text-gray-300 mb-4">
+                        The STMicroelectronics Nucleo-F767ZI development board was selected as the central 
+                        processing and control unit. This platform is based on the STM32F767ZIT6 microcontroller, 
+                        which features a high-performance ARM Cortex-M7 core operating at 216 MHz, 2 MB of Flash 
+                        memory, and 512 KB of SRAM. The selection of this MCU was driven by the demanding data 
+                        throughput requirements of the project. The need to simultaneously stream 6-axis data from two 
+                        separate IMUs at a 400 Hz Output Data Rate (ODR) per sensor, while also managing LRA drive 
+                        signals and host communication, necessitates significant processing power and memory 
+                        bandwidth.
+                    </p>
+
+                    <h5 class="text-md font-semibold text-white mb-3">2.1.2 Custom Sensor Interface</h5>
+                    <p class="text-gray-300 mb-6">
+                        To facilitate a direct and unbiased comparison of the IMU candidates, a custom Flexible Printed 
+                        Circuit (FPC) was designed and fabricated. This FPC provides a common mechanical and 
+                        electrical substrate for both the STMicroelectronics LSM6DSV32X and the TDK InvenSense 
+                        ICM-45688-P IMUs. By mounting both devices on the same physical board, the test 
+                        methodology ensures that they are subjected to identical thermal gradients and mechanical 
+                        stresses during the extended 24-hour drift test.
+                    </p>
+
+                    <h4 class="text-lg font-semibold text-primary-color mb-3">2.2 Component Interfacing and Data Acquisition</h4>
+                    <h5 class="text-md font-semibold text-white mb-3">2.2.1 IMU Communication Protocol</h5>
+                    <p class="text-gray-300 mb-4">
+                        The Serial Peripheral Interface (SPI) was selected as the communication protocol for interfacing 
+                        with both IMUs. Both the LSM6DSV32X and ICM-45688-P support SPI at clock speeds up to 10 
+                        MHz and 24 MHz, respectively. The full-duplex, high-speed nature of SPI makes it superior to 
+                        I²C for this application, where high-frequency, low-latency data streaming from multiple devices 
+                        is required.
+                    </p>
+
+                    <h5 class="text-md font-semibold text-white mb-3">2.2.2 LRA Drive and Control</h5>
+                    <p class="text-gray-300 mb-6">
+                        A custom firmware module was developed for the STM32 platform to control the LRA 
+                        candidates. This module includes a simple serial command-line interface (CLI) allowing a host 
+                        computer to issue commands, such as "play click" or "start sweep," via a virtual COM port. 
+                        Upon receiving a command, the firmware generates the appropriate AC drive signal using a 
+                        timer-based PWM output coupled with a proof-of-concept (PoC) external driver circuit.
+                    </p>
+
+                    <h3 class="text-xl font-semibold text-white mb-4">3.0 Inertial Measurement Unit (IMU) Down-Selection and Performance Analysis</h3>
+                    <p class="text-gray-300 mb-4">
+                        The selection of a high-stability, low-noise IMU is paramount for any application requiring 
+                        accurate motion tracking, particularly in wearable devices where sensor fusion algorithms are 
+                        used to estimate orientation and track movement over extended periods. This section details the 
+                        comparative evaluation of the STMicroelectronics LSM6DSV32X and the TDK InvenSense ICM-
+                        45688-P, culminating in a data-driven selection.
+                    </p>
+
+                    <h4 class="text-lg font-semibold text-primary-color mb-3">3.1 Candidate IMU Specification Review</h4>
+                    <p class="text-gray-300 mb-4">
+                        A preliminary analysis was conducted based on the manufacturers' datasheets to establish a 
+                        baseline comparison of the two candidates. The key performance specifications are 
+                        summarized in Table 1.
+                    </p>
+
+                    <div class="overflow-x-auto mb-6">
+                        <table class="generic-table">
+                            <thead>
+                                <tr>
+                                    <th>Parameter</th>
+                                    <th>STMicroelectronics LSM6DSV32X</th>
+                                    <th>TDK InvenSense ICM-45688-P</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Gyroscope Noise Density</td>
+                                    <td>2.8 mdps/√Hz</td>
+                                    <td class="table-highlight">3.8 mdps/√Hz</td>
+                                </tr>
+                                <tr>
+                                    <td>Accelerometer Noise Density</td>
+                                    <td>80 μg/√Hz</td>
+                                    <td class="table-highlight">70 μg/√Hz</td>
+                                </tr>
+                                <tr>
+                                    <td>Power Consumption</td>
+                                    <td>0.65 mA (Combo High-Performance)</td>
+                                    <td class="table-highlight">0.42 mA (6-Axis @ 1600 Hz LN Mode)</td>
+                                </tr>
+                                <tr>
+                                    <td>Gyroscope Full-Scale Range</td>
+                                    <td>±125 to ±4000 dps</td>
+                                    <td>±15.625 to ±4000 dps</td>
+                                </tr>
+                                <tr>
+                                    <td>Accelerometer Full-Scale Range</td>
+                                    <td>±4 to ±32 g</td>
+                                    <td>±2 to ±32 g</td>
+                                </tr>
+                                <tr>
+                                    <td>FIFO Size</td>
+                                    <td>4.5 kbyte</td>
+                                    <td class="table-highlight">8 kbyte</td>
+                                </tr>
+                                <tr>
+                                    <td>Special Features</td>
+                                    <td>Triple-Core, Machine Learning Core, FSM, Qvar™</td>
+                                    <td>APEX Motion Processing Engine</td>
+                                </tr>
+                                <tr>
+                                    <td>Package Size</td>
+                                    <td>2.5 × 3.0 × 0.83 mm</td>
+                                    <td>2.5 × 3.0 × 0.81 mm</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p class="text-gray-300 mb-6">
+                        The datasheet specifications reveal a classic engineering trade-off. The ICM-45688-P is 
+                        positioned as a leader in raw sensor performance, with a lower specified accelerometer noise 
+                        density and significantly lower power consumption in its low-noise mode. In contrast, the 
+                        LSM6DSV32X, while having a slightly higher gyroscope noise density and power draw, offers a 
+                        unique triple-core architecture and an embedded Machine Learning Core (MLC).
+                    </p>
+
+                    <h4 class="text-lg font-semibold text-primary-color mb-3">3.2 Zero-Rate Drift Characterization Methodology</h4>
+                    <p class="text-gray-300 mb-4">
+                        The most critical performance metric for an IMU in navigation and orientation tracking 
+                        applications is its long-term stability, or its resistance to drift. A 24-hour zero-rate test was 
+                        designed and executed to quantify this characteristic empirically.
+                    </p>
+
+                    <h5 class="text-md font-semibold text-white mb-3">3.2.1 Mechanical and Thermal Stabilization</h5>
+                    <p class="text-gray-300 mb-4">
+                        To ensure that the measured output reflects the intrinsic sensor noise and not external 
+                        environmental factors, rigorous stabilization measures were implemented. The FPC assembly, 
+                        containing both IMUs, was potted in a non-conductive epoxy resin. This process encases the 
+                        components in a solid, rigid block, which serves two purposes:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-400 space-y-2 mb-4">
+                        <li><strong class="text-white">Vibrational Isolation:</strong> It provides a high degree of mechanical damping, isolating the 
+                        MEMS structures from ambient building vibrations, acoustic noise, or other low-level 
+                        mechanical disturbances that could corrupt the low-frequency drift measurement.</li>
+                        <li><strong class="text-white">Thermal Mass:</strong> The epoxy acts as a thermal mass, slowing down the rate of temperature 
+                        change and minimizing thermal gradients across the sensor packages, which can be a 
+                        source of bias drift.</li>
+                    </ul>
+
+                    <h5 class="text-md font-semibold text-white mb-3">3.2.2 Data Acquisition Protocol</h5>
+                    <p class="text-gray-300 mb-6">
+                        The firmware on the Nucleo-F767ZI board was configured to initialize both IMUs with an Output 
+                        Data Rate (ODR) of 400 Hz for both the accelerometer and gyroscope. The full-scale ranges 
+                        were set to their lowest values (±4 g for the accelerometers and ±125 or ±250 dps for the 
+                        gyroscopes) to maximize sensitivity to noise and drift. The system then continuously polled both 
+                        sensors via their dedicated SPI buses and streamed the raw 16-bit, three-axis data for both 
+                        accelerometer and gyroscope to the host PC.
+                    </p>
+
+                    <h4 class="text-lg font-semibold text-primary-color mb-3">3.3 Spectral Analysis of Sensor Drift</h4>
+                    <p class="text-gray-300 mb-4">
+                        The raw time-series data was analyzed in MATLAB to characterize the noise and drift profiles in 
+                        the frequency domain. Sensor drift, which includes bias instability and flicker noise, manifests as 
+                        a concentration of noise energy at very low frequencies. The Fast Fourier Transform (FFT) is 
+                        the ideal tool for this analysis, as it transforms the signal from the time domain to the frequency 
+                        domain, allowing for the direct visualization and quantification of the noise power spectral 
+                        density.
+                    </p>
+
+                    <div class="bg-gray-900 p-4 rounded-lg border border-gray-700 mb-6">
+                        <h5 class="text-white font-semibold mb-2">Analysis Procedure:</h5>
+                        <ol class="list-decimal list-inside text-gray-400 space-y-2">
+                            <li>The mean of the time-series data was removed to eliminate the static DC offset (e.g., the 
+                            1g gravity vector on the accelerometer's z-axis).</li>
+                            <li>The fft function was used to compute the Discrete Fourier Transform of the zero-mean 
+                            signal.</li>
+                            <li>The two-sided power spectrum was converted to a single-sided spectrum, and the 
+                            amplitude was scaled to represent the power spectral density.</li>
+                            <li>The resulting spectrum was plotted on a log-log scale to visualize the noise 
+                            characteristics across the entire frequency band, from the lowest frequencies limited by 
+                            the 24-hour observation window up to the Nyquist frequency of 200 Hz.</li>
+                        </ol>
+                    </div>
+
+                    <h4 class="text-lg font-semibold text-primary-color mb-3">3.4 Comparative Analysis and Selection Rationale</h4>
+                    <p class="text-gray-300 mb-4">
+                        The spectral analysis revealed distinct performance differences between the two IMU 
+                        candidates. The analysis of the spectral plots across all axes led to the following key observations:
+                    </p>
+
+                    <ul class="list-disc list-inside text-gray-400 space-y-3 mb-6">
+                        <li><strong class="text-white">Gyroscope Drift:</strong> The ICM-45688-P consistently exhibited lower 
+                        noise power at frequencies below 1 Hz compared to the LSM6DSV32X. This indicates a 
+                        lower level of bias instability and flicker noise, which are the primary contributors to 
+                        orientation drift over time.</li>
+                        <li><strong class="text-white">Accelerometer Drift:</strong> Similarly, the ICM-45688-P demonstrated a 
+                        lower noise floor in the low-frequency region for the accelerometer data. This is crucial for 
+                        applications that rely on gravity vector measurements for tilt correction or for dead-
+                        reckoning algorithms.</li>
+                        <li><strong class="text-white">High-Frequency Noise:</strong> In the higher frequency range (>10 Hz), the noise floors of both 
+                        sensors were broadly consistent with their datasheet specifications, confirming the validity 
+                        of the measurement setup.</li>
+                    </ul>
+
+                    <div class="overflow-x-auto mb-6">
+                        <table class="generic-table">
+                            <thead>
+                                <tr>
+                                    <th>Axis</th>
+                                    <th>LSM6DSV32X (Arbitrary Units)</th>
+                                    <th>ICM-45688-P (Arbitrary Units)</th>
+                                    <th>Performance Winner</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Gyro-X</td>
+                                    <td>1.38</td>
+                                    <td class="status-success">1.12</td>
+                                    <td class="status-success">ICM-45688-P</td>
+                                </tr>
+                                <tr>
+                                    <td>Gyro-Y</td>
+                                    <td>1.45</td>
+                                    <td class="status-success">1.19</td>
+                                    <td class="status-success">ICM-45688-P</td>
+                                </tr>
+                                <tr>
+                                    <td>Gyro-Z</td>
+                                    <td>1.52</td>
+                                    <td class="status-success">1.25</td>
+                                    <td class="status-success">ICM-45688-P</td>
+                                </tr>
+                                <tr>
+                                    <td>Accel-X</td>
+                                    <td>1.21</td>
+                                    <td class="status-success">0.98</td>
+                                    <td class="status-success">ICM-45688-P</td>
+                                </tr>
+                                <tr>
+                                    <td>Accel-Y</td>
+                                    <td>1.18</td>
+                                    <td class="status-success">0.95</td>
+                                    <td class="status-success">ICM-45688-P</td>
+                                </tr>
+                                <tr>
+                                    <td>Accel-Z</td>
+                                    <td>1.29</td>
+                                    <td class="status-success">1.03</td>
+                                    <td class="status-success">ICM-45688-P</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="bg-gray-800 p-4 rounded mb-6">
+                        <p class="text-primary-color font-semibold mb-2">Selection Rationale:</p>
+                        <p class="text-gray-300">
+                            Based on the conclusive empirical evidence from the 24-hour drift test, 
+                            the TDK InvenSense ICM-45688-P is selected as the superior IMU for this application. Despite 
+                            the LSM6DSV32X's advanced on-chip processing features, the primary requirement for a high-
+                            performance wearable is the quality of the raw sensor data. The ICM-45688-P's demonstrably 
+                            lower drift across all axes provides a more stable and reliable input for sensor fusion algorithms.
+                        </p>
+                    </div>
+
+                    <h3 class="text-xl font-semibold text-white mb-4">4.0 Linear Resonant Actuator (LRA) Down-Selection and Characterization</h3>
+                    <p class="text-gray-300 mb-4">
+                        The quality of haptic feedback is a critical differentiator in modern wearable devices. It is defined 
+                        by the actuator's ability to produce strong, crisp, and responsive vibrations. This section details 
+                        the characterization and down-selection of two LRA candidates from Vybronics.
+                    </p>
+
+                    <h4 class="text-lg font-semibold text-primary-color mb-3">4.1 Candidate LRA Specification Review</h4>
+                    <p class="text-gray-300 mb-4">
+                        The two candidates, VG0840001D and VG0825001U, represent different design points in the 
+                        haptic actuator space. Their key specifications are compared in Table 3.
+                    </p>
+
+                    <div class="overflow-x-auto mb-6">
+                        <table class="generic-table">
+                            <thead>
+                                <tr>
+                                    <th>Parameter</th>
+                                    <th>Vybronics VG0840001D</th>
+                                    <th>Vybronics VG0825001U</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Rated Frequency</td>
+                                    <td class="table-highlight">170 Hz</td>
+                                    <td>240 Hz</td>
+                                </tr>
+                                <tr>
+                                    <td>Acceleration</td>
+                                    <td class="table-highlight">1.0 - 1.8 Grms</td>
+                                    <td>0.7 Grms</td>
+                                </tr>
+                                <tr>
+                                    <td>Rise Time</td>
+                                    <td class="table-highlight">&lt; 12 ms (to 50%)</td>
+                                    <td>&lt; 50 ms (to 50%)</td>
+                                </tr>
+                                <tr>
+                                    <td>Fall Time</td>
+                                    <td class="table-highlight">&lt; 55 ms (to 10%)</td>
+                                    <td>&lt; 80 ms (to 50%)</td>
+                                </tr>
+                                <tr>
+                                    <td>Rated Voltage</td>
+                                    <td>2.0 Vrms</td>
+                                    <td>1.2 Vrms</td>
+                                </tr>
+                                    <td>Φ 8 × 2.5 mm</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p class="text-gray-300 mb-6">
+                        The datasheets indicate that the VG0840001D is a higher-performance actuator, offering 
+                        significantly greater acceleration and much faster rise and fall times, at the cost of a larger 
+                        vertical profile (4.0 mm vs 2.5 mm). The VG0825001U operates at a higher frequency, which 
+                        falls within the peak sensitivity range of human tactile perception (200-300 Hz), potentially 
+                        making it more efficient from a perceptual standpoint.
+                    </p>
+
+                    <h4 class="text-lg font-semibold text-primary-color mb-3">4.2 Haptic Response Characterization Methodology</h4>
+                    <p class="text-gray-300 mb-4">
+                        To validate the datasheet specifications and understand the real-world performance of each 
+                        LRA, a series of characterization tests were performed.
+                    </p>
+
+                    <h5 class="text-md font-semibold text-white mb-3">4.2.1 Test Setup</h5>
+                    <p class="text-gray-300 mb-4">
+                        The test methodology adhered to the recommendations provided in the Vybronics datasheets. 
+                        Each LRA was mounted at the center of a standardized 100g dummy jig with dimensions of 15 
+                        × 45 × 105 mm. An accelerometer was mounted to the jig to measure the resulting 
+                        vibration. The use of a standardized mass is crucial, as the resonant frequency and effective 
+                        acceleration of an LRA are functions of the total mass of the system it is actuating.
+                    </p>
+
+                    <h5 class="text-md font-semibold text-white mb-3">4.2.2 Resonant Frequency Sweep</h5>
+                    <p class="text-gray-300 mb-4">
+                        To determine the precise resonant frequency of each LRA, a frequency sweep was conducted. 
+                        The LRA was driven with a sine wave at its rated voltage (2.0 Vrms for VG0840001D, 1.2 Vrms 
+                        for VG0825001U). The frequency of the drive signal was swept across a range centered on the 
+                        nominal resonant frequency (e.g., 150 Hz to 190 Hz for the VG0840001D).
+                    </p>
+
+                    <h4 class="text-lg font-semibold text-primary-color mb-3">4.3 Comparative Analysis and Selection Rationale</h4>
+                    <p class="text-gray-300 mb-4">
+                        The empirical characterization confirmed the performance trends indicated in the datasheets.
+                    </p>
+
+                    <ul class="list-disc list-inside text-gray-400 space-y-3 mb-6">
+                        <li><strong class="text-white">VG0840001D:</strong> Measured resonant frequency was found to be very close to the nominal 
+                        170 Hz. It produced a peak acceleration well within its specified 1.0-1.8 Grms range. The 
+                        measured passive fall time was consistent with the <55 ms specification. Critically, with 
+                        active braking, the stop time was reduced to under 20 ms.</li>
+                        <li><strong class="text-white">VG0825001U:</strong> Measured resonant frequency was near the nominal 240 Hz. The peak 
+                        acceleration was consistent with its 0.7 Grms rating. The passive fall time was 
+                        significantly longer, as expected from the datasheet, and even with active braking, the 
+                        stop time remained longer than that of the VG0840001D due to its different mechanical 
+                        properties.</li>
+                    </ul>
+
+                    <div class="bg-gray-800 p-4 rounded mb-6">
+                        <p class="text-primary-color font-semibold mb-2">Selection Rationale:</p>
+                        <p class="text-gray-300">
+                            For an application requiring crisp, high-definition haptic feedback, such as 
+                            simulating button clicks or distinct alerts, the Vybronics VG0840001D is the clear choice. Its 
+                            combination of high G-force, rapid rise time, and excellent active braking performance allows for 
+                            the creation of sharp, well-defined haptic waveforms. While the VG0825001U's higher 
+                            frequency is perceptually interesting, its slower transient response and lower amplitude make it 
+                            better suited for "buzz" or rumble effects rather than the high-fidelity feedback desired for this 
+                            project.
+                        </p>
+                    </div>
+
+                    <h3 class="text-xl font-semibold text-white mb-4">5.0 IMU and LRA Co-existence Analysis for Wearable Integration</h3>
+                    <p class="text-gray-300 mb-4">
+                        In any compact electromechanical system, particularly a wearable device, the close proximity of 
+                        components can lead to unintended interactions. The most significant integration risk in this 
+                        project is the mechanical coupling of high-frequency vibrations from the LRA into the MEMS 
+                        structure of the IMU, which can corrupt the motion sensor's output and lead to erroneous 
+                        tracking. This section quantifies this vibrational cross-talk and evaluates a basic mitigation 
+                        strategy.
+                    </p>
+
+                    <h4 class="text-lg font-semibold text-primary-color mb-3">5.1 Test Configuration for Vibration Coupling Simulation</h4>
+                    <p class="text-gray-300 mb-4">
+                        To simulate the placement of the components in a wearable device worn on the body, a silicon 
+                        substrate was used as a tissue phantom. Silicon provides a medium with damping properties 
+                        that offer a first-order approximation of how vibrations might transmit through soft tissue. The 
+                        selected IMU (ICM-45688-P) and LRA (VG0840001D) were mounted on this substrate in two 
+                        distinct configurations.
+                    </p>
+
+                    <ul class="list-disc list-inside text-gray-400 space-y-3 mb-6">
+                        <li><strong class="text-white">Case A: Side-by-Side Placement:</strong> The IMU and LRA were mounted directly adjacent to 
+                        each other on the surface of the silicon. This configuration represents a high-coupling 
+                        scenario, simulating a design with no specific mechanical isolation measures in place.</li>
+                        <li><strong class="text-white">Case B: Silicon-Isolated Placement:</strong> A piece of silicon was placed between the IMU 
+                        and the LRA, acting as a simple mechanical damper. This configuration was designed to 
+                        test the efficacy of introducing a damping material to absorb and attenuate the vibrational 
+                        energy transmitted from the actuator to the sensor.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold text-primary-color mb-3">5.2 Analysis of LRA-Induced Vibration on IMU Output</h4>
+                    <p class="text-gray-300 mb-4">
+                        The co-existence tests were analyzed to quantify the magnitude and nature of the interference.
+                    </p>
+
+                    <h5 class="text-md font-semibold text-white mb-3">5.2.1 Time-Domain Analysis</h5>
+                    <p class="text-gray-300 mb-4">
+                        The time-domain analysis clearly shows significant noise artifacts on both the 
+                        accelerometer and gyroscope outputs that are time-correlated with the LRA "clicks."
+                    </p>
+
+                    <ul class="list-disc list-inside text-gray-400 space-y-3 mb-6">
+                        <li><strong class="text-white">In Case A (Side-by-Side):</strong> The peak-to-peak noise on the accelerometer Z-axis is 
+                        substantial, reaching levels that could easily be misinterpreted as real motion by a sensor 
+                        fusion algorithm. The gyroscope output also shows a clear, high-frequency disturbance.</li>
+                        <li><strong class="text-white">In Case B (Isolated):</strong> The amplitude of the induced noise is visibly reduced on both sensor 
+                        outputs. By measuring the peak-to-peak amplitudes, the silicon isolator was found to 
+                        reduce the interference on the accelerometer Z-axis by approximately 40-50%.</li>
+                    </ul>
+
+                    <h5 class="text-md font-semibold text-white mb-3">5.2.2 Frequency-Domain Analysis</h5>
+                    <p class="text-gray-300 mb-6">
+                        To confirm the source of the interference, an FFT was performed on the IMU data segments 
+                        corresponding to the LRA actuation. The resulting power spectrum showed a single, dominant, 
+                        and extremely narrow spike precisely at 170 Hz, perfectly matching the resonant frequency of 
+                        the VG0840001D LRA. This confirms that the observed noise is not random but is deterministic 
+                        interference caused by direct mechanical energy transfer from the LRA.
+                    </p>
+
+                    <h4 class="text-lg font-semibold text-primary-color mb-3">5.3 Mitigation Strategies and Design Implications</h4>
+                    <p class="text-gray-300 mb-4">
+                        The results of the co-existence analysis yield critical design guidelines for the final product to 
+                        ensure the integrity of motion sensing. The interference is significant and must be addressed 
+                        through a combination of mechanical and firmware solutions.
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                         <div class="bg-gray-800 p-4 rounded">
-                            <h4 class="text-primary-color font-semibold mb-2">Long-term Stability</h4>
-                            <p class="text-gray-400">24-hour drift analysis using FFT spectral analysis</p>
+                            <h5 class="text-primary-color font-semibold mb-2">Mechanical Isolation (Hardware)</h5>
+                            <ul class="text-gray-400 text-sm space-y-2">
+                                <li>• Maximize physical distance between IMU and LRA on main PCB</li>
+                                <li>• Incorporate dedicated damping material (Poron foam gasket or silicone boot)</li>
+                                <li>• Mechanically decouple IMU from device housing and LRA</li>
+                                <li>• Achieve ~6 dB reduction in cross-talk through isolation</li>
+                            </ul>
                         </div>
                         <div class="bg-gray-800 p-4 rounded">
-                            <h4 class="text-primary-color font-semibold mb-2">Data Acquisition</h4>
-                            <p class="text-gray-400">400 Hz ODR with dual-sensor comparison</p>
+                            <h5 class="text-primary-color font-semibold mb-2">Signal Processing (Firmware)</h5>
+                            <ul class="text-gray-400 text-sm space-y-2">
+                                <li>• Implement digital notch filter in IMU data processing pipeline</li>
+                                <li>• Second-order IIR filter centered at 170 Hz (LRA resonant frequency)</li>
+                                <li>• Dynamically enable filter only when haptic driver is active</li>
+                                <li>• Preserve legitimate high-frequency motion data when filter is off</li>
+                            </ul>
                         </div>
+                    </div>
+
+                    <h3 class="text-xl font-semibold text-white mb-4">6.0 Summary of Findings and Final Recommendations</h3>
+                    <p class="text-gray-300 mb-4">
+                        This project successfully executed a multi-faceted investigation to select and characterize key 
+                        components for a wearable haptic device. Through a combination of datasheet analysis, 
+                        rigorous empirical testing, and system-level integration studies, a set of clear, data-driven 
+                        conclusions and actionable design recommendations has been formulated.
+                    </p>
+
+                    <h4 class="text-lg font-semibold text-primary-color mb-3">6.1 Recommended Component Bill of Materials (BOM)</h4>
+                    <p class="text-gray-300 mb-4">
+                        Based on the comprehensive analysis detailed in this report, the following components are 
+                        recommended for the product's Bill of Materials:
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div class="bg-gray-800 p-4 rounded">
+                            <h5 class="text-primary-color font-semibold mb-2">Inertial Measurement Unit (IMU): TDK InvenSense ICM-45688-P</h5>
+                            <p class="text-gray-400 text-sm">
+                                The 24-hour zero-rate drift test conclusively demonstrated that the 
+                                ICM-45688-P possesses superior bias stability across all six axes compared to the 
+                                LSM6DSV32X. This lower intrinsic drift is the most critical factor for achieving 
+                                accurate and reliable orientation tracking in a wearable device. The ICM-45688-P's 
+                                lower power consumption is a significant secondary benefit that will contribute to 
+                                longer battery life.
+                            </p>
+                        </div>
+                        <div class="bg-gray-800 p-4 rounded">
+                            <h5 class="text-primary-color font-semibold mb-2">Linear Resonant Actuator (LRA): Vybronics VG0840001D</h5>
+                            <p class="text-gray-400 text-sm">
+                                The empirical characterization confirmed that the VG0840001D 
+                                provides a superior haptic experience for applications requiring sharp, distinct 
+                                feedback. Its high G-force, fast rise time, and amenability to active braking allow for 
+                                the creation of crisp, high-fidelity haptic effects that are essential for a premium user 
+                                experience.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h4 class="text-lg font-semibold text-primary-color mb-3">6.2 Critical Design Guidelines for System Integration</h4>
+                    <p class="text-gray-300 mb-4">
+                        The co-existence analysis highlighted the critical importance of mitigating vibrational cross-talk. 
+                        Failure to address this issue will result in corrupted motion data and poor device performance. 
+                        The following guidelines are essential for the hardware and firmware engineering teams:
+                    </p>
+
+                    <div class="bg-gray-900 p-4 rounded-lg border border-gray-700 mb-6">
+                        <h5 class="text-lg font-semibold text-primary-color mb-3">Hardware Design Guidelines</h5>
+                        <ol class="list-decimal list-inside text-gray-400 space-y-2">
+                            <li><strong class="text-white">Physical Separation:</strong> On the main PCB layout, the IMU (ICM-45688-P) and LRA 
+                            (VG0840001D) must be placed as far apart as the product's industrial design 
+                            allows.</li>
+                            <li><strong class="text-white">Mechanical Damping:</strong> A dedicated mechanical damping solution is mandatory. It 
+                            is recommended to implement a custom-designed silicone or Poron foam gasket 
+                            that isolates the IMU package from the PCB and the device housing.</li>
+                            <li><strong class="text-white">Axis Orientation:</strong> If possible, orient the LRA such that its primary axis of vibration 
+                            (Z-axis for this coin LRA) is not parallel to the IMU's most sensitive or critical axis 
+                            for the application (often the gyroscope's Z-axis for heading).</li>
+                        </ol>
+                    </div>
+
+                    <div class="bg-gray-900 p-4 rounded-lg border border-gray-700 mb-6">
+                        <h5 class="text-lg font-semibold text-primary-color mb-3">Firmware Design Guidelines</h5>
+                        <ol class="list-decimal list-inside text-gray-400 space-y-2">
+                            <li><strong class="text-white">Implement a Notch Filter:</strong> A second-order IIR (Infinite Impulse Response) digital 
+                            notch filter must be implemented in the IMU data processing pipeline.</li>
+                            <li><strong class="text-white">Filter Tuning:</strong> The filter's center frequency must be precisely tuned to the 
+                            measured resonant frequency of the VG0840001D (empirically determined to be 
+                            ~170 Hz). The filter's Q-factor should be configured to be high, creating a narrow 
+                            stop-band that removes the LRA interference without significantly affecting adjacent 
+                            frequencies containing useful motion data.</li>
+                            <li><strong class="text-white">Dynamic Filter Activation:</strong> The notch filter must be dynamically enabled in the 
+                            firmware only during periods of LRA actuation. The haptic driver subsystem should 
+                            signal the sensor processing module to engage the filter immediately before playing 
+                            a haptic effect and disengage it immediately after.</li>
+                        </ol>
+                    </div>
+
+                    <div class="bg-gray-900 p-6 rounded-lg border border-gray-700 text-center">
+                        <h4 class="text-lg font-semibold text-primary-color mb-2">Project Impact</h4>
+                        <p class="text-gray-400">This comprehensive component down-selection and integration analysis provides critical engineering guidelines for developing high-performance wearable haptic systems, ensuring optimal sensor performance while maintaining crisp haptic feedback.</p>
                     </div>
                 </div>`
             },
