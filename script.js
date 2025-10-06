@@ -1086,13 +1086,97 @@ document.addEventListener('DOMContentLoaded', function() {
             'pcb-portfolio': {
                 title: 'PCB/FPC Design Portfolio',
                 description: `
-                    <p class="text-gray-300 mb-4">Engineered a variety of PCB/FPC boards (from single layer to 8 layers) using Altium Designer and Cadence Allegro/OrCAD. All designs were optimized for size, power, signal integrity, and manufacturability (DFM).</p>
-                    <h3 class="text-xl font-semibold text-primary-color mt-6 mb-3">Highlighted Projects:</h3>
-                    <ul class="list-disc list-inside text-gray-400 space-y-2">
-                        <li>Custom Strain Gauge FPC with wire-bonding test capabilities.</li>
-                        <li>Custom ASIC (TSMC) test board featuring 100V operation, 8 layers, and 96 GPIOs.</li>
-                        <li>High-density rigid/flex PCBs for complex wearable applications.</li>
-                    </ul>`
+                    <div class="space-y-6">
+                        <h2 class="text-2xl font-bold text-primary-color mb-4">PCB/FPC Design Portfolio</h2>
+                        <p class="text-gray-300 mb-4">Engineered a variety of PCB/FPC boards (from single layer to 8 layers) using Altium Designer and Cadence Allegro/OrCAD. All designs were optimized for size, power, signal integrity, and manufacturability (DFM).</p>
+                        
+                        <h3 class="text-xl font-semibold text-primary-color mt-6 mb-3">Highlighted Projects:</h3>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2 mb-6">
+                            <li>Custom Strain Gauge FPC with wire-bonding test capabilities.</li>
+                            <li>Custom ASIC (TSMC) test board featuring 100V operation, 8 layers, and 96 GPIOs.</li>
+                            <li>High-density rigid/flex PCBs for complex wearable applications.</li>
+                        </ul>
+
+                        <p class="text-gray-300 mb-6">Here are some examples of different PCB/FPC (Single layer to 8 layer) designed in last couple year which includes LDO's, DC DC converters, I2C/SPI/PCIE/MIPI/UART, Analog/Digital, RF/thermal and Mechanical layout considerations only in last 2 years</p>
+
+                        <!-- PCB/FPC Samples Image -->
+                        <div class="bg-gray-900 p-6 rounded-lg border border-gray-700 my-6">
+                            <h4 class="text-lg font-semibold text-primary-color mb-4 text-center">PCB/FPC Design Samples (2023-2025)</h4>
+                            <div class="text-center">
+                                <img src="images/PCB FPC Samples.png" alt="PCB/FPC Design Portfolio Samples showing various board layouts from single layer to 8 layers" class="w-full h-auto object-contain rounded-lg mb-2">
+                                <h5 class="text-sm font-semibold text-white mb-1">Comprehensive PCB/FPC Design Portfolio</h5>
+                                <p class="text-sm text-gray-400">Collection of PCB/FPC designs ranging from single layer to 8 layers, featuring advanced layout considerations for LDOs, DC-DC converters, high-speed digital interfaces (I2C/SPI/PCIe/MIPI/UART), analog/digital circuits, RF design, thermal management, and mechanical constraints developed over the last 2 years.</p>
+                            </div>
+                        </div>
+
+                        <h3 class="text-xl font-semibold text-white mb-4">Design Expertise and Capabilities</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <h4 class="text-lg font-semibold text-primary-color mb-3">Circuit Design</h4>
+                                <ul class="list-disc list-inside text-gray-400 space-y-2">
+                                    <li><strong class="text-white">Power Management:</strong> LDO regulators, DC-DC converters, power sequencing</li>
+                                    <li><strong class="text-white">Analog Circuits:</strong> High-precision analog front-ends, signal conditioning</li>
+                                    <li><strong class="text-white">Digital Interfaces:</strong> I2C, SPI, PCIe, MIPI, UART communication protocols</li>
+                                    <li><strong class="text-white">RF Design:</strong> Antenna placement, impedance matching, EMI/EMC considerations</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-primary-color mb-3">Layout Considerations</h4>
+                                <ul class="list-disc list-inside text-gray-400 space-y-2">
+                                    <li><strong class="text-white">Signal Integrity:</strong> High-speed routing, differential pairs, length matching</li>
+                                    <li><strong class="text-white">Thermal Management:</strong> Thermal vias, copper pours, heat dissipation</li>
+                                    <li><strong class="text-white">Mechanical Design:</strong> Flex-rigid transitions, bend radius optimization</li>
+                                    <li><strong class="text-white">Manufacturability:</strong> DFM guidelines, assembly considerations</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h3 class="text-xl font-semibold text-white mb-4">Technical Specifications</h3>
+                        <div class="overflow-x-auto mb-6">
+                            <table class="generic-table">
+                                <thead>
+                                    <tr>
+                                        <th>Parameter</th>
+                                        <th>Capability</th>
+                                        <th>Applications</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Layer Count</td>
+                                        <td class="status-info">1 to 8 layers</td>
+                                        <td>Simple sensors to complex multi-function boards</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Board Types</td>
+                                        <td class="status-info">Rigid, Flex, Rigid-Flex</td>
+                                        <td>Wearables, automotive, industrial applications</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Design Tools</td>
+                                        <td class="status-success">Altium Designer, Cadence Suite</td>
+                                        <td>Professional-grade EDA tools</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Signal Types</td>
+                                        <td class="status-info">Digital, Analog, RF, Power</td>
+                                        <td>Mixed-signal and high-frequency designs</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Voltage Range</td>
+                                        <td class="status-warning">1.2V to 100V</td>
+                                        <td>Low-power sensors to high-voltage applications</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="bg-gray-900 p-6 rounded-lg border border-gray-700 text-center">
+                            <h4 class="text-lg font-semibold text-primary-color mb-2">Design Philosophy</h4>
+                            <p class="text-gray-400">Every PCB/FPC design balances performance, cost, manufacturability, and reliability to deliver optimal solutions for each specific application and use case.</p>
+                        </div>
+                    </div>
+                `
             },
         'vacuum-gauge': {
             title: 'Digital Vacuum Gauge - Project Report: Design and Implementation of a Digital Vacuum Gauge',
