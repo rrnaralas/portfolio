@@ -116,11 +116,16 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <p class="text-sm text-gray-400">LRA characterization using standardized 100g mass jig for accurate resonant frequency and acceleration measurements per datasheet methodology.</p>
                             </div>
                         </div>
-                        <div class="flex justify-center">
-                            <div class="text-center max-w-md">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+                            <div class="text-center">
                                 <img src="images/Images for IMU and LRA /LRA and IMU on finger for haptics and tracking.jpg" alt="Wearable Application Testing" class="w-full h-64 object-contain rounded-lg mb-2">
                                 <h5 class="text-sm font-semibold text-white mb-1">Wearable Application Testing</h5>
                                 <p class="text-sm text-gray-400">Real-world application demonstration showing IMU and LRA integration on finger for simultaneous haptic feedback and motion tracking validation.</p>
+                            </div>
+                            <div class="text-center">
+                                <img src="images/Images for IMU and LRA /LRA at resonance.png" alt="LRA Resonant Frequency Analysis" class="w-full h-64 object-contain rounded-lg mb-2">
+                                <h5 class="text-sm font-semibold text-white mb-1">LRA Resonant Frequency Analysis</h5>
+                                <p class="text-sm text-gray-400">Frequency response analysis showing LRA resonant peak at 170 Hz, demonstrating optimal drive frequency for maximum acceleration and haptic performance.</p>
                             </div>
                         </div>
                     </div>
