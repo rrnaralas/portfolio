@@ -1076,18 +1076,18 @@ document.addEventListener('DOMContentLoaded', function() {
                             <h4 class="text-lg font-semibold text-primary-color mb-4 text-center">Circuit Design and Implementation</h4>
                             <div class="grid grid-cols-1 gap-6 mb-4">
                                 <div class="text-center">
-                                    <img src="https://images.unsplash.com/photo-1555664424-778a1e5e1b48?q=80&w=2070&auto=format&fit=crop" alt="DC-DC Converter Schematic Design" class="w-full h-64 object-contain rounded-lg mb-2">
-                                    <h5 class="text-sm font-semibold text-white mb-1">Hybrid Boost-Flyback Topology</h5>
-                                    <p class="text-sm text-gray-400">Complete circuit schematic showing the MAX1605 controller, Sumida transformer, output rectification, and filtering components for high-gain voltage conversion.</p>
+                                    <img src="images/DC-DC Converter/poc schematic.png" alt="DC-DC Converter POC Schematic" class="w-full h-64 object-contain rounded-lg mb-2">
+                                    <h5 class="text-sm font-semibold text-white mb-1">Proof-of-Concept Schematic</h5>
+                                    <p class="text-sm text-gray-400">Complete circuit schematic showing the MAX1605 controller, Sumida transformer, output rectification, and filtering components for high-gain voltage conversion from 3.1-5V input to 60V output.</p>
                                 </div>
                                 <div class="text-center">
-                                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop" alt="Detailed Circuit Implementation" class="w-full h-64 object-contain rounded-lg mb-2">
-                                    <h5 class="text-sm font-semibold text-white mb-1">Detailed Implementation</h5>
-                                    <p class="text-sm text-gray-400">Comprehensive circuit implementation with component values, part numbers, and design annotations showing the complete power conversion solution.</p>
+                                    <img src="images/DC-DC Converter/application notes.png" alt="Application Notes and Design Guidelines" class="w-full h-64 object-contain rounded-lg mb-2">
+                                    <h5 class="text-sm font-semibold text-white mb-1">Application Notes and Design Guidelines</h5>
+                                    <p class="text-sm text-gray-400">Detailed application notes covering component selection, design considerations, and implementation guidelines for the hybrid boost-flyback topology.</p>
                                 </div>
                                 <div class="text-center">
-                                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" alt="Performance Analysis and Test Results" class="w-full h-64 object-contain rounded-lg mb-2">
-                                    <h5 class="text-sm font-semibold text-white mb-1">Performance Analysis and Test Results</h5>
+                                    <img src="images/DC-DC Converter/test_data.png" alt="Experimental Test Data and Performance Results" class="w-full h-64 object-contain rounded-lg mb-2">
+                                    <h5 class="text-sm font-semibold text-white mb-1">Experimental Test Data and Performance Results</h5>
                                     <p class="text-sm text-gray-400">Comprehensive test data showing efficiency curves at 5V and 3.3V inputs, with measured performance across different load conditions demonstrating >80% efficiency achievement.</p>
                                 </div>
                             </div>
