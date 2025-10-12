@@ -1981,11 +1981,11 @@ document.addEventListener('DOMContentLoaded', function() {
                         
                         <!-- Prototype Overview -->
                         <div class="bg-gray-900 p-6 rounded-lg border border-gray-700 my-6">
-                            <h4 class="text-lg font-semibold text-primary-color mb-4 text-center">Aero Mouse Prototype</h4>
+                            <h4 class="text-lg font-semibold text-primary-color mb-4 text-center">Aero Mouse Prototype Development</h4>
                             <div class="text-center">
-                                <img src="images/aero-mouse-pcb.png" alt="Aero Mouse Prototype showing LRA Driver and Haptic Motor, MCU, BLE, IMU Dev Board" class="w-full h-96 object-contain rounded-lg mb-2">
-                                <h5 class="text-sm font-semibold text-white mb-1">Complete Prototype Architecture</h5>
-                                <p class="text-sm text-gray-400">Integrated prototype featuring LSM6D sensor module, ESP32C6 development board with BLE/Wi-Fi capabilities, and Linear Resonant Actuator (LRA) driver for haptic feedback control.</p>
+                                <img src="images/aero-mouse-pcb.png" alt="Aero Mouse Prototype PCB showing LRA Driver and Haptic Motor, MCU, BLE, IMU Development Board" class="w-full h-96 object-contain rounded-lg mb-2">
+                                <h5 class="text-sm font-semibold text-white mb-1">Complete Prototype PCB Architecture</h5>
+                                <p class="text-sm text-gray-400">Integrated prototype PCB featuring LSM6D sensor module for motion detection, ESP32C6 development board with BLE/Wi-Fi capabilities, Linear Resonant Actuator (LRA) driver circuit for precise haptic feedback control, and comprehensive power management system for wireless 3D air mouse functionality.</p>
                             </div>
                         </div>
 
