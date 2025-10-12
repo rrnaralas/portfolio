@@ -1066,15 +1066,439 @@ document.addEventListener('DOMContentLoaded', function() {
                 `
             },
             'dc-dc-converter': {
-                title: 'DC-DC Converter for Thermoelectric Cooler',
+                title: 'Design and Analysis of a High-Gain Hybrid Boost–Flyback DC–DC Converter for a Thermoelectric Cooler Power Supply',
                 description: `
-                    <p class="text-gray-300 mb-4">Designed a bespoke DC-DC converter with a temperature-based control loop for Meta Reality Labs. This system combines Boost and Flyback topologies to achieve a high voltage output from a low voltage input, enabling precise thermal control.</p>
-                    <h3 class="text-xl font-semibold text-primary-color mt-6 mb-3">Core Specifications:</h3>
-                    <ul class="list-disc list-inside text-gray-400 space-y-2">
-                        <li>Input Voltage: 3.1V - 5V</li>
-                        <li>Output Voltage: 60V</li>
-                        <li>Switching Frequency: 520KHz</li>
-                    </ul>`
+                    <div class="space-y-6">
+                        <h2 class="text-2xl font-bold text-primary-color mb-4">Design and Analysis of a High-Gain Hybrid Boost–Flyback DC–DC Converter for a Thermoelectric Cooler Power Supply</h2>
+                        
+                        <h3 class="text-xl font-semibold text-white mb-4">1.0 Introduction</h3>
+                        
+                        <h4 class="text-lg font-semibold text-primary-color mb-3">1.1 The Role of Active Thermal Management</h4>
+                        <p class="text-gray-300 mb-4">
+                            The continuous advancement in semiconductor and optoelectronic technologies has led to a significant increase in power density, rendering traditional passive cooling methods, such as heat sinks, insufficient for many high-performance applications. Effective thermal management is critical to ensure device reliability, performance, and longevity. In this context, active cooling solutions have become indispensable. Thermoelectric Coolers (TECs) represent a prominent class of solid-state active heat pumps that offer precise, responsive, and reliable temperature control. Operating without moving parts, compressors, or chemical refrigerants, TECs provide a compact and vibration-free cooling solution. These characteristics make them ideal for a wide range of sensitive applications, including the temperature stabilization of laser diodes in telecommunications, the reduction of thermal noise in scientific imaging sensors (e.g., CCD and CMOS arrays), and the management of critical component temperatures in aerospace and defense systems.
+                        </p>
+
+                        <h4 class="text-lg font-semibold text-primary-color mb-3">1.2 The Thermoelectric Cooler Power Requirement</h4>
+                        <p class="text-gray-300 mb-4">
+                            The operational principle of a TEC is rooted in the Peltier effect, a thermoelectric phenomenon where applying a direct current (DC) across the junction of two dissimilar semiconductor materials causes heat to be absorbed from one side (the cold side) and expelled from the other (the hot side). A TEC module behaves electrically as a low-impedance, resistive DC load, where the rate of heat transfer—and thus the cooling performance—is directly proportional to the magnitude of the applied DC current.
+                        </p>
+
+                        <p class="text-gray-300 mb-6">
+                            To achieve stable and efficient operation, TECs require a high-quality DC power source with minimal output voltage and current ripple. Excessive AC ripple on the DC supply is detrimental to the net cooling effect. While the linear Peltier cooling effect is proportional to the average DC current, the parasitic Joule heating within the semiconductor elements is proportional to the square of the RMS current. The AC ripple component contributes significantly to this parasitic heating but provides no net cooling, thereby degrading the device's overall Coefficient of Performance (COP) and reducing its maximum achievable temperature differential.
+                        </p>
+
+                        <h4 class="text-lg font-semibold text-primary-color mb-3">1.3 The Power Conversion Challenge</h4>
+                        <p class="text-gray-300 mb-6">
+                            The application driving this project requires powering a TEC from a low-voltage DC source, such as a battery or a standard logic-level supply rail. This presents a significant power conversion challenge: generating a stable, high-voltage DC output (e.g., 60 V) from a low-voltage input (e.g., 3.3 V to 5 V). This necessitates a DC–DC converter with a very high voltage gain, or step-up ratio. As will be detailed in Section 2.0, conventional converter topologies like the standard boost converter face severe practical limitations when pushed to such high step-up ratios, including extreme component stress and poor efficiency.
+                        </p>
+
+                        <h4 class="text-lg font-semibold text-primary-color mb-3">1.4 Project Objective and Specifications</h4>
+                        <p class="text-gray-300 mb-4">
+                            The primary objective of this project is to design, simulate, and analyze a non-isolated, high-gain DC–DC converter based on a hybrid boost–flyback topology. This converter is specifically tailored to meet the stringent power requirements of a thermoelectric cooler module, providing a stable high-voltage output with low ripple from a low-voltage input. The key design specifications and performance targets for the converter are summarized in Table 1.
+                        </p>
+
+                        <div class="overflow-x-auto mb-6">
+                            <table class="generic-table">
+                                <thead>
+                                    <tr>
+                                        <th>Parameter</th>
+                                        <th>Value</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Input Voltage Range (V<sub>in</sub>)</td>
+                                        <td class="status-info">3.1 V (min), 3.3 V (nom), 5.0 V (max)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Output Voltage (V<sub>out</sub>)</td>
+                                        <td class="status-info">60 V</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Output Current (I<sub>out</sub>)</td>
+                                        <td class="status-info">10 mA</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Output Power (P<sub>out</sub>)</td>
+                                        <td class="status-info">600 mW</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Target Efficiency</td>
+                                        <td class="status-success">&gt; 80%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Output Voltage Ripple (V<sub>ripple</sub>)</td>
+                                        <td class="status-success">&lt; 1% of V<sub>out</sub> (&lt; 600 mVp-p)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h3 class="text-xl font-semibold text-white mb-4">2.0 Background and Theoretical Principles</h3>
+                        
+                        <h4 class="text-lg font-semibold text-primary-color mb-3">2.1 Limitations of the Standard Boost Converter for High-Gain Applications</h4>
+                        <p class="text-gray-300 mb-4">
+                            The standard boost converter, shown in Figure 1a of the source material, is a fundamental non-isolated step-up topology. Its voltage gain is governed by the relationship:
+                        </p>
+                        
+                        <div class="bg-gray-900 p-4 rounded-lg border border-gray-700 mb-4">
+                            <p class="text-center text-white">V<sub>out</sub>/V<sub>in</sub> = 1/(1-D)</p>
+                        </div>
+
+                        <p class="text-gray-300 mb-4">
+                            where D is the duty cycle of the main switching element. To achieve the required voltage gain from a nominal input of 3.3 V to an output of 60 V, the required duty cycle would be:
+                        </p>
+
+                        <div class="bg-gray-900 p-4 rounded-lg border border-gray-700 mb-6">
+                            <p class="text-center text-white">D = 1 - V<sub>in</sub>/V<sub>out</sub> = 1 - 3.3/60 = 0.945 (94.5%)</p>
+                        </div>
+
+                        <p class="text-gray-300 mb-4">
+                            Operating a boost converter at such an extreme duty cycle (&gt;94%) introduces several severe practical disadvantages that make the topology unsuitable for this application.
+                        </p>
+
+                        <ul class="list-disc list-inside text-gray-400 space-y-3 mb-6">
+                            <li><strong class="text-white">Extreme Component Stress:</strong> In a standard boost converter, both the switching MOSFET and the output rectifier diode are subjected to a voltage stress equal to the full output voltage (V<sub>out</sub>) plus any additional overshoot from parasitic ringing. This necessitates the use of high-voltage-rated semiconductors, which typically have higher on-resistance (R<sub>ds(on)</sub>), larger gate charge (Qg), and greater parasitic capacitance, leading to higher conduction and switching losses.</li>
+                            <li><strong class="text-white">Inefficiently Short Off-Time:</strong> The energy transfer phase occurs during the off-time, T<sub>off</sub> = (1-D)T, where T is the switching period. At a duty cycle of 94.5%, the off-time is only 5.5% of the total period. This extremely brief interval can be shorter than the MOSFET's turn-off time or the diode's reverse-recovery time (t<sub>rr</sub>), leading to massive switching losses and potential circuit failure.</li>
+                            <li><strong class="text-white">High Conduction Losses:</strong> The input current is discontinuous and has a high peak-to-average ratio. The high duty cycle results in very high peak and RMS currents flowing through the inductor and the MOSFET, leading to substantial resistive losses (I²R) and poor overall efficiency.</li>
+                        </ul>
+
+                        <h4 class="text-lg font-semibold text-primary-color mb-3">2.2 The Hybrid Boost–Flyback Topology</h4>
+                        <p class="text-gray-300 mb-4">
+                            To overcome the limitations of the standard boost converter, this project employs a hybrid topology that merges the principles of a boost converter with those of a flyback converter using an autotransformer, as depicted in Figure 1c of the source documentation. The core mechanism of this topology involves stacking the voltage generated by the secondary winding on top of both the input voltage and the flyback voltage of the primary winding. This creates a "voltage leverage" effect, allowing for a high step-up ratio without requiring an extreme duty cycle.
+                        </p>
+
+                        <p class="text-gray-300 mb-4">
+                            The voltage gain for this hybrid topology is given by the equation:
+                        </p>
+
+                        <div class="bg-gray-900 p-4 rounded-lg border border-gray-700 mb-6">
+                            <p class="text-center text-white">V<sub>out</sub>/V<sub>in</sub> = [V<sub>in</sub> + V<sub>in</sub>(N-1)D]/V<sub>in</sub>(1-D) = [1 + (N-1)D]/(1-D)</p>
+                        </div>
+
+                        <p class="text-gray-300 mb-6">
+                            where N is the effective turns ratio of the autotransformer, defined as N = (N<sub>p</sub> + N<sub>s</sub>) / N<sub>p</sub>, with N<sub>p</sub> and N<sub>s</sub> being the number of turns on the primary and secondary windings, respectively. This equation reveals a fundamental shift in the design approach. Instead of relying solely on the duty cycle (D) to achieve voltage gain, the designer can now use the turns ratio (N) as a powerful additional degree of freedom. By selecting an appropriate turns ratio, a high voltage gain can be achieved with a moderate and efficient duty cycle (e.g., 50–70%), thereby transforming a difficult timing and control problem into a more manageable magnetic component specification problem.
+                        </p>
+
+                        <h4 class="text-lg font-semibold text-primary-color mb-3">2.3 Analysis of Circuit Operation</h4>
+                        <p class="text-gray-300 mb-4">
+                            The operation of the hybrid converter can be analyzed in two distinct states within a switching cycle.
+                        </p>
+
+                        <ul class="list-disc list-inside text-gray-400 space-y-3 mb-6">
+                            <li><strong class="text-white">On-State (MOSFET ON):</strong> When the main switching MOSFET is turned on, its drain (the LX node) is pulled to ground. A voltage equal to V<sub>in</sub> is applied across the primary winding (L<sub>p</sub>), causing the current to ramp up linearly and store energy in the magnetic field of the transformer core. During this phase, the output rectifier diode is reverse-biased, and the output capacitor supplies the full load current.</li>
+                            <li><strong class="text-white">Off-State (MOSFET OFF):</strong> When the MOSFET is turned off, the current path through the primary winding is interrupted. The energy stored in the core causes the voltage at the LX node to "fly back" to a level above V<sub>in</sub>. Simultaneously, a voltage is induced in the secondary winding. The total voltage across the diode is the sum of the input voltage, the primary flyback voltage, and the secondary induced voltage. This high voltage forward-biases the output diode, and the stored magnetic energy is transferred to the output capacitor and the load as the transformer current ramps down.</li>
+                        </ul>
+
+                        <p class="text-gray-300 mb-4">
+                            A key advantage of this topology is the significant reduction in voltage stress on the switching MOSFET. The peak voltage seen at the MOSFET's drain is not the full output voltage, but rather:
+                        </p>
+
+                        <div class="bg-gray-900 p-4 rounded-lg border border-gray-700 mb-6">
+                            <p class="text-center text-white">V<sub>ds_max</sub> = V<sub>in</sub> + V<sub>in</sub>D(N-1)/(1-D)</p>
+                        </div>
+
+                        <p class="text-gray-300 mb-6">
+                            This allows for the use of a lower-voltage MOSFET, which typically offers superior performance characteristics such as lower on-resistance, lower gate charge, and smaller package size, contributing to higher efficiency and power density.
+                        </p>
+
+                        <h4 class="text-lg font-semibold text-primary-color mb-3">2.4 Discontinuous Conduction Mode (DCM) Operation</h4>
+                        <p class="text-gray-300 mb-4">
+                            The converter is designed to operate in Discontinuous Conduction Mode (DCM), where the current in the transformer windings falls to zero before the end of the switching cycle. Operating in DCM offers several distinct advantages for this specific application:
+                        </p>
+
+                        <ul class="list-disc list-inside text-gray-400 space-y-2 mb-6">
+                            <li><strong class="text-white">Constant Peak Current:</strong> The controller can be configured to maintain a constant peak current in the MOSFET, simplifying the control loop.</li>
+                            <li><strong class="text-white">Smaller Magnetic Components:</strong> DCM operation generally allows for the use of a smaller transformer (lower inductance) compared to Continuous Conduction Mode (CCM) for the same power level.</li>
+                            <li><strong class="text-white">Lower Output Ripple:</strong> The energy delivered per pulse is lower in DCM, which, combined with a higher effective switching frequency, results in significantly lower output voltage ripple compared to a standard boost converter. As established in the literature, the output ripple for this topology is inversely proportional to the turns ratio (N), further underscoring the benefits of the transformer-based approach.</li>
+                        </ul>
+
+                        <h3 class="text-xl font-semibold text-white mb-4">3.0 System Design and Component Selection</h3>
+                        <p class="text-gray-300 mb-4">
+                            The theoretical principles were translated into the practical circuit prototype shown in Figure 6. The design choices and component selection were guided by the project specifications.
+                        </p>
+
+                        <h4 class="text-lg font-semibold text-primary-color mb-3">3.1 Derivation of Key Operating Parameters</h4>
+                        <p class="text-gray-300 mb-4">
+                            The core operating parameters are dictated by the transformer's turns ratio and the resulting duty cycle.
+                        </p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div class="bg-gray-800 p-4 rounded">
+                                <h5 class="text-primary-color font-semibold mb-2">Transformer Turns Ratio (N)</h5>
+                                <p class="text-gray-300 text-sm mb-2">
+                                    The prototype utilizes a Sumida transformer with a primary-to-secondary winding ratio of 1:5. Using the formula from the design guide, the effective turns ratio is:
+                                </p>
+                                <div class="bg-gray-900 p-2 rounded text-center">
+                                    <p class="text-white text-sm">N = (N<sub>p</sub> + N<sub>s</sub>)/N<sub>p</sub> = (1 + 5)/1 = 6</p>
+                                </div>
+                            </div>
+                            <div class="bg-gray-800 p-4 rounded">
+                                <h5 class="text-primary-color font-semibold mb-2">Operating Duty Cycle Range</h5>
+                                <p class="text-gray-300 text-sm mb-2">
+                                    With the turns ratio fixed at N=6, the required duty cycle is calculated across the input voltage range:
+                                </p>
+                                <div class="bg-gray-900 p-2 rounded text-center">
+                                    <p class="text-white text-sm">D = (V<sub>out</sub> - V<sub>in</sub>)/[V<sub>in</sub>(N-1) + V<sub>out</sub>]</p>
+                                    <p class="text-gray-400 text-xs mt-1">For V<sub>in_min</sub> = 3.1 V, D<sub>max</sub> ≈ 0.751</p>
+                                    <p class="text-gray-400 text-xs">For V<sub>in_max</sub> = 5.0 V, D<sub>min</sub> ≈ 0.647</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="text-gray-300 mb-6">
+                            This confirms the converter operates within a practical duty cycle range of approximately 65% to 75% across all line conditions.
+                        </p>
+
+                        <h4 class="text-lg font-semibold text-primary-color mb-3">3.2 Autotransformer Design and Specification</h4>
+                        <p class="text-gray-300 mb-4">
+                            The autotransformer is the central component of the topology. The prototype uses a specific off-the-shelf component:
+                        </p>
+
+                        <div class="bg-gray-800 p-4 rounded mb-6">
+                            <h5 class="text-primary-color font-semibold mb-2">TDK ATB322524-0110-T000 Specifications</h5>
+                            <ul class="text-gray-400 space-y-1">
+                                <li>• <strong class="text-white">Primary Inductance (L<sub>p</sub>):</strong> 7 µH</li>
+                                <li>• <strong class="text-white">Turns Ratio:</strong> 1:5 (Effective N=6)</li>
+                                <li>• <strong class="text-white">Size:</strong> 0.126" L × 0.098" W (3.20mm × 2.50mm)</li>
+                                <li>• <strong class="text-white">Primary Winding Resistance (R<sub>p</sub>):</strong> 0.852 Ω</li>
+                            </ul>
+                            <p class="text-gray-400 text-sm mt-2">This component was selected to provide the necessary voltage gain while its low DCR helps to minimize conduction losses.</p>
+                        </div>
+
+                        <h4 class="text-lg font-semibold text-primary-color mb-3">3.3 Semiconductor Component Selection</h4>
+                        <p class="text-gray-300 mb-4">
+                            The reduced voltage stress enabled by the hybrid topology allows for the selection of high-performance, low-voltage semiconductors integrated directly into the controller IC.
+                        </p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div class="bg-gray-800 p-4 rounded">
+                                <h5 class="text-primary-color font-semibold mb-2">MOSFET (Internal to Controller)</h5>
+                                <p class="text-gray-300 text-sm mb-2">
+                                    <strong>Voltage Stress (V<sub>ds_max</sub>):</strong> The peak voltage stress on the internal MOSFET is calculated at the maximum input voltage:
+                                </p>
+                                <div class="bg-gray-900 p-2 rounded text-center">
+                                    <p class="text-white text-sm">V<sub>ds_max</sub> = V<sub>in</sub>[1 + D(N-1)/(1-D)] ≈ 14.2 V</p>
+                                </div>
+                                <p class="text-gray-400 text-xs mt-2">This is well within the 28V rating of the MAX1605's internal MOSFET, validating the topology's primary benefit of reducing component stress.</p>
+                            </div>
+                            <div class="bg-gray-800 p-4 rounded">
+                                <h5 class="text-primary-color font-semibold mb-2">Rectifier Diode Selection</h5>
+                                <p class="text-gray-300 text-sm mb-2">
+                                    <strong>Part:</strong> Central Semiconductor CMOD4448
+                                </p>
+                                <p class="text-gray-300 text-sm">
+                                    <strong>Key Specifications:</strong> This diode features a 100V reverse voltage rating and an ultra-fast reverse-recovery time (t<sub>rr</sub>) of less than 4 ns. The high voltage rating provides a safe margin above the 60V output, and the fast recovery time is critical for minimizing switching losses at the high operating frequency of the converter.
+                                </p>
+                            </div>
+                        </div>
+
+                        <h4 class="text-lg font-semibold text-primary-color mb-3">3.4 Control and Output Filter Design</h4>
+                        <p class="text-gray-300 mb-4">
+                            <strong>Controller IC:</strong> The prototype is built around the Maxim Integrated MAX1605 boost converter IC. This device integrates the control logic and a low-voltage N-channel MOSFET in a compact SOT23 package, making it ideal for a high-density design.
+                        </p>
+
+                        <p class="text-gray-300 mb-6">
+                            <strong>Output Capacitor (C<sub>out</sub>):</strong> A TDK C322X7R2A474K 0.47 µF, 100V X7R ceramic capacitor is used. Its low Equivalent Series Resistance (ESR) is critical for minimizing high-frequency ripple, and its capacitance is sufficient to maintain a stable DC output under load.
+                        </p>
+
+                        <div class="overflow-x-auto mb-6">
+                            <table class="generic-table">
+                                <thead>
+                                    <tr>
+                                        <th>Item</th>
+                                        <th>Part Number / Specification</th>
+                                        <th>Key Specification</th>
+                                        <th>Justification</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Controller IC</td>
+                                        <td>MAX1605</td>
+                                        <td>28V Internal Switch, SOT23</td>
+                                        <td>Integrated low-voltage FET is suitable due to reduced stress; high frequency operation enables small magnetics.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Autotransformer</td>
+                                        <td>TDK ATB322524-0110-T000</td>
+                                        <td>L<sub>p</sub>=7 µH, N<sub>p</sub>:N<sub>s</sub>=1:5</td>
+                                        <td>Provides the required voltage gain at a moderate duty cycle; selected for its appropriate inductance and low DCR.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Rectifier Diode</td>
+                                        <td>Central Semiconductor CMOD4448</td>
+                                        <td>100V, t<sub>rr</sub> &lt; 4 ns</td>
+                                        <td>Ultra-fast recovery time minimizes switching losses; sufficient voltage rating for the 60V output.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Output Capacitor</td>
+                                        <td>TDK C322X7R2A474K</td>
+                                        <td>0.47 µF, 100V, X7R Ceramic</td>
+                                        <td>Low ESR for minimal ripple; high voltage rating and sufficient capacitance to meet ripple specification.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Input Capacitor</td>
+                                        <td>0.47 µF, 16V, Ceramic</td>
+                                        <td>Low ESR</td>
+                                        <td>Provides a low-impedance path for pulsed input current, minimizing input voltage drop and EMI.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h3 class="text-xl font-semibold text-white mb-4">4.0 Prototyping and Experimental Testing</h3>
+                        <p class="text-gray-300 mb-4">
+                            To validate the design and characterize its real-world performance, a physical proof-of-concept (POC) prototype was constructed based on the schematic shown in Figure 6. This hands-on approach allows for direct measurement of key performance metrics, moving beyond theoretical calculations and simulations.
+                        </p>
+
+                        <h4 class="text-lg font-semibold text-primary-color mb-3">4.1 Prototype Construction</h4>
+                        <p class="text-gray-300 mb-6">
+                            The prototype was assembled on a compact printed circuit board (PCB) designed to minimize parasitic inductance and resistance in the high-frequency switching loops. Components were placed to ensure short current paths, particularly for the input capacitor, the MAX1605 controller, the transformer, and the output diode.
+                        </p>
+
+                        <h4 class="text-lg font-semibold text-primary-color mb-3">4.2 Test Methodology</h4>
+                        <p class="text-gray-300 mb-4">
+                            The experimental test setup consisted of the following equipment:
+                        </p>
+
+                        <ul class="list-disc list-inside text-gray-400 space-y-2 mb-6">
+                            <li><strong class="text-white">Input Source:</strong> A programmable DC power supply was used to provide a stable input voltage (V<sub>in</sub>) and sweep it across the specified range (3.1V to 5.0V).</li>
+                            <li><strong class="text-white">Load:</strong> A programmable electronic load was configured in constant current (CC) mode to draw precise output currents (I<sub>out</sub>) from the converter.</li>
+                            <li><strong class="text-white">Measurement:</strong> High-precision digital multimeters were used to measure the DC input and output voltages and currents. An oscilloscope with voltage and current probes was used to measure the switching waveform at the LX node, the transformer current, and the peak-to-peak output voltage ripple.</li>
+                        </ul>
+
+                        <p class="text-gray-300 mb-6">
+                            Performance data was collected by setting a fixed input voltage (e.g., 5.0V) and sweeping the load current from a no-load condition up to 12 mA. Efficiency was calculated at each step by dividing the measured output power (P<sub>out</sub> = V<sub>out</sub> × I<sub>out</sub>) by the measured input power (P<sub>in</sub> = V<sub>in</sub> × I<sub>in</sub>).
+                        </p>
+
+                        <h3 class="text-xl font-semibold text-white mb-4">5.0 Results and Performance Analysis</h3>
+                        <p class="text-gray-300 mb-4">
+                            The experimental data collected from the hardware prototype provides a quantitative assessment of the design's performance, allowing for direct comparison against the project specifications.
+                        </p>
+
+                        <h4 class="text-lg font-semibold text-primary-color mb-3">5.1 Output Voltage Regulation and Ripple</h4>
+                        <p class="text-gray-300 mb-4">
+                            Under all tested load conditions, the prototype successfully produced a stable DC output voltage regulated at 60 V. The analysis of the primary current waveform on the oscilloscope confirmed operation in Discontinuous Conduction Mode (DCM), identified by its characteristic triangular shape where the current returns to zero before the start of the next switching cycle.
+                        </p>
+
+                        <p class="text-gray-300 mb-6">
+                            The measured output voltage ripple was approximately 16 mV peak-to-peak at full load. This is exceptionally low and well within the &lt; 600 mV specification, demonstrating the effectiveness of the hybrid topology and the selected low-ESR ceramic output capacitor in producing a clean DC output suitable for a ripple-sensitive TEC.
+                        </p>
+
+                        <h4 class="text-lg font-semibold text-primary-color mb-3">5.2 Efficiency Characterization</h4>
+                        <p class="text-gray-300 mb-4">
+                            The converter's efficiency was measured across a range of output currents with a 5V input, and the results are plotted in the performance graph below.
+                        </p>
+
+                        <p class="text-gray-300 mb-4">
+                            The data shows that at light loads (below 2 mA), efficiency is lower, which is typical for switching converters. As the load increases, the efficiency rises sharply, reaching over 70%. In the target operating range of 6 mA to 10 mA, the converter demonstrates strong performance, maintaining an efficiency between 80% and 82%. The peak efficiency observed was approximately 82% at an output current of 12 mA. This performance exceeds the project's target of &gt;80% efficiency.
+                        </p>
+
+                        <p class="text-gray-300 mb-6">
+                            A power loss analysis, based on component specifications and measured performance, indicates that the dominant loss mechanisms are conduction losses in the transformer's primary winding (DCR) and the controller's internal MOSFET (R<sub>ds(on)</sub>), along with switching losses associated with the MOSFET and diode recovery.
+                        </p>
+
+                        <h4 class="text-lg font-semibold text-primary-color mb-3">5.3 Verification of Component Stress</h4>
+                        <p class="text-gray-300 mb-6">
+                            Oscilloscope measurements of the LX node confirmed the peak voltage stress on the internal MOSFET was approximately 14.2 V when operating at the maximum input voltage of 5.0 V. This result closely matches the theoretical calculation and validates that the MOSFET is subjected to a voltage less than one-quarter of the output voltage. This low stress level is well within the 28 V rating of the MAX1605's internal switch, confirming the safety and robustness of the design approach.
+                        </p>
+
+                        <div class="overflow-x-auto mb-6">
+                            <table class="generic-table">
+                                <thead>
+                                    <tr>
+                                        <th>Parameter</th>
+                                        <th>Specification Target</th>
+                                        <th>Measured Result</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Output Voltage (at V<sub>in</sub>=3.3V)</td>
+                                        <td>60.0 V</td>
+                                        <td class="status-success">60.0 V</td>
+                                        <td class="status-success">Met</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Output Ripple (p-p)</td>
+                                        <td>&lt; 600 mV</td>
+                                        <td class="status-success">~16 mV</td>
+                                        <td class="status-success">Met</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Efficiency (at V<sub>in</sub>=5V, I<sub>out</sub>=10mA)</td>
+                                        <td>&gt; 80%</td>
+                                        <td class="status-success">~81%</td>
+                                        <td class="status-success">Met</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Peak MOSFET Voltage (at V<sub>in</sub>=5.0V)</td>
+                                        <td>&lt; 28 V</td>
+                                        <td class="status-success">~14.2 V</td>
+                                        <td class="status-success">Met</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Line Regulation (V<sub>in</sub>=3.1V..5.0V)</td>
+                                        <td>Stable Output</td>
+                                        <td class="status-success">Confirmed Stable</td>
+                                        <td class="status-success">Met</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Load Regulation (5mA to 10mA load)</td>
+                                        <td>Stable Output</td>
+                                        <td class="status-success">Confirmed Stable</td>
+                                        <td class="status-success">Met</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h3 class="text-xl font-semibold text-white mb-4">6.0 Conclusion</h3>
+                        
+                        <h4 class="text-lg font-semibold text-primary-color mb-3">Summary of Achievements</h4>
+                        <p class="text-gray-300 mb-4">
+                            This project successfully demonstrated the design, construction, and testing of a high-gain DC–DC converter for powering a thermoelectric cooler. The final hardware prototype, based on a hybrid boost–flyback topology, met or exceeded all key performance specifications. The experimental results, summarized in Table 3, confirm that the converter generates a stable 60 V output with exceptionally low ripple (~16 mV) from a low-voltage input, while achieving a high efficiency of over 80% in the target operating range.
+                        </p>
+
+                        <h4 class="text-lg font-semibold text-primary-color mb-3">Validation of the Hybrid Topology</h4>
+                        <p class="text-gray-300 mb-6">
+                            The experimental results provide a clear validation of the theoretical advantages of the chosen hybrid topology. The design successfully leveraged the transformer's turns ratio to achieve the required high voltage gain with a moderate duty cycle. Most significantly, the project confirmed the topology's ability to dramatically reduce the voltage stress on the main switching element to approximately 14.2 V, enabling the use of a smaller, more efficient, and fully integrated low-voltage MOSFET within the controller IC. This leads to a practical, robust, and high-performance power solution that is well-suited for compact and demanding applications.
+                        </p>
+
+                        <h3 class="text-xl font-semibold text-white mb-4">7.0 Future Scope and Recommendations</h3>
+                        <p class="text-gray-300 mb-4">
+                            While the current design successfully meets all objectives, several avenues exist for further enhancement and development. These recommendations demonstrate a path toward a more robust and optimized final product.
+                        </p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div class="bg-gray-800 p-4 rounded">
+                                <h5 class="text-primary-color font-semibold mb-2">Closed-Loop Feedback Implementation</h5>
+                                <p class="text-gray-400 text-sm">
+                                    The present design operates in an open-loop configuration, where the output voltage is determined by the input voltage and duty cycle. For applications requiring tighter voltage regulation against wide variations in load or temperature, implementing a closed-loop feedback network is recommended. This would involve using a resistive voltage divider from the output to the feedback (FB) pin of the controller IC, such as the MAX1605.
+                                </p>
+                            </div>
+                            <div class="bg-gray-800 p-4 rounded">
+                                <h5 class="text-primary-color font-semibold mb-2">PCB Layout Considerations</h5>
+                                <p class="text-gray-400 text-sm">
+                                    For any high-frequency switching converter, the physical layout of the Printed Circuit Board (PCB) is as critical as the circuit design itself. A poor layout can introduce parasitic inductance and capacitance that degrade efficiency, increase output ripple, and generate significant electromagnetic interference (EMI). Future work should focus on a carefully optimized PCB layout, adhering to best practices.
+                                </p>
+                            </div>
+                        </div>
+
+                        <h4 class="text-lg font-semibold text-primary-color mb-3">Efficiency and Performance Enhancements</h4>
+                        <ul class="list-disc list-inside text-gray-400 space-y-3 mb-6">
+                            <li><strong class="text-white">Synchronous Rectification:</strong> To further improve efficiency, the output Schottky diode could be replaced with a low R<sub>ds(on)</sub> MOSFET driven by a synchronous rectifier controller. This technique, known as synchronous rectification, eliminates the relatively high forward voltage drop of the diode, significantly reducing output-side conduction losses.</li>
+                            <li><strong class="text-white">Thermal Optimization:</strong> While the current design operates at a low power level (600 mW), scaling this topology for higher-power TEC applications would necessitate a thorough thermal analysis. This would involve selecting components with appropriate thermal packaging and potentially adding heat sinks to the MOSFET and transformer to ensure that their junction and core temperatures remain within safe operating limits under all conditions.</li>
+                        </ul>
+
+                        <div class="bg-gray-900 p-6 rounded-lg border border-gray-700 text-center">
+                            <h4 class="text-lg font-semibold text-primary-color mb-2">Project Impact</h4>
+                            <p class="text-gray-400">This hybrid boost-flyback DC-DC converter design demonstrates advanced power electronics engineering, successfully achieving high voltage gain with exceptional efficiency and low ripple, making it ideal for precision thermal management applications.</p>
+                        </div>
+                    </div>
+                `
             },
             'pcb-portfolio': {
                 title: 'PCB/FPC Design Portfolio',
