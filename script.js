@@ -1066,10 +1066,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 `
             },
             'dc-dc-converter': {
-                title: 'Design and Analysis of a High-Gain Hybrid Boost–Flyback DC–DC Converter for a Thermoelectric Cooler Power Supply',
+                title: 'Design and Analysis of a High-Gain Hybrid Boost–Flyback DC–DC Converter for ASIC Board Testing',
                 description: `
                     <div class="space-y-6">
-                        <h2 class="text-2xl font-bold text-primary-color mb-4">Design and Analysis of a High-Gain Hybrid Boost–Flyback DC–DC Converter for a Thermoelectric Cooler Power Supply</h2>
+                        <h2 class="text-2xl font-bold text-primary-color mb-4">Design and Analysis of a High-Gain Hybrid Boost–Flyback DC–DC Converter for ASIC Board Testing</h2>
                         
                         <!-- DC-DC Converter Circuit Diagrams -->
                         <div class="bg-gray-900 p-6 rounded-lg border border-gray-700 my-6">
@@ -1095,28 +1095,28 @@ document.addEventListener('DOMContentLoaded', function() {
                         
                         <h3 class="text-xl font-semibold text-white mb-4">1.0 Introduction</h3>
                         
-                        <h4 class="text-lg font-semibold text-primary-color mb-3">1.1 The Role of Active Thermal Management</h4>
+                        <h4 class="text-lg font-semibold text-primary-color mb-3">1.1 ASIC Testing and Validation Requirements</h4>
                         <p class="text-gray-300 mb-4">
-                            The continuous advancement in semiconductor and optoelectronic technologies has led to a significant increase in power density, rendering traditional passive cooling methods, such as heat sinks, insufficient for many high-performance applications. Effective thermal management is critical to ensure device reliability, performance, and longevity. In this context, active cooling solutions have become indispensable. Thermoelectric Coolers (TECs) represent a prominent class of solid-state active heat pumps that offer precise, responsive, and reliable temperature control. Operating without moving parts, compressors, or chemical refrigerants, TECs provide a compact and vibration-free cooling solution. These characteristics make them ideal for a wide range of sensitive applications, including the temperature stabilization of laser diodes in telecommunications, the reduction of thermal noise in scientific imaging sensors (e.g., CCD and CMOS arrays), and the management of critical component temperatures in aerospace and defense systems.
+                            Application-Specific Integrated Circuits (ASICs) represent the pinnacle of custom semiconductor design, offering optimized performance for specific applications through dedicated hardware architectures. During the development and validation phases of ASIC design, comprehensive testing under various operating conditions is essential to ensure functionality, reliability, and performance specifications are met. This testing often requires precise control of supply voltages, including high-voltage rails that may not be readily available from standard laboratory power supplies or development boards.
                         </p>
 
-                        <h4 class="text-lg font-semibold text-primary-color mb-3">1.2 The Thermoelectric Cooler Power Requirement</h4>
+                        <h4 class="text-lg font-semibold text-primary-color mb-3">1.2 High-Voltage Testing Requirements for ASIC Validation</h4>
                         <p class="text-gray-300 mb-4">
-                            The operational principle of a TEC is rooted in the Peltier effect, a thermoelectric phenomenon where applying a direct current (DC) across the junction of two dissimilar semiconductor materials causes heat to be absorbed from one side (the cold side) and expelled from the other (the hot side). A TEC module behaves electrically as a low-impedance, resistive DC load, where the rate of heat transfer—and thus the cooling performance—is directly proportional to the magnitude of the applied DC current.
+                            Many ASIC designs, particularly those intended for power management, motor control, or high-voltage analog applications, require testing across a wide range of supply voltages to validate their operational boundaries and performance characteristics. These test conditions often include high-voltage rails (e.g., 60V) that exceed the capabilities of standard logic-level supplies typically found in development environments.
                         </p>
 
                         <p class="text-gray-300 mb-6">
-                            To achieve stable and efficient operation, TECs require a high-quality DC power source with minimal output voltage and current ripple. Excessive AC ripple on the DC supply is detrimental to the net cooling effect. While the linear Peltier cooling effect is proportional to the average DC current, the parasitic Joule heating within the semiconductor elements is proportional to the square of the RMS current. The AC ripple component contributes significantly to this parasitic heating but provides no net cooling, thereby degrading the device's overall Coefficient of Performance (COP) and reducing its maximum achievable temperature differential.
+                            For comprehensive ASIC validation, test systems must provide clean, stable DC power with minimal output voltage and current ripple. Excessive noise on the supply rails can introduce measurement artifacts, affect analog circuit performance, and potentially mask design flaws that would appear under ideal operating conditions. Therefore, high-quality power sources with low noise and excellent regulation are fundamental to meaningful ASIC characterization and validation.
                         </p>
 
                         <h4 class="text-lg font-semibold text-primary-color mb-3">1.3 The Power Conversion Challenge</h4>
                         <p class="text-gray-300 mb-6">
-                            The application driving this project requires powering a TEC from a low-voltage DC source, such as a battery or a standard logic-level supply rail. This presents a significant power conversion challenge: generating a stable, high-voltage DC output (e.g., 60 V) from a low-voltage input (e.g., 3.3 V to 5 V). This necessitates a DC–DC converter with a very high voltage gain, or step-up ratio. As will be detailed in Section 2.0, conventional converter topologies like the standard boost converter face severe practical limitations when pushed to such high step-up ratios, including extreme component stress and poor efficiency.
+                            The challenge driving this project is the need for a portable, efficient power supply that can generate high-voltage DC outputs (e.g., 60V) from commonly available low-voltage sources (e.g., 3.3V to 5V) typical of development board environments. This presents a significant power conversion challenge: achieving a very high voltage gain, or step-up ratio, while maintaining excellent regulation and low noise characteristics essential for ASIC testing. As will be detailed in Section 2.0, conventional converter topologies like the standard boost converter face severe practical limitations when pushed to such high step-up ratios, including extreme component stress and poor efficiency.
                         </p>
 
                         <h4 class="text-lg font-semibold text-primary-color mb-3">1.4 Project Objective and Specifications</h4>
                         <p class="text-gray-300 mb-4">
-                            The primary objective of this project is to design, simulate, and analyze a non-isolated, high-gain DC–DC converter based on a hybrid boost–flyback topology. This converter is specifically tailored to meet the stringent power requirements of a thermoelectric cooler module, providing a stable high-voltage output with low ripple from a low-voltage input. The key design specifications and performance targets for the converter are summarized in Table 1.
+                            The primary objective of this project is to design, simulate, and analyze a non-isolated, high-gain DC–DC converter based on a hybrid boost–flyback topology. This converter is specifically designed to provide a stable, high-voltage power source suitable for ASIC board testing and validation, delivering clean DC output with minimal ripple from low-voltage development board supplies. The key design specifications and performance targets for the converter are summarized in Table 1.
                         </p>
 
                         <div class="overflow-x-auto mb-6">
@@ -1405,7 +1405,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         </p>
 
                         <p class="text-gray-300 mb-6">
-                            The measured output voltage ripple was approximately 16 mV peak-to-peak at full load. This is exceptionally low and well within the &lt; 600 mV specification, demonstrating the effectiveness of the hybrid topology and the selected low-ESR ceramic output capacitor in producing a clean DC output suitable for a ripple-sensitive TEC.
+                            The measured output voltage ripple was approximately 16 mV peak-to-peak at full load. This is exceptionally low and well within the &lt; 600 mV specification, demonstrating the effectiveness of the hybrid topology and the selected low-ESR ceramic output capacitor in producing a clean DC output suitable for sensitive ASIC testing applications.
                         </p>
 
                         <h4 class="text-lg font-semibold text-primary-color mb-3">5.2 Efficiency Characterization</h4>
@@ -1481,12 +1481,12 @@ document.addEventListener('DOMContentLoaded', function() {
                         
                         <h4 class="text-lg font-semibold text-primary-color mb-3">Summary of Achievements</h4>
                         <p class="text-gray-300 mb-4">
-                            This project successfully demonstrated the design, construction, and testing of a high-gain DC–DC converter for powering a thermoelectric cooler. The final hardware prototype, based on a hybrid boost–flyback topology, met or exceeded all key performance specifications. The experimental results, summarized in Table 3, confirm that the converter generates a stable 60 V output with exceptionally low ripple (~16 mV) from a low-voltage input, while achieving a high efficiency of over 80% in the target operating range.
+                            This project successfully demonstrated the design, construction, and testing of a high-gain DC–DC converter for ASIC board testing applications. The final hardware prototype, based on a hybrid boost–flyback topology, met or exceeded all key performance specifications. The experimental results, summarized in Table 3, confirm that the converter generates a stable 60 V output with exceptionally low ripple (~16 mV) from a low-voltage input, while achieving a high efficiency of over 80% in the target operating range.
                         </p>
 
                         <h4 class="text-lg font-semibold text-primary-color mb-3">Validation of the Hybrid Topology</h4>
                         <p class="text-gray-300 mb-6">
-                            The experimental results provide a clear validation of the theoretical advantages of the chosen hybrid topology. The design successfully leveraged the transformer's turns ratio to achieve the required high voltage gain with a moderate duty cycle. Most significantly, the project confirmed the topology's ability to dramatically reduce the voltage stress on the main switching element to approximately 14.2 V, enabling the use of a smaller, more efficient, and fully integrated low-voltage MOSFET within the controller IC. This leads to a practical, robust, and high-performance power solution that is well-suited for compact and demanding applications.
+                            The experimental results provide a clear validation of the theoretical advantages of the chosen hybrid topology. The design successfully leveraged the transformer's turns ratio to achieve the required high voltage gain with a moderate duty cycle. Most significantly, the project confirmed the topology's ability to dramatically reduce the voltage stress on the main switching element to approximately 14.2 V, enabling the use of a smaller, more efficient, and fully integrated low-voltage MOSFET within the controller IC. This leads to a practical, robust, and high-performance power solution that is well-suited for ASIC testing and validation applications.
                         </p>
 
                         <h3 class="text-xl font-semibold text-white mb-4">7.0 Future Scope and Recommendations</h3>
@@ -1517,7 +1517,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                         <div class="bg-gray-900 p-6 rounded-lg border border-gray-700 text-center">
                             <h4 class="text-lg font-semibold text-primary-color mb-2">Project Impact</h4>
-                            <p class="text-gray-400">This hybrid boost-flyback DC-DC converter design demonstrates advanced power electronics engineering, successfully achieving high voltage gain with exceptional efficiency and low ripple, making it ideal for precision thermal management applications.</p>
+                            <p class="text-gray-400">This hybrid boost-flyback DC-DC converter design demonstrates advanced power electronics engineering, successfully achieving high voltage gain with exceptional efficiency and low ripple, making it ideal for ASIC board testing and high-voltage validation applications.</p>
                         </div>
                     </div>
                 `
